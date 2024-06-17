@@ -1,0 +1,14 @@
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\bin\Debug\net8.0\DAL.deps.json
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\bin\Debug\net8.0\DAL.dll
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\bin\Debug\net8.0\DAL.pdb
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\obj\Debug\net8.0\DAL.dll
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\obj\Debug\net8.0\refint\DAL.dll
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\obj\Debug\net8.0\DAL.pdb
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\obj\Debug\net8.0\ref\DAL.dll
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\bin\Debug\net8.0\DAL.runtimeconfig.json
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+D:\adtechsource\repos\Sira_a_projectManagement_tool\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
