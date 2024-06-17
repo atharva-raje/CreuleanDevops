@@ -26,6 +26,7 @@ namespace DAL.Dbcontext
         public DbSet<WorkItem> WorkItems { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Comments> Comments {  get; set; }
+        public DbSet<Status> statuses { get; set; }
             
     }
 }

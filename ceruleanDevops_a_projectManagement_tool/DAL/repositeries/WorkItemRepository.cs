@@ -27,36 +27,47 @@ namespace DAL.repositeries
 
         }
 
-
-        public async Task<WorkItem> GetWorkitem(int WorkItemId)
-        {
-            return await _workItemsDbContext.WorkItems.FirstOrDefaultAsync(w => w.Id == WorkItemId);
-        }
-
-        public async Task<IEnumerable<WorkItem>> GetWorkitems()
-        {
-            return await _workItemsDbContext.WorkItems.ToListAsync();
-
-        }
-
-        public async Task<WorkItem> UpdateWorkitem(WorkItem workItem)
+        public async Task<int> DeleteWorkItem(int WorkItemId)
         {
             var result = await _workItemsDbContext.WorkItems
-                .FirstOrDefaultAsync(e => e.Id == workItem.Id);
-
+                .FirstOrDefaultAsync(e => e.Id == WorkItemId);
             if (result != null)
             {
-                result.Id = workItem.Id;
-                result.Name = workItem.Name;
-                result.Description = workItem.Description;
-                result.iteration = workItem.iteration;
-                result.area = workItem.area;
-                result.Type = workItem.Type;
+                _workItemsDbContext.WorkItems.Remove(result);
                 await _workItemsDbContext.SaveChangesAsync();
-                return result;
-
+                return 1;
             }
-            return null;
+            return 0;
         }
+            public async Task<WorkItem> GetWorkitem(int WorkItemId)
+            {
+                return await _workItemsDbContext.WorkItems.FirstOrDefaultAsync(w => w.Id == WorkItemId);
+            }
+
+            public async Task<IEnumerable<WorkItem>> GetWorkitems()
+            {
+                return await _workItemsDbContext.WorkItems.ToListAsync();
+            }
+
+            public async Task<WorkItem> UpdateWorkitem(WorkItem WorkItem)
+            {
+                var result = await _workItemsDbContext.WorkItems
+                    .FirstOrDefaultAsync(e => e.Id == WorkItem.Id);
+
+                if (result != null)
+                {
+                    result.Id = WorkItem.Id;
+                    result.Name = WorkItem.Name;
+                    result.Description = WorkItem.Description;
+                    result.iteration = WorkItem.iteration;
+                    result.area = WorkItem.area;
+                    result.Type = WorkItem.Type;
+                    await _workItemsDbContext.SaveChangesAsync();
+                    return result;
+
+                }
+                return null;
+            }
+        
     }
 }

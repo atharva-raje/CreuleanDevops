@@ -47,6 +47,23 @@ namespace DAL.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("DAL.Entites.Status", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("statuses");
+                });
+
             modelBuilder.Entity("DAL.Entites.User", b =>
                 {
                     b.Property<int>("UserId")
@@ -64,7 +81,7 @@ namespace DAL.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("DAL.Entites.WorkItems", b =>
+            modelBuilder.Entity("DAL.Entites.WorkItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -92,7 +109,12 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("statusId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("statusId");
 
                     b.ToTable("WorkItems");
                 });
@@ -106,6 +128,22 @@ namespace DAL.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("DAL.Entites.WorkItem", b =>
+                {
+                    b.HasOne("DAL.Entites.Status", "status")
+                        .WithMany("WorkItems")
+                        .HasForeignKey("statusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("status");
+                });
+
+            modelBuilder.Entity("DAL.Entites.Status", b =>
+                {
+                    b.Navigation("WorkItems");
                 });
 
             modelBuilder.Entity("DAL.Entites.User", b =>

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CO6G3sLr8jjPudFwHNd6603DlLtVr2pbVjr+pPVIEKuniFlcPZLK55jpsOS8YPB9hcxb2Y74ivduhYt8WxLyMg==",
+  "dgSpecHash": "QtMqJJE++aMumL9QjSDKVuLxZ8NBxKzy9rUJQQ87PE/kgf2rbCO0vYGsfdCx4yDxf0nQvr4D16fcEAH67aNY9Q==",
   "success": true,
-  "projectFilePath": "D:\\adtechsource\\repos\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\BusinessLogic.csproj",
+  "projectFilePath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\BusinessLOgic.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\athar\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\athar\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\athar\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\athar\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

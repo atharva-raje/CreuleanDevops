@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IpHODmyeN/Ov8WihxKPCHpk6GSgOau7+QKcCaY41hFGVB3HHlfgckmvQXeCUxo8nYZDA69HnzTeeQAUuD6U7xQ==",
+  "dgSpecHash": "ft6Tt3Nw/tn0cfmC3jL7x0PV3MRdP5KDQc/wGD7N/bP0sd9owR5bn1G9eFpSOCR+RokwgvPubB07lpvqI0q1PQ==",
   "success": true,
-  "projectFilePath": "D:\\adtechsource\\repos\\ceruleanDevops_a_projectManagement_tool\\DAL\\DAL.csproj",
+  "projectFilePath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\athar\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\athar\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\athar\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\athar\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
