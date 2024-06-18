@@ -4604,9 +4604,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\WebApplication1.csproj",
-      "projectName": "WebApplication1",
-      "projectPath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\WebApplication.Api.csproj",
+      "projectName": "WebApplication.Api",
+      "projectPath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\WebApplication.Api.csproj",
       "packagesPath": "C:\\Users\\athar\\.nuget\\packages\\",
       "outputPath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",

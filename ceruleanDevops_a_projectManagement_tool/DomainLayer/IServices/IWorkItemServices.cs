@@ -18,8 +18,8 @@ namespace BusinessLOgic.IServices
 
         public  Task<IEnumerable<WorkItem>> GetWorkItemsService();
         public Task<WorkItem> AddWorkItemsService(WorkItemModel workItemModel);
-        public Task<WorkItem> UpdateWorkItemsService();
-        public Task<WorkItem> DeleteWorkItemsService();
+        public Task<WorkItem> UpdateWorkItemsService(int id,WorkItemModel workItemModel);
+        public  Task<int>  DeleteWorkItemsService(int WorkItemId);
 
 
 

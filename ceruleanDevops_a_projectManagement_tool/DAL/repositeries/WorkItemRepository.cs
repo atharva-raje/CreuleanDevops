@@ -49,14 +49,14 @@ namespace DAL.repositeries
                 return await _workItemsDbContext.WorkItems.ToListAsync();
             }
 
-            public async Task<WorkItem> UpdateWorkitem(WorkItem WorkItem)
+            public async Task<WorkItem> UpdateWorkitem(int id,WorkItem WorkItem)
             {
                 var result = await _workItemsDbContext.WorkItems
-                    .FirstOrDefaultAsync(e => e.Id == WorkItem.Id);
+                    .FirstOrDefaultAsync(e => e.Id == id);
 
                 if (result != null)
                 {
-                    result.Id = WorkItem.Id;
+                    result.Id = id;
                     result.Name = WorkItem.Name;
                     result.Description = WorkItem.Description;
                     result.iteration = WorkItem.iteration;

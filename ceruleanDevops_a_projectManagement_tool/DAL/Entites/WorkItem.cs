@@ -13,7 +13,10 @@ namespace DAL.Entites
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        [ForeignKey("Status")]
+        public int statusId { get; set; }
         public Status status { get; set; }
+        
         public string Type { get; set; }
         public string area { get; set; }
         public string iteration {  get; set; }

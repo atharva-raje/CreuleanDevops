@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pxCIkAjLSULdgc9s6zOu2jfEZsIljdWiLBLkcXNxgYE3AFg2iCL1MuJBaX7gyurhqJqev+3m8zTxNJAvltg3qA==",
+  "dgSpecHash": "gaRyCL4s8J/L/DMIYn0cG0NnemNwfvQIjlQ7XMxjfJd1yIZL/QaMcfBX1ujE4SzFqMDSZNA2iKA5C24HezXIKg==",
   "success": true,
-  "projectFilePath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\WebApplication.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\athar\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\athar\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

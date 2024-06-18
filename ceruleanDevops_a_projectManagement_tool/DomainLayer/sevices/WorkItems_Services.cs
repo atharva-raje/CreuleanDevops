@@ -24,14 +24,22 @@ namespace BusinessLOgic.sevices
 
         public async Task<WorkItem> AddWorkItemsService(WorkItemModel workItemModel)
         {
-            var newWorkItem = _mapper.Map<WorkItem>(workItemModel);
+            WorkItem newWorkItem = new WorkItem
+            {
+                 Name = workItemModel.Name,
+                 Description = workItemModel.Description,
+                 iteration = workItemModel.iteration,
+                 area = workItemModel.area,
+                 Type = workItemModel.Type,
+                 statusId = workItemModel.status
+            };
             var result = await _workItemsRespository.AddWorkitem(newWorkItem);
             return result;    
         }  
 
-        public Task<WorkItem> DeleteWorkItemsService()
+        public async Task<int> DeleteWorkItemsService(int WorkItemId)
         {
-            throw new NotImplementedException();
+            return await _workItemsRespository.DeleteWorkItem(WorkItemId);
         }
 
         public async Task<IEnumerable<WorkItem>> GetWorkItemsService()
@@ -39,9 +47,20 @@ namespace BusinessLOgic.sevices
             return await _workItemsRespository.GetWorkitems();
         }
 
-        public Task<WorkItem> UpdateWorkItemsService()
+        public async Task<WorkItem> UpdateWorkItemsService(int id, WorkItemModel workItemModel)
         {
-            throw new NotImplementedException();
+
+            WorkItem newWorkItem = new WorkItem
+            {
+                Name = workItemModel.Name,
+                Description = workItemModel.Description,
+                iteration = workItemModel.iteration,
+                area = workItemModel.area,
+                Type = workItemModel.Type,
+                statusId = workItemModel.status
+            };
+            var result = await _workItemsRespository.UpdateWorkitem(id,newWorkItem);
+            return result;
         }
     }
 }

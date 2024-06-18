@@ -11,8 +11,8 @@ namespace DAL.Irepositeries
     {
         Task<IEnumerable<WorkItem>> GetWorkitems();
         Task<WorkItem> GetWorkitem(int WorkItemId);
-        Task<WorkItem> AddWorkitem(WorkItemModel WorkItem);
-        Task<WorkItem> UpdateWorkitem(WorkItem WorkItem);
+        Task<WorkItem> AddWorkitem(WorkItem WorkItem);
+        Task<WorkItem> UpdateWorkitem(int id,WorkItem WorkItem);
         Task<int> DeleteWorkItem(int WorkItemId);
 
 

@@ -11,6 +11,8 @@ namespace WebApplication1
             // Add as many of these lines as you need to map your objects
             CreateMap<WorkItem, WorkItemModel>();
             CreateMap<WorkItemModel, WorkItem>();
+            CreateMap<WorkItem, WorkItemModelWIthId>();
+            CreateMap<WorkItemModelWIthId, WorkItem>();
 
         }
     }

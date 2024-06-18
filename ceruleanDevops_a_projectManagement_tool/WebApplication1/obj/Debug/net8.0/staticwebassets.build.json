@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "ozPU8KMwOlbQHpcE5qZTZ7CirEa+BWCC4ogaz+QJEsE=",
-  "Source": "WebApplication1",
-  "BasePath": "_content/WebApplication1",
+  "Hash": "txZ6emE6R2atSkXtJrTwXfidjDYFGhXRVjN3hdtlODc=",
+  "Source": "WebApplication.Api",
+  "BasePath": "_content/WebApplication.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
