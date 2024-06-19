@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -18,9 +19,11 @@ namespace DAL.Entites
         public Status status { get; set; }
         
         public string Type { get; set; }
+        
         public string area { get; set; }
         public string iteration {  get; set; }
 
+         
 
     }
 }

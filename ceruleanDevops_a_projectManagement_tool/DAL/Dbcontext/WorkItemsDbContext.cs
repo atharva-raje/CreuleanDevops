@@ -27,6 +27,8 @@ namespace DAL.Dbcontext
         public DbSet<User> Users { get; set; }
         public DbSet<Comments> Comments {  get; set; }
         public DbSet<Status> statuses { get; set; }
+        public DbSet<Areas> Areas { get; set; }
+        public DbSet<Iterations> Iterations { get; set; }
             
     }
 }

@@ -1,0 +1,75 @@
+﻿@page "/workitem"
+@using Microsoft.AspNetCore.Components.Forms
+
+<h3>New Task</h3>
+
+<div class="task-container">
+    <div class="task-header">
+        <label for="title">Enter title</label>
+        <InputText id="title" @bind-Value="title" />
+        @if (string.IsNullOrEmpty(title))
+        {
+            <span class="error">Field 'Title' cannot be empty.</span>
+        }
+    </div>
+    <div class="task-body">
+        <div class="task-section">
+            <h4>Description</h4>
+            <InputTextArea id="description" @bind-Value="description" />
+        </div>
+        <div class="task-section">
+            <h4>Discussion</h4>
+            <InputTextArea id="discussion" @bind-Value="discussion" />
+        </div>
+    </div>
+    <div class="task-footer">
+        <button @onclick="SaveTask">Save</button>
+    </div>
+</div>
+
+@code {
+    private string title;
+    private string description;
+    private string discussion;
+
+    private void SaveTask()
+    {
+        // Implement save logic here
+        Console.WriteLine("Task saved");
+    }
+}
+
+<style>
+    .task-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+    }
+
+    .task-header, .task-footer {
+        margin-bottom: 20px;
+    }
+
+    .task-section {
+        margin-bottom: 20px;
+    }
+
+    .error {
+        color: red;
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #0078d7;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #005a9e;
+        }
+</style>

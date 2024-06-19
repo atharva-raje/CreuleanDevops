@@ -22,6 +22,23 @@ namespace DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("DAL.Entites.Areas", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("areaName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Areas");
+                });
+
             modelBuilder.Entity("DAL.Entites.Comments", b =>
                 {
                     b.Property<int>("Id")
@@ -45,6 +62,28 @@ namespace DAL.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("DAL.Entites.Iterations", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AreaId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("IterationName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AreaId");
+
+                    b.ToTable("Iterations");
                 });
 
             modelBuilder.Entity("DAL.Entites.Status", b =>
@@ -130,6 +169,17 @@ namespace DAL.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("DAL.Entites.Iterations", b =>
+                {
+                    b.HasOne("DAL.Entites.Areas", "area")
+                        .WithMany("iterations")
+                        .HasForeignKey("AreaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("area");
+                });
+
             modelBuilder.Entity("DAL.Entites.WorkItem", b =>
                 {
                     b.HasOne("DAL.Entites.Status", "status")
@@ -139,6 +189,11 @@ namespace DAL.Migrations
                         .IsRequired();
 
                     b.Navigation("status");
+                });
+
+            modelBuilder.Entity("DAL.Entites.Areas", b =>
+                {
+                    b.Navigation("iterations");
                 });
 
             modelBuilder.Entity("DAL.Entites.Status", b =>

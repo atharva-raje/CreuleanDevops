@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -9,11 +9,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.5" PrivateAssets="all" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\DomainLayer\BusinessLOgic.csproj" />
-    <ProjectReference Include="..\WebApplication1\WebApplication.Api.csproj" />
   </ItemGroup>
 
 </Project>
