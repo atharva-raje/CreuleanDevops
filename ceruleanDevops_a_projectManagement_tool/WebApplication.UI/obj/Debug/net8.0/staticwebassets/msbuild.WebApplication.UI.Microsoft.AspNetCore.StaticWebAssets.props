@@ -2,7 +2,7 @@
   <ItemGroup>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\app.css))">
       <SourceType>Package</SourceType>
-      <SourceId>WebApplication.UI</SourceId>
+      <SourceId>WebAPplication.UI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>/</BasePath>
       <RelativePath>css/app.css</RelativePath>
@@ -18,7 +18,7 @@
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\bootstrap\bootstrap.min.css))">
       <SourceType>Package</SourceType>
-      <SourceId>WebApplication.UI</SourceId>
+      <SourceId>WebAPplication.UI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>/</BasePath>
       <RelativePath>css/bootstrap/bootstrap.min.css</RelativePath>
@@ -34,7 +34,7 @@
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\bootstrap\bootstrap.min.css.map))">
       <SourceType>Package</SourceType>
-      <SourceId>WebApplication.UI</SourceId>
+      <SourceId>WebAPplication.UI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>/</BasePath>
       <RelativePath>css/bootstrap/bootstrap.min.css.map</RelativePath>
@@ -50,7 +50,7 @@
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\favicon.png))">
       <SourceType>Package</SourceType>
-      <SourceId>WebApplication.UI</SourceId>
+      <SourceId>WebAPplication.UI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>/</BasePath>
       <RelativePath>favicon.png</RelativePath>
@@ -66,7 +66,7 @@
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\icon-192.png))">
       <SourceType>Package</SourceType>
-      <SourceId>WebApplication.UI</SourceId>
+      <SourceId>WebAPplication.UI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>/</BasePath>
       <RelativePath>icon-192.png</RelativePath>
@@ -82,7 +82,7 @@
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\index.html))">
       <SourceType>Package</SourceType>
-      <SourceId>WebApplication.UI</SourceId>
+      <SourceId>WebAPplication.UI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>/</BasePath>
       <RelativePath>index.html</RelativePath>
@@ -98,7 +98,7 @@
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\sample-data\weather.json))">
       <SourceType>Package</SourceType>
-      <SourceId>WebApplication.UI</SourceId>
+      <SourceId>WebAPplication.UI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>/</BasePath>
       <RelativePath>sample-data/weather.json</RelativePath>
@@ -112,12 +112,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\sample-data\weather.json))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\WebApplication.UI.styles.css))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\WebAPplication.UI.styles.css))">
       <SourceType>Package</SourceType>
-      <SourceId>WebApplication.UI</SourceId>
+      <SourceId>WebAPplication.UI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>/</BasePath>
-      <RelativePath>WebApplication.UI.styles.css</RelativePath>
+      <RelativePath>WebAPplication.UI.styles.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>CurrentProject</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -126,11 +126,11 @@
       <AssetTraitValue>ApplicationBundle</AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\WebApplication.UI.styles.css))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\WebAPplication.UI.styles.css))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\_framework\blazor.webassembly.js))">
       <SourceType>Package</SourceType>
-      <SourceId>WebApplication.UI</SourceId>
+      <SourceId>WebAPplication.UI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>/</BasePath>
       <RelativePath>_framework/blazor.webassembly.js</RelativePath>
@@ -146,14 +146,14 @@
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\_framework\blazor.webassembly.js.gz))">
       <SourceType>Package</SourceType>
-      <SourceId>WebApplication.UI</SourceId>
+      <SourceId>WebAPplication.UI</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>/</BasePath>
       <RelativePath>_framework/blazor.webassembly.js.gz</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebApplication.UI\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js</RelatedAsset>
+      <RelatedAsset>D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebAPplication.UI\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

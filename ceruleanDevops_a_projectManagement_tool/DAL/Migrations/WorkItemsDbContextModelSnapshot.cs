@@ -54,12 +54,17 @@ namespace DAL.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
+                    b.Property<int>("WorkItemId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("dateTime")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
+
+                    b.HasIndex("WorkItemId");
 
                     b.ToTable("Comments");
                 });
@@ -144,9 +149,15 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("endDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("iteration")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("startDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("statusId")
                         .HasColumnType("int");
@@ -166,7 +177,15 @@ namespace DAL.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("DAL.Entites.WorkItem", "workItem")
+                        .WithMany("comments")
+                        .HasForeignKey("WorkItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("User");
+
+                    b.Navigation("workItem");
                 });
 
             modelBuilder.Entity("DAL.Entites.Iterations", b =>
@@ -204,6 +223,11 @@ namespace DAL.Migrations
             modelBuilder.Entity("DAL.Entites.User", b =>
                 {
                     b.Navigation("Comments");
+                });
+
+            modelBuilder.Entity("DAL.Entites.WorkItem", b =>
+                {
+                    b.Navigation("comments");
                 });
 #pragma warning restore 612, 618
         }

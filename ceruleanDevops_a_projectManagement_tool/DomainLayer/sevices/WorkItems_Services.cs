@@ -31,7 +31,10 @@ namespace BusinessLOgic.sevices
                  iteration = workItemModel.iteration,
                  area = workItemModel.area,
                  Type = workItemModel.Type,
-                 statusId = workItemModel.status
+                 statusId = workItemModel.statusId,
+                 startDate = workItemModel.startDate,
+                 endDate = workItemModel.endDate
+
             };
             var result = await _workItemsRespository.AddWorkitem(newWorkItem);
             return result;    
@@ -57,7 +60,10 @@ namespace BusinessLOgic.sevices
                 iteration = workItemModel.iteration,
                 area = workItemModel.area,
                 Type = workItemModel.Type,
-                statusId = workItemModel.status
+                statusId = workItemModel.statusId,
+                startDate = workItemModel.startDate,
+                endDate = workItemModel.endDate
+
             };
             var result = await _workItemsRespository.UpdateWorkitem(id,newWorkItem);
             return result;

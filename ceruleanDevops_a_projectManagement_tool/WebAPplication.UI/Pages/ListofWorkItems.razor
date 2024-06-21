@@ -1,0 +1,52 @@
+﻿@page "/ListWorkItems"
+@using BusinessLOgic.Models
+@using Apicall
+@inject WorkItemCall workitemcall
+@inject HttpClient Http
+
+<PageTitle>WorkItem</PageTitle>
+
+<h1>List Of Workitems</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (data == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Type</th>
+                <th>area</th>
+                <th>iteration</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in data)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Type</td>
+                    <td>@item.area</td>
+                    <td>@item.iteration</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<WorkItemModel> data;
+
+    protected override async Task OnInitializedAsync()
+    {
+        data = await workitemcall.GetWorkItems();
+
+    }
+}

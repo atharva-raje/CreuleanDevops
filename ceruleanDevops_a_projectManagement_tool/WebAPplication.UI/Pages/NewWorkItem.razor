@@ -1,0 +1,127 @@
+﻿@page "/workitem"
+@using BusinessLOgic.Models
+@using Microsoft.AspNetCore.Components.Forms
+@using Apicall
+@using WebAPplication.UI.UiModels
+@inject WorkItemCall workitemcall
+@inject NavigationManager NavManager
+
+<h3>New WorkItems</h3>
+<EditForm Model="uIWorkItem" OnSubmit="AddWorkitem">
+        <label for="name">Enter name</label>
+        <InputText @bind-Value="uIWorkItem.name" />
+        @if (string.IsNullOrEmpty(name))
+        {
+            <span class="error">Field 'name' cannot be empty.</span>
+        }
+       <br />
+       <br />
+            <h6>Description</h6>
+            <InputTextArea id="description" @bind-Value="uIWorkItem.description" />
+    <br />
+    <br />
+            <h6>type</h6>
+            <InputTextArea id="type" @bind-Value="uIWorkItem.type" />
+    <br />
+    <br />
+            <h6>area</h6>
+            <InputTextArea id="area" @bind-Value="uIWorkItem.area" />
+    <br />
+    <br />
+            <h6>iteration</h6>
+            <InputTextArea id="iteration" @bind-Value="uIWorkItem.iteration" />
+    <br />
+    <br />
+            <h6>status</h6>
+            <InputTextArea id="status" @bind-Value="uIWorkItem.status" />
+
+    <br />
+    <br />
+    <h6>StartDate</h6>
+    <div class="form-outline datetimepicker">
+        <input type="text" class="form-control" value="22/12/2020, 14:12:56" id="datetimepickerExample">
+        <label for="datetimepickerExample" class="form-label">Select Date and Time</label>
+    </div>
+    <br />
+    <br />
+    <div class="form-outline datetimepicker">
+        <input type="text" class="form-control" value="22/12/2020, 14:12:56" id="datetimepickerExample">
+        <label for="datetimepickerExample" class="form-label">Select Date and Time</label>
+    </div>
+    <br />
+    <br />
+    <button type="submit">Save</button>
+    
+ 1
+</EditForm>
+@if(saved)
+{
+    NavManager.NavigateTo("/ListWorkItems");
+}
+
+@code {
+    private string name;
+    private string description;
+    private string type;
+    private string area;
+    private string iteration;
+    private string status;
+
+    public UIWorkItem uIWorkItem = new UIWorkItem();
+    private bool saved = false;
+    private async Task AddWorkitem()
+    {
+        
+        try
+        {
+            saved = false;
+            var result = await workitemcall.AddWorkItem(uIWorkItem);
+            saved = true;
+            StateHasChanged();
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+     
+
+
+     
+}
+
+<style>
+    .task-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+    }
+
+    .task-header, .task-footer {
+        margin-bottom: 20px;
+    }
+
+    .task-section {
+        margin-bottom: 20px;
+    }
+
+    .error {
+        color: red;
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #0078d7;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #005a9e;
+        }
+</style>

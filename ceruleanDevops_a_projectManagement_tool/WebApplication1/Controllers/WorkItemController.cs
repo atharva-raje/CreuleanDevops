@@ -26,7 +26,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
-        
+        [Route("getall")]
         public async Task<IActionResult> GetWorkItems()
         {
             var results =  await _workItemServices.GetWorkItemsService();

@@ -7,6 +7,7 @@ using DAL.Irepositeries;
 using DAL.repositeries;
 using Microsoft.EntityFrameworkCore;
 
+/*var builder = WebApplication.CreateBuilder(args);*/
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -20,7 +21,19 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAuthorization();
 builder.Services.AddScoped<IWorkItemServices, WorkItems_Services>();
 builder.Services.AddScoped<IWorkItemsRespository, WorkItemRepository>();
+builder.Services.AddScoped<IStatusRepository, StatusRepository>();
+builder.Services.AddScoped<IStatusService, StatusService>();
 builder.Services.AddScoped<WorkItemsDbContext>();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "MyAllowSpecificOrigins",
+                      builder =>
+                      {
+                          builder.AllowAnyOrigin()
+                                 .AllowAnyMethod()
+                                 .AllowAnyHeader();
+                      });
+});
 builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
@@ -33,8 +46,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseRouting();
 
+app.UseCors("MyAllowSpecificOrigins");
 app.UseAuthorization();
+ 
 
 app.MapControllers();
 

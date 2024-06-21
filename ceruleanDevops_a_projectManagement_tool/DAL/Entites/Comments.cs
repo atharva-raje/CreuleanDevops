@@ -21,6 +21,9 @@ namespace DAL.Entites
 
         public string Description {  get; set; }
         public DateTime dateTime { get; set; }
+        [ForeignKey("WorkItem")]
+        public int WorkItemId {  get; set; }
+        public WorkItem workItem { get; set; }
 
 
     }

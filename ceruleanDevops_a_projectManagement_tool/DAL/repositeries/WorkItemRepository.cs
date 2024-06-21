@@ -62,6 +62,8 @@ namespace DAL.repositeries
                     result.iteration = WorkItem.iteration;
                     result.area = WorkItem.area;
                     result.Type = WorkItem.Type;
+                    result.startDate = WorkItem.startDate;
+                    result.endDate = WorkItem.endDate;
                     await _workItemsDbContext.SaveChangesAsync();
                     return result;
 

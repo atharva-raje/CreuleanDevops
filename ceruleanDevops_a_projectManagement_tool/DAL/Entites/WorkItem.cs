@@ -22,8 +22,9 @@ namespace DAL.Entites
         
         public string area { get; set; }
         public string iteration {  get; set; }
-
-         
+        public DateTime startDate {  get; set; }
+        public DateTime endDate { get; set; }
+        public ICollection<Comments> comments { get; set; }
 
     }
 }
