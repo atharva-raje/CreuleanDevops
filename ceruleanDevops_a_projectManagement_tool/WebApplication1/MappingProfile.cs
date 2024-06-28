@@ -13,6 +13,19 @@ namespace WebApplication1
             CreateMap<WorkItemModel, WorkItem>();
             CreateMap<WorkItem, WorkItemModelWIthId>();
             CreateMap<WorkItemModelWIthId, WorkItem>();
+            CreateMap<Status,StatusModelWithoutId>();
+            CreateMap<StatusModelWithoutId, Status>();
+            CreateMap<AreaWithoutId, Areas>();
+            CreateMap<Areas,AreaWithoutId>();
+            CreateMap<IterationWIthoutId, Iterations>();
+            CreateMap<Iterations, IterationWIthoutId>();
+            CreateMap<StatusModelWithoutId, Status>();
+            CreateMap<Status,StatusModelWithoutId>();
+            CreateMap<User,UserModel>();
+            CreateMap<UserModel, User>();
+            CreateMap<CommentModel, Comments>();
+            CreateMap<Comments,CommentModel>();
+
 
         }
     }

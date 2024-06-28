@@ -1,52 +1,112 @@
 ﻿@page "/ListWorkItems"
+@using Blazorise
 @using BusinessLOgic.Models
 @using Apicall
 @inject WorkItemCall workitemcall
 @inject HttpClient Http
-
+<Alert @ref="myAlert" Color="Color.Success">
+    <AlertMessage>Delete Successful!</AlertMessage>
+    <CloseButton />
+</Alert>
+<Alert @ref="myAlertFailed" Color="Color.Danger">
+    <AlertMessage>Failed to Delete!</AlertMessage>
+    <CloseButton />
+</Alert>
 <PageTitle>WorkItem</PageTitle>
-
-<h1>List Of Workitems</h1>
-
-<p>This component demonstrates fetching data from the server.</p>
-
+<h1>List</h1>
+<br />
 @if (data == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Type</th>
-                <th>area</th>
-                <th>iteration</th>
-            </tr>
-        </thead>
-        <tbody>
+    <Table class="table">
+        <TableHeader>
+            <TableRow>
+                <TableRowCell class="fw-bold">Name</TableRowCell>
+                <TableRowCell class="fw-bold">Description</TableRowCell>
+                <TableRowCell class="fw-bold">Type</TableRowCell>
+                <TableRowCell class="fw-bold">Status</TableRowCell>
+                <TableRowCell class="fw-bold">Assignee</TableRowCell>
+                <TableRowCell class="fw-bold">Area</TableRowCell>
+                <TableRowCell class="fw-bold">Iteration</TableRowCell>
+                <TableRowCell class="fw-bold">StartDate</TableRowCell>
+                <TableRowCell class="fw-bold">EndDate</TableRowCell>
+                <TableRowCell class="fw-bold">Actions</TableRowCell>
+            </TableRow>
+        </TableHeader>
+        <TableBody>
             @foreach (var item in data)
             {
-                <tr>
-                    <td>@item.Name</td>
-                    <td>@item.Description</td>
-                    <td>@item.Type</td>
-                    <td>@item.area</td>
-                    <td>@item.iteration</td>
-                </tr>
+                <TableRow>
+                    <TableRowCell>@item.Name</TableRowCell>
+                    <TableRowCell>@item.Description</TableRowCell>
+                    <TableRowCell>@item.Type</TableRowCell>
+                    <TableRowCell>@statuses[data.ToList().IndexOf(item)]</TableRowCell>
+                    <TableRowCell>@item.user</TableRowCell>
+                    <TableRowCell>@item.area</TableRowCell>
+                    <TableRowCell>@item.iteration</TableRowCell>
+                    <TableRowCell>@item.startDate.ToShortDateString()</TableRowCell>
+                    <TableRowCell>@item.endDate.ToShortDateString()</TableRowCell>
+                    <TableRowCell>
+                        <button @onclick="() => DeleteWorkItem(item.Id)" class="btn btn-danger">Delete</button>
+                    </TableRowCell>
+                </TableRow>
+                i++;
             }
-        </tbody>
-    </table>
+        </TableBody>
+    </Table>
 }
 
 @code {
     private IEnumerable<WorkItemModel> data;
-
-    protected override async Task OnInitializedAsync()
+    private List<string> statuses = new List<string>();
+    private int i = 0;
+    Alert myAlert;
+    Alert myAlertFailed;
+    private async Task<string> GetStatus(int statusId)
+    {
+        var result = await workitemcall.GetStatus(statusId);
+        return result;
+    }
+    private async Task DeleteWorkItem(int id)
+    {
+        var result = await workitemcall.deleteWorkItem(id);
+        if(result)
+        {
+            myAlert.Show();
+            await LoadData();
+        }
+        else
+        {
+            myAlertFailed.Show();
+            await LoadData();
+        }
+    }
+    private async Task LoadData()
     {
         data = await workitemcall.GetWorkItems();
+        statuses.Clear();
+        foreach (var item in data)
+        {
+            i = 0;
+            var status = await GetStatus(item.statusId);
+            statuses.Add(status);
+        }
+        StateHasChanged();
+    }
+    protected override async Task OnInitializedAsync()
+    {
+
+        data = await workitemcall.GetWorkItems();
+        foreach(var item in data)
+        {
+            var status = await GetStatus(item.statusId);
+            statuses.Add(status);
+
+        }
 
     }
+    
 }

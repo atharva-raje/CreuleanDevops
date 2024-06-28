@@ -17,9 +17,11 @@ namespace DAL.repositeries
         {
             _workItemsDbContext = workItemsDbContext;
         }
-        public Task<Comments> AddComment(Comments comments)
+        public async Task<Comments> AddComment(Comments comments)
         {
-            throw new NotImplementedException();
+            var result = await _workItemsDbContext.Comments.AddAsync(comments);
+            await _workItemsDbContext.SaveChangesAsync();
+            return result.Entity;
         }
 
         public async Task<IEnumerable<Comments>> GetComments()

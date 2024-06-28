@@ -23,6 +23,12 @@ builder.Services.AddScoped<IWorkItemServices, WorkItems_Services>();
 builder.Services.AddScoped<IWorkItemsRespository, WorkItemRepository>();
 builder.Services.AddScoped<IStatusRepository, StatusRepository>();
 builder.Services.AddScoped<IStatusService, StatusService>();
+builder.Services.AddScoped<IIterationRepository, IterationRepository>();
+builder.Services.AddScoped<IIterationService, IterationService>();
+builder.Services.AddScoped<IAreaRepository, AreaRepository>();
+builder.Services.AddScoped<IAreaService, AreaService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserSerivce,User_Sevices>();
 builder.Services.AddScoped<WorkItemsDbContext>();
 builder.Services.AddCors(options =>
 {

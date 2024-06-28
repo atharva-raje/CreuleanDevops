@@ -10,7 +10,10 @@ namespace WebAPplication.UI.UiModels
         public string area { get; set; }
         public string iteration { get; set; }
         public string status { get; set; }
+        public string priority { get; set; }
         public DateTime startdate { get; set; }
+        public string user {  get; set; }
+
         public DateTime endate { get; set; }
 
     }

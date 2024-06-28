@@ -14,14 +14,9 @@ namespace BusinessLOgic.IServices
     public interface IWorkItemServices
     {
          
-       
-
-        public  Task<IEnumerable<WorkItem>> GetWorkItemsService();
-        public Task<WorkItem> AddWorkItemsService(WorkItemModel workItemModel);
-        public Task<WorkItem> UpdateWorkItemsService(int id,WorkItemModel workItemModel);
-        public  Task<int>  DeleteWorkItemsService(int WorkItemId);
-
-
-
+           Task<IEnumerable<WorkItem>> GetWorkItemsService();
+          Task<WorkItem> AddWorkItemsService(WorkItemModel workItemModel);
+          Task<WorkItem> UpdateWorkItemsService(int id,WorkItemModel workItemModel);
+           Task<int>  DeleteWorkItemsService(int WorkItemId);
     }
 }

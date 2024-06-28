@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "WebAPplication.UI",
   "resources": {
-    "hash": "sha256-SaoCudgAOuY998HejBjfzgjs13iI+YSe1Hg4X0kPBxg=",
+    "hash": "sha256-boONRhs7O8KJ3i/ddzyun9HcBOt9Peb6NpPPmby29+0=",
     "jsModuleNative": {
       "dotnet.native.8.0.5.wvkpqkfuui.js": "sha256-boyHe+0RMZDkzBKGhsrnXPhPg3oZ6UqJnTUzngJPjNY="
     },
@@ -20,11 +20,16 @@
       "AutoMapper.wasm": "sha256-pQ4Xf706xSWYtP4HFejje/2xeMx82yLD1hKlKL3JR1I=",
       "Azure.Core.wasm": "sha256-cQyh2VXLObWcWT4DMebhILyvQTQYLQG0wN7/OwDJX5g=",
       "Azure.Identity.wasm": "sha256-Z4d2gC7rBBgpCvtxUFKuedytnRnWY92gC2dLlsuh+xQ=",
-      "BootstrapBlazor.wasm": "sha256-lCwO1XUedAW/eLZjKORyXf5Dx0jAcMggGwfHwYIxe3Q=",
+      "BlazorBootstrap.wasm": "sha256-DXl738A3nveFxYK+NWkxvHdTmicdO6btBT/VduMi0Co=",
+      "Blazorise.wasm": "sha256-RKOQuEJpYF8onKjts7Kbsk0hgHFi8K6ZlZvIBimZtGo=",
+      "Blazorise.Bootstrap.wasm": "sha256-NRmwycx/DlYSNg9EIdzSxZcJMOOz+KgIHUSC2nPc7h4=",
+      "Blazorise.Components.wasm": "sha256-30Op6z4vMa2WfU7vQ82UBukPPeUi5fS712/0gql703g=",
+      "Blazorise.Icons.FontAwesome.wasm": "sha256-Lt5VHOuE+BnW9kaXC9DcnyLb6aUIWTOSXa+m1urL5nY=",
+      "Blazorise.Licensing.wasm": "sha256-vmNGzxXoM2MA6rFUp99OvXbE3FJlYnUDr6zyA1Nc3Xc=",
+      "Blazorise.Snackbar.wasm": "sha256-/+mYrnLmKcftfgVk6DwZXnGcMt8kLjw7enKm7UkO5Ok=",
       "System.Web.Cors.wasm": "sha256-TPZovhnQnnLfLM9l2sG+Sv5lPE07cZj3KYoW8r6Pc4I=",
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-OLGFBcpljsXLhIaQF0m6arMwqtgxgm6RbZTaO8tfkRU=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-+8HtAi0ng5YbjkbeE5qEZU5ga1uH7+yDBrpxerkI1G4=",
-      "Microsoft.AspNetCore.Components.Authorization.wasm": "sha256-EFv+L1YnGvKwdvpSUAgxwhBJoxTLebypp66mmnzNKr4=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-CMRkrzCDzgX1XUEE5PWWJ6Q9JsVt/StuycyytVANvQ8=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-supFGv3TIB/pt7VOZOt4lPKVw0aeRxy3rAjLsoVD1EA=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-xiTZO998vbw5J8+g35bYDWWP7EvrRjIF8D2u5ttIRAc=",
@@ -50,8 +55,6 @@
       "Microsoft.Extensions.FileProviders.Physical.wasm": "sha256-MS+zB0xkKhKk/QdE32ZwKtdlrLMLI/y2NAKPUWhcBVg=",
       "Microsoft.Extensions.FileSystemGlobbing.wasm": "sha256-AnWUKd0qJ8ZNKkRC0AFK2cjjszB7reXiP+bXdIi8bic=",
       "Microsoft.Extensions.Http.wasm": "sha256-EOHR/vTMOWbdshFAa+n27+jPgCvrczn8XGFLj2P06UI=",
-      "Microsoft.Extensions.Localization.wasm": "sha256-WY8wzDYpbOl8wspMlvRknbN/lqHg9753iaOQ7V6946A=",
-      "Microsoft.Extensions.Localization.Abstractions.wasm": "sha256-nyx/rfgAQdcrcEUL+33sVVotG+tqnvT6p2hMBzLU0Us=",
       "Microsoft.Extensions.Logging.wasm": "sha256-Rx+UwnmyfTtMmlYd3HWJOvYVnSSwShUKrbPvqkfxmZk=",
       "Microsoft.Extensions.Logging.Abstractions.wasm": "sha256-AL42sVLgQf/nX/uHvd/OHfIFwLq3fRt9qn4/jnfJ2CM=",
       "Microsoft.Extensions.Options.wasm": "sha256-5/m+yVFGRuY+N4jQnD+QETKH0AfhAsnVze5dJ5ogIVM=",
@@ -246,14 +249,14 @@
       "mscorlib.wasm": "sha256-XvLAB5IyfVSmj5aaGnPwgVFaaZz8jXmbN8WmeopiPBM=",
       "netstandard.wasm": "sha256-TbMssdnuTiKq1gjTPkpgROAuWN0uhvPnagvWR+wAgNs=",
       "System.Private.CoreLib.wasm": "sha256-sscg+Efk8ROPq+q4IVmhShzITuoOYvB8Bsc+Mp9vcSM=",
-      "BusinessLOgic.wasm": "sha256-MHJqekrqvHvYvpWmsJrGOjCinXpoVsYM/LqiakQUsbE=",
-      "DAL.wasm": "sha256-Pqx507i1ylVjaDc/P32ePrWtFAkKdtLI4VIryHBMtJw=",
-      "WebAPplication.UI.wasm": "sha256-JZZPLvRxBS//0xnondr5s1LLGojZTTTSOWXn/+iJoBk="
+      "BusinessLOgic.wasm": "sha256-PqDzPuYZdsdHzRNnEMXwx5BRtf/6fbDxfPx/ScIZNZ4=",
+      "DAL.wasm": "sha256-PJH0ofiu9Cea+XcstpF9KnSrS6KAItQFrxFfNj2N8Fc=",
+      "WebAPplication.UI.wasm": "sha256-/Icj/6X3R5yR0gHZLDwEQ0pHDsZB4c+SfrrOUzEMT7s="
     },
     "pdb": {
-      "BusinessLOgic.pdb": "sha256-FimeRreq1rZcjlDUrRT7vRF57uzl7pQbhvSXT0D4E00=",
-      "DAL.pdb": "sha256-UioipA5R6G4qhOqvkWjLlUDON09KiZcoeJ+MladHMvM=",
-      "WebAPplication.UI.pdb": "sha256-57QFSYOmsFnnTMiVoItOv57Jl7L/wiLNL3Z+ltHU604="
+      "BusinessLOgic.pdb": "sha256-WvzONEDB2kVNYSoSvp1dh1wLvHcp9ql24ZQmX1LdVVU=",
+      "DAL.pdb": "sha256-FHT7KytWmUuugbJpltw9P6BE+eC1lajkTDS1VtNAhIM=",
+      "WebAPplication.UI.pdb": "sha256-j6oD2Jqs1bhk8gmDySfp7FkkIy0+V3NEck357LSRJWM="
     }
   },
   "cacheBootResources": true,

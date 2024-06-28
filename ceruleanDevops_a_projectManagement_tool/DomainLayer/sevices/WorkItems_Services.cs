@@ -33,7 +33,9 @@ namespace BusinessLOgic.sevices
                  Type = workItemModel.Type,
                  statusId = workItemModel.statusId,
                  startDate = workItemModel.startDate,
-                 endDate = workItemModel.endDate
+                 endDate = workItemModel.endDate,
+                 priority = workItemModel.priority,
+                 user = workItemModel.user
 
             };
             var result = await _workItemsRespository.AddWorkitem(newWorkItem);
@@ -44,10 +46,11 @@ namespace BusinessLOgic.sevices
         {
             return await _workItemsRespository.DeleteWorkItem(WorkItemId);
         }
-
         public async Task<IEnumerable<WorkItem>> GetWorkItemsService()
         {
-            return await _workItemsRespository.GetWorkitems();
+            var result = await _workItemsRespository.GetWorkitems();
+            return result;
+             
         }
 
         public async Task<WorkItem> UpdateWorkItemsService(int id, WorkItemModel workItemModel)
@@ -62,7 +65,8 @@ namespace BusinessLOgic.sevices
                 Type = workItemModel.Type,
                 statusId = workItemModel.statusId,
                 startDate = workItemModel.startDate,
-                endDate = workItemModel.endDate
+                endDate = workItemModel.endDate,
+                priority = workItemModel.priority
 
             };
             var result = await _workItemsRespository.UpdateWorkitem(id,newWorkItem);

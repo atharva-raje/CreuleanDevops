@@ -1,0 +1,215 @@
+﻿@page "/workitem"
+@using Blazorise
+@using BusinessLOgic.Models
+@using Microsoft.AspNetCore.Components.Forms
+@using Apicall
+@using WebAPplication.UI.UiModels
+@inject WorkItemCall workitemcall
+@inject NavigationManager NavManager
+
+<Alert @ref="myAlert" Color="Color.Success">
+    <AlertMessage>Success!</AlertMessage>
+    <AlertDescription>You successfully created a new Work-Item!</AlertDescription>
+    <CloseButton />
+</Alert>
+<Alert @ref="myAlertFailed" Color="Color.Danger">
+    <AlertMessage>Failed!</AlertMessage>
+    <AlertDescription>Failed to create a Work Item</AlertDescription>
+    <CloseButton />
+</Alert>
+<div class="container-fluid bg-primary-subtle">
+    <h3>Create Work-Item</h3>
+    <EditForm Model="uIWorkItem" OnSubmit="AddWorkitem">
+        <DataAnnotationsValidator />
+        <div class="form-row">
+            <div class="col-md-12  ">
+                <label class="fw-bold" for="name">Title</label>
+                <InputText id="name" class="form-control shadow" @bind-Value="uIWorkItem.name" />
+                <ValidationMessage For="@(() => uIWorkItem.name)" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12  ">
+                <label class="fw-bold" for="description">Description</label>
+                <InputTextArea id="description" class="form-control shadow" @bind-Value="uIWorkItem.description" />
+                <ValidationMessage For="@(() => uIWorkItem.description)" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-3  ">
+                <label class="fw-bold" for="type">Type</label>
+                <InputText id="type" class="form-control shadow" @bind-Value="uIWorkItem.type" />
+                <ValidationMessage For="@(() => uIWorkItem.type)" />
+            </div>
+            <br />
+            <div class="col-md-3  ">
+                <label class="fw-bold" for="status">Status</label>
+                @*<InputText id="status" class="form-control" @bind-Value="uIWorkItem.status" />*@
+
+                <InputSelect id="statusSelect" class="form-control shadow" @bind-Value="uIWorkItem.status">
+                    <option hidden value="">Please select an status</option>
+                    @foreach (var status in statuses)
+                    {
+                        <option value="@status.Name">@status.Name</option>
+                    }
+                </InputSelect>
+                <ValidationMessage For="@(() => uIWorkItem.area)" />
+            </div>
+            <div class="col-md-3  ">
+                <label class="fw-bold" id="Priorityselect">Priority</label>
+                <InputSelect id="prioritySelect" class="form-control shadow" @bind-Value="uIWorkItem.priority">
+                    <option hidden value="">Please select an priority</option>
+                    <option value="@priorites[0]">High</option>
+                    <option value="@priorites[1]">Medium</option>
+                    <option value="@priorites[2]">Low</option>
+                </InputSelect>
+                <ValidationMessage For="@(() => uIWorkItem.priority)" />
+            </div>
+
+        </div>
+        <br />
+        <div class="row">
+
+            <div class="col-md-3 ">
+                <label class="fw-bold" for="area">Area</label>
+                @*<InputText id="area" class="form-control" @bind-Value="uIWorkItem.area" />*@
+                <InputSelect id="areaSelect" class="form-control  shadow" @bind-Value="uIWorkItem.area" @oninput=AreaSelected>
+                    <option hidden value="">Please select an area</option>
+                    @foreach (var area in areas)
+                    {
+                        <option value="@area.areaName">@area.areaName</option>
+                    }
+                </InputSelect>
+                <ValidationMessage For="@(() => uIWorkItem.area)" />
+            </div>
+
+            <br />
+
+            <div class="col-md-3  ">
+
+                <label class="fw-bold" for="iteration">Iteration</label>
+                <InputSelect id="iterationSelect" class="form-control  shadow" @bind-Value="uIWorkItem.iteration" Disabled="@(!iterations.Any())">
+                    <option hidden value="">Please select an iteration</option>
+                    @foreach (var iteration in iterations)
+                    {
+                        <option value="@iteration.IterationName">@iteration.IterationName</option>
+                    }
+                </InputSelect>
+                <ValidationMessage For="@(() => uIWorkItem.iteration)" />
+            </div>
+            <br />
+            <div class="col-md-3">
+                <label class="fw-bold" for="status">Assign User</label>
+                <InputSelect id="statusSelect" class="form-control shadow " @bind-Value="uIWorkItem.user">
+                    <option hidden value="">Please select an user</option>
+                    @foreach (var user in users)
+                    {
+                        <option value="@user.UserName"><i class="bi bi-person-circle"></i>@user.UserName</option>
+                    }
+                </InputSelect>
+                <ValidationMessage For="@(() => uIWorkItem.user)" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-3  ">
+                <Label class="fw-bold" for="startdate">Start Date</Label>
+                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.startdate" />
+                <ValidationMessage For="@(() => uIWorkItem.startdate )" />
+
+            </div>
+            <br />
+            <div class="col-md-3 ">
+                <Label class="fw-bold" for="startdate">End Date</Label>
+                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.endate" />
+                <ValidationMessage For="@(() =>uIWorkItem.endate )" />
+
+            </div>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </EditForm>
+</div>
+<br />
+<Comments></Comments>
+@*@if(saved)
+{
+
+    NavManager.NavigateTo("/ListWorkItems");
+}*@
+
+@code {
+    private string name;
+    private string description;
+    private string type;
+    private string area;
+    private string iteration;
+    private string status;
+    private List<StatusModelWithoutId> statuses = new List<StatusModelWithoutId>();
+    private List<UserModel> users = new List<UserModel>();
+    private List<string> priorites = new List<string> { "high", "medium", "low" };
+    public UIWorkItem uIWorkItem = new UIWorkItem();
+    private bool saved = false;
+    Alert myAlert;
+    Alert myAlertFailed;
+
+
+    private List<AreaWithoutId> areas = new List<AreaWithoutId>();
+    private List<IterationWIthoutId> iterations = new List<IterationWIthoutId>();
+    private bool IsNameValid => !string.IsNullOrWhiteSpace(uIWorkItem.area);
+    private async Task AddWorkitem()
+
+    {
+
+        try
+        {
+            saved = false;
+            var result = await workitemcall.AddWorkItem(uIWorkItem);
+            Console.WriteLine("Modal shown");
+            saved = true;
+            @*NavManager.NavigateTo("/workitem", forceLoad: true);*@
+            if (result.IsSuccessStatusCode)
+            {
+                myAlert.Show();
+
+                uIWorkItem = new UIWorkItem
+                    {
+                        startdate = DateTime.Today,
+                        endate = DateTime.Today
+                    };
+                StateHasChanged();
+            }
+            else
+            {
+                myAlertFailed.Show();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+    private async void AreaSelected(ChangeEventArgs e)
+    {
+        var AreaSelected = e.Value.ToString();
+        var iterations1 = await workitemcall.Getiterations(AreaSelected);
+        iterations = iterations1.ToList();
+        StateHasChanged();
+
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var areas1 = await workitemcall.GetAreas();
+        areas = areas1.ToList();
+        var s = await workitemcall.GetStatusModels();
+        statuses = s.ToList();
+        uIWorkItem.startdate = DateTime.Today;
+        uIWorkItem.endate = DateTime.Today;
+        var u = await workitemcall.GetUsers();
+        users = u.ToList();
+    }
+
+}

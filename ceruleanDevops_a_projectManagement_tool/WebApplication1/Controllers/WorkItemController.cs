@@ -39,7 +39,7 @@ namespace WebApplication1.Controllers
         public async Task<IActionResult> GetWorkItemsWithId()
         {
             var results = await _workItemServices.GetWorkItemsService();
-            var model = _mapper.Map<IEnumerable<WorkItemModelWIthId>>(results);
+            var model = _mapper.Map<IEnumerable<WorkItemModel>>(results);
 
             return Ok(model);
         }
@@ -60,6 +60,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpDelete]
+        [Route("delete/{WorkItemId}")]
         public async Task<IActionResult> DeleteWorkItem(int WorkItemId)
         {
             var results = await _workItemServices.DeleteWorkItemsService(WorkItemId);

@@ -15,5 +15,9 @@ namespace BusinessLOgic.Models
         public string Type { get; set; }
         public string area { get; set; }
         public string iteration { get; set; }
+        public string priority { get; set; }
+        public DateTime startDate { get; set; }
+        public DateTime endDate { get; set; }
+        public string user {  get; set; }
     }
 }

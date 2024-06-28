@@ -64,6 +64,8 @@ namespace DAL.repositeries
                     result.Type = WorkItem.Type;
                     result.startDate = WorkItem.startDate;
                     result.endDate = WorkItem.endDate;
+                    result.status = WorkItem.status;
+                    result.priority = WorkItem.priority;
                     await _workItemsDbContext.SaveChangesAsync();
                     return result;
 

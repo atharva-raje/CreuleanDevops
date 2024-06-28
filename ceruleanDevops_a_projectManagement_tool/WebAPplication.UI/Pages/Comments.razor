@@ -1,5 +1,82 @@
-﻿<h3>Comments</h3>
+﻿@page "/comments"
 
+@using Blazorise
+@using BusinessLOgic.Models
+@using Microsoft.AspNetCore.Components.Forms
+@using Apicall
+@using WebAPplication.UI.UiModels
+@inject WorkItemCall workitemcall
+@inject NavigationManager NavManager 
+  @*   <div class="container accordion" id="discussion">
+        <div class="accordion-item"> 
+       <header1 class="accordion-header fw-bold" id="headingDiscussion">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Discussion
+      </button>
+      </header1>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingDiscussion" data-bs-parent="#discussion">
+    <div class="accordion-body"> 
+    <EditForm  Model="comment">
+        <InputTextArea id="description" class="form-control shadow" @bind-Value="comment.decription" />
+    </EditForm>
+    <br />
+    <div>
+    <button type="submit" class="btn-primary">Save</button>
+    <CloseButton Clicked="@OnClicked" class="offset-sm-1">Close</CloseButton>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>*@
+@*<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header fw-bold" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         disscussion
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+                    <EditForm Model="comment">
+                        <InputTextArea id="description" class="form-control shadow" @bind-Value="comment.decription" />
+                    </EditForm>
+                    <br />
+                    <div>
+                        <button type="submit" class="btn-primary">Save</button>
+        <CloseButton Clicked="@OnClicked" class="offset-sm-1">Close</CloseButton>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  *@
+<Accordion>
+        <AccordionItem @bind-Visible="@visible">
+        <AccordionHeader>
+            <Heading Size="HeadingSize.Is5">
+                <AccordionToggle>Discussion</AccordionToggle>
+            </Heading>
+        </AccordionHeader>
+        <AccordionBody>
+            <EditForm Model="comment">
+                <InputTextArea id="description" class="form-control shadow" @bind-Value="comment.decription" />
+            </EditForm>
+            <br />
+            <div>
+                <button type="submit" class="btn-primary">Save</button>
+                <CloseButton Clicked="@OnClicked" class="offset-sm-1">Close</CloseButton>
+            </div>
+        </AccordionBody>
+    </AccordionItem>
+    </Accordion>
+ 
 @code {
+    private CommentModel comment = new CommentModel();
+     bool visible = true;
+    Task OnClicked()
+    {
+        visible = false;
 
+        return Task.CompletedTask;
+    }
 }

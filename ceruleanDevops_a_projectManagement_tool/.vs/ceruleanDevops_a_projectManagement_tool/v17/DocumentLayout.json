@@ -3,212 +3,48 @@
   "WorkspaceRootPath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\pages\\newworkitem.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\pages\\newworkitem.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\uimodels\\uiworkitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\uimodels\\uiworkitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\webapplication.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\webapplication.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\webapplication.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\webapplication.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\entites\\workitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\entites\\workitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\repositeries\\workitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\repositeries\\workitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\irepositeries\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\irepositeries\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\sevices\\comments_sevices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\sevices\\comments_sevices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\sevices\\workitems_services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\sevices\\workitems_services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\repositeries\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\repositeries\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\repositeries\\statusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\repositeries\\statusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\entites\\areas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\entites\\areas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\repositeries\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\repositeries\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\apicall\\workitemcall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\apicall\\workitemcall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\pages\\listofworkitems.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\pages\\listofworkitems.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\pages\\comments.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\pages\\comments.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\models\\workitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\models\\workitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\models\\workitemmodelwithid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\models\\workitemmodelwithid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\controllers\\workitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\controllers\\workitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\webapplication1.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\webapplication1.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\irepositeries\\iworkitemsrespository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\irepositeries\\iworkitemsrespository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\entites\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\entites\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\entites\\comments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\entites\\comments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\entites\\iterations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\entites\\iterations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\entites\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\entites\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\irepositeries\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\irepositeries\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\sevices\\statusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\sevices\\statusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\sevices\\iterationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\sevices\\iterationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\sevices\\user_sevices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\sevices\\user_sevices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\migrations\\20240617194051_adding_status_fk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20240617194051_adding_status_fk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\sevices\\workitems_services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\sevices\\workitems_services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\pages\\comments.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\pages\\comments.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\models\\commentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\models\\commentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\controllers\\statuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\controllers\\statuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\pages\\newworkitem.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\pages\\newworkitem.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\pages\\updateworkitem.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\pages\\updateworkitem.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\pages\\listofworkitems.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\pages\\listofworkitems.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\iservices\\istatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\iservices\\istatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240621094422_adding_dates_workitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Migrations\\20240621094422_adding_dates_workitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\migrations\\20240621094227_creatiingcomments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20240621094227_creatiingcomments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\dbcontext\\workitemsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\dbcontext\\workitemsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\iservices\\iworkitemservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\iservices\\iworkitemservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\irepositeries\\istatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\irepositeries\\istatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\migrations\\20240621091546_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20240621091546_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\migrations\\20240618092439_changingarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20240618092439_changingarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\entites\\links.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\entites\\links.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\wwwroot\\css\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\wwwroot\\css\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -219,55 +55,149 @@
       "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\iapicall\\iworkitemapicall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\apicall\\workitemcall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\apicall\\workitemcall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\models\\workitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\models\\workitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\models\\workitemmodelwithid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\models\\workitemmodelwithid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\repositeries\\workitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\repositeries\\workitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\controllers\\workitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\controllers\\workitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\iservices\\istatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\iservices\\istatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\iservices\\iworkitemservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\iservices\\iworkitemservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\iservices\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\iservices\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\models\\statusmodelwithoutid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\models\\statusmodelwithoutid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\webapplication.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\webapplication.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\wwwroot\\favicon.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\wwwroot\\favicon.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\repositeries\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\repositeries\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\wwwroot\\icon-192.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\wwwroot\\icon-192.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+      "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.205\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\repositeries\\statusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\repositeries\\statusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\controllers\\statuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\controllers\\statuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\migrations\\20240617080046_add_status_taable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20240617080046_add_status_taable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\repositeries\\arearepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\repositeries\\arearepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\migrations\\20240616191059_add user_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20240616191059_add user_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\repositeries\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\repositeries\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\migrations\\20240616184615_add_workitems_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20240616184615_add_workitems_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\entites\\workitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\entites\\workitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\migrations\\20240616195605_add forigenkey comments_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20240616195605_add forigenkey comments_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\entites\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\entites\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\migrations\\20240618092302_changing_iteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20240618092302_changing_iteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\entites\\links.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\entites\\links.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\migrations\\20240618091254_changing_iteration_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20240618091254_changing_iteration_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\entites\\comments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\entites\\comments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\migrations\\20240618082026_adding_new_tables_area_and_iteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20240618082026_adding_new_tables_area_and_iteration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\domainlayer\\models\\commentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD40720-894D-4785-BB2A-5471CDA37A2A}|DomainLayer\\BusinessLOgic.csproj|solutionrelative:domainlayer\\models\\commentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\irepositeries\\istatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\irepositeries\\istatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication1\\controllers\\areascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D07366-8C1E-4654-879C-EF15295664F4}|WebApplication1\\WebApplication.Api.csproj|solutionrelative:webapplication1\\controllers\\areascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|c:\\users\\athar\\.nuget\\packages\\bootstrap\\5.3.3\\contentfiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|c:\\users\\athar\\.nuget\\packages\\bootstrap\\5.3.3\\contentfiles\\any\\any\\wwwroot\\css\\bootstrap-grid.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|c:\\users\\athar\\.nuget\\packages\\bootstrap\\5.3.3\\contentfiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\wwwroot\\css\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\wwwroot\\css\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\irepositeries\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\irepositeries\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\uimodels\\uiworkitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\uimodels\\uiworkitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\irepositeries\\iworkitemsrespository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\irepositeries\\iworkitemsrespository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\webapplication.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E248D2CA-2677-4A56-8164-DD065D5C952E}|WebAPplication.UI\\WebAPplication.UI.csproj|solutionrelative:webapplication.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|d:\\adtechsource\\repos\\new_repository\\ceruleandevops_a_projectmanagement_tool\\dal\\migrations\\20240626163724_adding_user_to_workitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0960603E-80BF-4CF2-8DD3-90A972B9A56E}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20240626163724_adding_user_to_workitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -277,7 +207,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -289,159 +219,172 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WorkItem.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\WorkItem.cs",
-              "RelativeDocumentMoniker": "DAL\\Entites\\WorkItem.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\WorkItem.cs",
-              "RelativeToolTip": "DAL\\Entites\\WorkItem.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAA7wB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T18:04:28.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\Irepositeries\\IUserRepository.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IUserRepository.cs",
-              "RelativeToolTip": "DAL\\Irepositeries\\IUserRepository.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAYwBAAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T20:23:14.759Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WorkItemRepository.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\WorkItemRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\repositeries\\WorkItemRepository.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\WorkItemRepository.cs",
-              "RelativeToolTip": "DAL\\repositeries\\WorkItemRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAEEAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T20:39:32.734Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WebApplication.Api.csproj",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\WebApplication.Api.csproj",
-              "RelativeDocumentMoniker": "WebApplication1\\WebApplication.Api.csproj",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\WebApplication.Api.csproj",
-              "RelativeToolTip": "WebApplication1\\WebApplication.Api.csproj",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAUAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-17T06:03:55.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WebAPplication.UI.csproj",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\WebAPplication.UI.csproj",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\WebAPplication.UI.csproj",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\WebAPplication.UI.csproj",
-              "RelativeToolTip": "WebAPplication.UI\\WebAPplication.UI.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAiwBQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-20T05:54:15.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "NewWorkItem.razor",
               "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\NewWorkItem.razor",
               "RelativeDocumentMoniker": "WebAPplication.UI\\Pages\\NewWorkItem.razor",
               "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\NewWorkItem.razor",
               "RelativeToolTip": "WebAPplication.UI\\Pages\\NewWorkItem.razor",
-              "ViewState": "AQIAABcAAAAAAAAAAAAIwH4AAAAIAAAA",
+              "ViewState": "AQIAAMMAAAAAAAAAAAAcwNcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T05:50:20.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T16:06:26.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UiWorkItem.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\UiModels\\UiWorkItem.cs",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\UiModels\\UiWorkItem.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\UiModels\\UiWorkItem.cs",
-              "RelativeToolTip": "WebAPplication.UI\\UiModels\\UiWorkItem.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAkAAAAlAAAA",
+              "DocumentIndex": 5,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "WebAPplication.UI\\Pages\\Counter.razor",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\Counter.razor",
+              "RelativeToolTip": "WebAPplication.UI\\Pages\\Counter.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-26T13:41:46.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Comments.razor",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\Comments.razor",
+              "RelativeDocumentMoniker": "WebAPplication.UI\\Pages\\Comments.razor",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\Comments.razor",
+              "RelativeToolTip": "WebAPplication.UI\\Pages\\Comments.razor",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAcwEQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-26T20:13:57.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User_Sevices.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\User_Sevices.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\sevices\\User_Sevices.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\User_Sevices.cs",
+              "RelativeToolTip": "DomainLayer\\sevices\\User_Sevices.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T05:22:11.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T15:25:34.456Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Comments_sevices.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\Comments_sevices.cs",
-              "RelativeDocumentMoniker": "DomainLayer\\sevices\\Comments_sevices.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\Comments_sevices.cs",
-              "RelativeToolTip": "DomainLayer\\sevices\\Comments_sevices.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T20:15:12.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "WorkItems_Services.cs",
               "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\WorkItems_Services.cs",
               "RelativeDocumentMoniker": "DomainLayer\\sevices\\WorkItems_Services.cs",
               "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\WorkItems_Services.cs",
               "RelativeToolTip": "DomainLayer\\sevices\\WorkItems_Services.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAYwCQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAIAwwC8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T20:14:31.66Z",
+              "WhenOpened": "2024-06-26T15:26:57.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IterationService.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\IterationService.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\sevices\\IterationService.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\IterationService.cs",
+              "RelativeToolTip": "DomainLayer\\sevices\\IterationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T20:03:15.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Comments_sevices.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\Comments_sevices.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\sevices\\Comments_sevices.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\Comments_sevices.cs",
+              "RelativeToolTip": "DomainLayer\\sevices\\Comments_sevices.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAuwCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T19:50:58.629Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UpdateWorkItem.razor",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\UpdateWorkItem.razor",
+              "RelativeDocumentMoniker": "WebAPplication.UI\\Pages\\UpdateWorkItem.razor",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\UpdateWorkItem.razor",
+              "RelativeToolTip": "WebAPplication.UI\\Pages\\UpdateWorkItem.razor",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-27T11:32:02.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ListofWorkItems.razor",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\ListofWorkItems.razor",
+              "RelativeDocumentMoniker": "WebAPplication.UI\\Pages\\ListofWorkItems.razor",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\ListofWorkItems.razor",
+              "RelativeToolTip": "WebAPplication.UI\\Pages\\ListofWorkItems.razor",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-26T07:23:36.919Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\UserRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\repositeries\\UserRepository.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\UserRepository.cs",
-              "RelativeToolTip": "DAL\\repositeries\\UserRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Class1.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\Class1.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Class1.cs",
+              "RelativeToolTip": "DomainLayer\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T20:39:46.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "StatusRepository.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\StatusRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\repositeries\\StatusRepository.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\StatusRepository.cs",
-              "RelativeToolTip": "DAL\\repositeries\\StatusRepository.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAawBUAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T05:30:05.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T20:08:17.737Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "CommentRepository.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\CommentRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\repositeries\\CommentRepository.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\CommentRepository.cs",
-              "RelativeToolTip": "DAL\\repositeries\\CommentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAJAAAA",
+              "Title": "IWorkItemAPiCall.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\IApicall\\IWorkItemAPiCall.cs",
+              "RelativeDocumentMoniker": "WebAPplication.UI\\IApicall\\IWorkItemAPiCall.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\IApicall\\IWorkItemAPiCall.cs",
+              "RelativeToolTip": "WebAPplication.UI\\IApicall\\IWorkItemAPiCall.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T20:40:01.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T16:42:12.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WorkItemRepository.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\WorkItemRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\repositeries\\WorkItemRepository.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\WorkItemRepository.cs",
+              "RelativeToolTip": "DAL\\repositeries\\WorkItemRepository.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAwwA4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T13:44:53.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "WorkItemModel.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\WorkItemModel.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\Models\\WorkItemModel.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\WorkItemModel.cs",
+              "RelativeToolTip": "DomainLayer\\Models\\WorkItemModel.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwAgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T07:15:14.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "libman.json",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\libman.json",
+              "RelativeDocumentMoniker": "WebAPplication.UI\\libman.json",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\libman.json",
+              "RelativeToolTip": "WebAPplication.UI\\libman.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-27T07:29:33.113Z"
             },
             {
               "$type": "Document",
@@ -451,495 +394,325 @@
               "RelativeDocumentMoniker": "WebAPplication.UI\\Apicall\\WorkItemCall.cs",
               "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Apicall\\WorkItemCall.cs",
               "RelativeToolTip": "WebAPplication.UI\\Apicall\\WorkItemCall.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABQAAABdAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAqwFYAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T06:13:04.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ListofWorkItems.razor",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\ListofWorkItems.razor",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\Pages\\ListofWorkItems.razor",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\ListofWorkItems.razor",
-              "RelativeToolTip": "WebAPplication.UI\\Pages\\ListofWorkItems.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T05:55:57.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Counter.razor",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\Counter.razor",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\Pages\\Counter.razor",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\Counter.razor",
-              "RelativeToolTip": "WebAPplication.UI\\Pages\\Counter.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T07:42:27.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T16:42:35.743Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Areas.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\Areas.cs",
-              "RelativeDocumentMoniker": "DAL\\Entites\\Areas.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\Areas.cs",
-              "RelativeToolTip": "DAL\\Entites\\Areas.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAkwA4AAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T07:51:26.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Comments.razor",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\Comments.razor",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\Pages\\Comments.razor",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\Comments.razor",
-              "RelativeToolTip": "WebAPplication.UI\\Pages\\Comments.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "WebAPplication.UI\\Layout\\NavMenu.razor",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "WebAPplication.UI\\Layout\\NavMenu.razor",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABQAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-21T08:57:11.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T05:23:41.403Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Program.cs",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\Program.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Program.cs",
-              "RelativeToolTip": "WebAPplication.UI\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T05:50:37.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "App.razor",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\App.razor",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\App.razor",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\App.razor",
-              "RelativeToolTip": "WebAPplication.UI\\App.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T05:52:00.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\_Imports.razor",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\_Imports.razor",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\_Imports.razor",
-              "RelativeToolTip": "WebAPplication.UI\\_Imports.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T05:52:44.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "WorkItemModel.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\WorkItemModel.cs",
-              "RelativeDocumentMoniker": "DomainLayer\\Models\\WorkItemModel.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\WorkItemModel.cs",
-              "RelativeToolTip": "DomainLayer\\Models\\WorkItemModel.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAsAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T06:33:44.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "WorkItemModelWIthId.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\WorkItemModelWIthId.cs",
-              "RelativeDocumentMoniker": "DomainLayer\\Models\\WorkItemModelWIthId.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\WorkItemModelWIthId.cs",
-              "RelativeToolTip": "DomainLayer\\Models\\WorkItemModelWIthId.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T06:11:47.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
               "Title": "WorkItemController.cs",
               "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Controllers\\WorkItemController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\WorkItemController.cs",
               "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Controllers\\WorkItemController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\WorkItemController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAA3wCsAAAAMAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwD4AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T05:56:11.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T15:36:06.643Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Program.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Program.cs",
-              "RelativeToolTip": "WebApplication1\\Program.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAqwBoAAAAjAAAA",
+              "DocumentIndex": 15,
+              "Title": "WorkItemModelWIthId.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\WorkItemModelWIthId.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\Models\\WorkItemModelWIthId.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\WorkItemModelWIthId.cs",
+              "RelativeToolTip": "DomainLayer\\Models\\WorkItemModelWIthId.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAYwBQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T06:33:14.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T07:15:23.541Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "WebApplication1.http",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\WebApplication1.http",
-              "RelativeDocumentMoniker": "WebApplication1\\WebApplication1.http",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\WebApplication1.http",
-              "RelativeToolTip": "WebApplication1\\WebApplication1.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-06-17T07:16:47.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IWorkItemsRespository.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IWorkItemsRespository.cs",
-              "RelativeDocumentMoniker": "DAL\\Irepositeries\\IWorkItemsRespository.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IWorkItemsRespository.cs",
-              "RelativeToolTip": "DAL\\Irepositeries\\IWorkItemsRespository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAuwA4AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T20:17:15.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Status.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\Status.cs",
-              "RelativeDocumentMoniker": "DAL\\Entites\\Status.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\Status.cs",
-              "RelativeToolTip": "DAL\\Entites\\Status.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T07:53:27.662Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Comments.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\Comments.cs",
-              "RelativeDocumentMoniker": "DAL\\Entites\\Comments.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\Comments.cs",
-              "RelativeToolTip": "DAL\\Entites\\Comments.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAA8wBQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T18:04:38.692Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Iterations.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\Iterations.cs",
-              "RelativeDocumentMoniker": "DAL\\Entites\\Iterations.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\Iterations.cs",
-              "RelativeToolTip": "DAL\\Entites\\Iterations.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAAABEAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T07:51:34.611Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\User.cs",
-              "RelativeDocumentMoniker": "DAL\\Entites\\User.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\User.cs",
-              "RelativeToolTip": "DAL\\Entites\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T18:04:01.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "IcommentRepository.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IcommentRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\Irepositeries\\IcommentRepository.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IcommentRepository.cs",
-              "RelativeToolTip": "DAL\\Irepositeries\\IcommentRepository.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAIwAwAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T09:00:28.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "StatusService.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\StatusService.cs",
-              "RelativeDocumentMoniker": "DomainLayer\\sevices\\StatusService.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\StatusService.cs",
-              "RelativeToolTip": "DomainLayer\\sevices\\StatusService.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAuwBgAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T05:34:09.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "User_Sevices.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\User_Sevices.cs",
-              "RelativeDocumentMoniker": "DomainLayer\\sevices\\User_Sevices.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\sevices\\User_Sevices.cs",
-              "RelativeToolTip": "DomainLayer\\sevices\\User_Sevices.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T20:14:53.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "20240617194051_adding_status_fk.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240617194051_adding_status_fk.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20240617194051_adding_status_fk.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240617194051_adding_status_fk.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20240617194051_adding_status_fk.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T19:40:51.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "DAL.csproj",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\DAL.csproj",
-              "RelativeDocumentMoniker": "DAL\\DAL.csproj",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\DAL.csproj",
-              "RelativeToolTip": "DAL\\DAL.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-16T13:29:13.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "CommentModel.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\CommentModel.cs",
-              "RelativeDocumentMoniker": "DomainLayer\\Models\\CommentModel.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\CommentModel.cs",
-              "RelativeToolTip": "DomainLayer\\Models\\CommentModel.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAUwA0AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T09:02:23.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "StatusController.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Controllers\\StatusController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\StatusController.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Controllers\\StatusController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\StatusController.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAgwCEAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T05:37:26.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Class1.cs",
-              "RelativeDocumentMoniker": "DomainLayer\\Class1.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Class1.cs",
-              "RelativeToolTip": "DomainLayer\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T10:05:15.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "BusinessLOgic.csproj",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\BusinessLOgic.csproj",
-              "RelativeDocumentMoniker": "DomainLayer\\BusinessLOgic.csproj",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\BusinessLOgic.csproj",
-              "RelativeToolTip": "DomainLayer\\BusinessLOgic.csproj",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAiwBYAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-17T05:55:45.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 19,
               "Title": "IStatusService.cs",
               "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\IServices\\IStatusService.cs",
               "RelativeDocumentMoniker": "DomainLayer\\IServices\\IStatusService.cs",
               "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\IServices\\IStatusService.cs",
               "RelativeToolTip": "DomainLayer\\IServices\\IStatusService.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAiwAoAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T05:33:15.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "20240621094422_adding_dates_workitem.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240621094422_adding_dates_workitem.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20240621094422_adding_dates_workitem.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240621094422_adding_dates_workitem.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20240621094422_adding_dates_workitem.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T09:44:22.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "20240621094227_creatiingcomments.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240621094227_creatiingcomments.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20240621094227_creatiingcomments.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240621094227_creatiingcomments.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20240621094227_creatiingcomments.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T09:42:28.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T15:28:28.602Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "WorkItemsDbContext.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Dbcontext\\WorkItemsDbContext.cs",
-              "RelativeDocumentMoniker": "DAL\\Dbcontext\\WorkItemsDbContext.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Dbcontext\\WorkItemsDbContext.cs",
-              "RelativeToolTip": "DAL\\Dbcontext\\WorkItemsDbContext.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwB4AAAA5AAAA",
+              "DocumentIndex": 20,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\IServices\\IUserService.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\IServices\\IUserService.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\IServices\\IUserService.cs",
+              "RelativeToolTip": "DomainLayer\\IServices\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T18:08:39.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T13:46:39.803Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\appsettings.json",
-              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\appsettings.json",
-              "RelativeToolTip": "WebApplication1\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-16T18:34:25.431Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 21,
               "Title": "IWorkItemServices.cs",
               "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\IServices\\IWorkItemServices.cs",
               "RelativeDocumentMoniker": "DomainLayer\\IServices\\IWorkItemServices.cs",
               "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\IServices\\IWorkItemServices.cs",
               "RelativeToolTip": "DomainLayer\\IServices\\IWorkItemServices.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAtwBUAAAAZAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T06:19:42.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T09:08:41.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "IStatusRepository.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IStatusRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\Irepositeries\\IStatusRepository.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IStatusRepository.cs",
-              "RelativeToolTip": "DAL\\Irepositeries\\IStatusRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAATAAAA",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAC8AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T05:29:09.313Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T16:52:36.369Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "20240621091546_init.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240621091546_init.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20240621091546_init.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240621091546_init.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20240621091546_init.cs",
+              "DocumentIndex": 22,
+              "Title": "ICommentService.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\IServices\\ICommentService.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\IServices\\ICommentService.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\IServices\\ICommentService.cs",
+              "RelativeToolTip": "DomainLayer\\IServices\\ICommentService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T19:49:59.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\Models\\UserModel.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\UserModel.cs",
+              "RelativeToolTip": "DomainLayer\\Models\\UserModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T16:04:32.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "StatusModelWithoutId.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\StatusModelWithoutId.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\Models\\StatusModelWithoutId.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\StatusModelWithoutId.cs",
+              "RelativeToolTip": "DomainLayer\\Models\\StatusModelWithoutId.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T09:15:46.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T16:04:58.437Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "20240618092439_changingarea.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240618092439_changingarea.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20240618092439_changingarea.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240618092439_changingarea.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20240618092439_changingarea.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAZAAAA",
+              "DocumentIndex": 25,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\MappingProfile.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\MappingProfile.cs",
+              "RelativeToolTip": "WebApplication1\\MappingProfile.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAqwBoAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T09:24:39.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T16:05:25.428Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 26,
+              "Title": "WebAPplication.UI.csproj",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\WebAPplication.UI.csproj",
+              "RelativeDocumentMoniker": "WebAPplication.UI\\WebAPplication.UI.csproj",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\WebAPplication.UI.csproj",
+              "RelativeToolTip": "WebAPplication.UI\\WebAPplication.UI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-26T17:18:15.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "USerController.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Controllers\\USerController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\USerController.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Controllers\\USerController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\USerController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T15:30:26.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\UserRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\repositeries\\UserRepository.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\UserRepository.cs",
+              "RelativeToolTip": "DAL\\repositeries\\UserRepository.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwCIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T13:44:24.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "StatusRepository.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\StatusRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\repositeries\\StatusRepository.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\StatusRepository.cs",
+              "RelativeToolTip": "DAL\\repositeries\\StatusRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T15:29:18.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AreaRepository.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\AreaRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\repositeries\\AreaRepository.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\AreaRepository.cs",
+              "RelativeToolTip": "DAL\\repositeries\\AreaRepository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:25:11.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "StatusController.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Controllers\\StatusController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\StatusController.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Controllers\\StatusController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\StatusController.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAEwDIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T15:30:31.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CommentRepository.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\CommentRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\repositeries\\CommentRepository.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\repositeries\\CommentRepository.cs",
+              "RelativeToolTip": "DAL\\repositeries\\CommentRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T19:47:19.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "WorkItem.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\WorkItem.cs",
+              "RelativeDocumentMoniker": "DAL\\Entites\\WorkItem.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\WorkItem.cs",
+              "RelativeToolTip": "DAL\\Entites\\WorkItem.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA1wBkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T13:43:44.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\User.cs",
+              "RelativeDocumentMoniker": "DAL\\Entites\\User.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\User.cs",
+              "RelativeToolTip": "DAL\\Entites\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T13:43:04.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
               "Title": "LInks.cs",
               "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\LInks.cs",
               "RelativeDocumentMoniker": "DAL\\Entites\\LInks.cs",
               "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\LInks.cs",
               "RelativeToolTip": "DAL\\Entites\\LInks.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T19:57:34.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "Home.razor",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\Pages\\Home.razor",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Pages\\Home.razor",
-              "RelativeToolTip": "WebAPplication.UI\\Pages\\Home.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T06:13:26.527Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T16:04:44.153Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 36,
+              "Title": "Comments.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\Comments.cs",
+              "RelativeDocumentMoniker": "DAL\\Entites\\Comments.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Entites\\Comments.cs",
+              "RelativeToolTip": "DAL\\Entites\\Comments.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T20:04:40.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "CommentModel.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\CommentModel.cs",
+              "RelativeDocumentMoniker": "DomainLayer\\Models\\CommentModel.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\Models\\CommentModel.cs",
+              "RelativeToolTip": "DomainLayer\\Models\\CommentModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T19:57:20.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "CommentController.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Controllers\\CommentController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\CommentController.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Controllers\\CommentController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\CommentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T19:53:13.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IStatusRepository.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IStatusRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Irepositeries\\IStatusRepository.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IStatusRepository.cs",
+              "RelativeToolTip": "DAL\\Irepositeries\\IStatusRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T16:34:46.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "AreasController.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Controllers\\AreasController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AreasController.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\Controllers\\AreasController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\AreasController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwCMAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T19:53:39.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
               "Title": "bootstrap.min.css",
               "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
               "RelativeDocumentMoniker": "WebAPplication.UI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
@@ -947,210 +720,100 @@
               "RelativeToolTip": "WebAPplication.UI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-21T08:59:18.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T17:21:33.316Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "app.css",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\css\\app.css",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\wwwroot\\css\\app.css",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\css\\app.css",
-              "RelativeToolTip": "WebAPplication.UI\\wwwroot\\css\\app.css",
+              "DocumentIndex": 42,
+              "Title": "bootstrap-grid.css",
+              "DocumentMoniker": "C:\\Users\\athar\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.css",
+              "ToolTip": "C:\\Users\\athar\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.css [Read Only]",
+              "ViewState": "AQIAAOcDAAAAAAAAACBjwIcCAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-26T17:21:37.318Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "bootstrap-reboot.css",
+              "DocumentMoniker": "C:\\Users\\athar\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.css",
+              "ToolTip": "C:\\Users\\athar\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.css [Read Only]",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-21T08:59:29.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T17:21:38.435Z",
+              "EditorCaption": " [Read Only]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\Layout\\NavMenu.razor",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "WebAPplication.UI\\Layout\\NavMenu.razor",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T05:54:51.013Z",
-              "EditorCaption": ""
+              "DocumentIndex": 41,
+              "Title": "bootstrap-utilities.css",
+              "DocumentMoniker": "C:\\Users\\athar\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.css",
+              "ToolTip": "C:\\Users\\athar\\.nuget\\packages\\bootstrap\\5.3.3\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.css [Read Only]",
+              "ViewState": "AQIAAK4AAAAAAAAAACBjwLwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-26T17:22:25.508Z",
+              "EditorCaption": " [Read Only]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "IWorkItemAPiCall.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\IApicall\\IWorkItemAPiCall.cs",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\IApicall\\IWorkItemAPiCall.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\IApicall\\IWorkItemAPiCall.cs",
-              "RelativeToolTip": "WebAPplication.UI\\IApicall\\IWorkItemAPiCall.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAuwAsAAAAAAAAA",
+              "DocumentIndex": 45,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Irepositeries\\IUserRepository.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IUserRepository.cs",
+              "RelativeToolTip": "DAL\\Irepositeries\\IUserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T06:09:44.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T13:44:03.687Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\MappingProfile.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebApplication1\\MappingProfile.cs",
-              "RelativeToolTip": "WebApplication1\\MappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAxAAAA",
+              "DocumentIndex": 46,
+              "Title": "UiWorkItem.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\UiModels\\UiWorkItem.cs",
+              "RelativeDocumentMoniker": "WebAPplication.UI\\UiModels\\UiWorkItem.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\UiModels\\UiWorkItem.cs",
+              "RelativeToolTip": "WebAPplication.UI\\UiModels\\UiWorkItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T06:58:18.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T16:40:43.42Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "index.html",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\index.html",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\wwwroot\\index.html",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\index.html",
-              "RelativeToolTip": "WebAPplication.UI\\wwwroot\\index.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-20T05:52:34.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "icon-192.png",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\icon-192.png",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\wwwroot\\icon-192.png",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\icon-192.png",
-              "RelativeToolTip": "WebAPplication.UI\\wwwroot\\icon-192.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-06-20T05:52:39.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "favicon.png",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\favicon.png",
-              "RelativeDocumentMoniker": "WebAPplication.UI\\wwwroot\\favicon.png",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\favicon.png",
-              "RelativeToolTip": "WebAPplication.UI\\wwwroot\\favicon.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-06-20T05:52:41.579Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
-              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
-              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
-              "ViewState": "AQIAAN8BAAAAAAAAAAAMwOoBAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-06-18T08:19:03.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "20240618092302_changing_iteration.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240618092302_changing_iteration.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20240618092302_changing_iteration.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240618092302_changing_iteration.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20240618092302_changing_iteration.cs",
+              "DocumentIndex": 49,
+              "Title": "20240626163724_adding_user_to_workitems.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240626163724_adding_user_to_workitems.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\20240626163724_adding_user_to_workitems.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240626163724_adding_user_to_workitems.cs",
+              "RelativeToolTip": "DAL\\Migrations\\20240626163724_adding_user_to_workitems.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T09:23:02.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T16:37:24.811Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "20240618091254_changing_iteration_table.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240618091254_changing_iteration_table.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20240618091254_changing_iteration_table.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240618091254_changing_iteration_table.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20240618091254_changing_iteration_table.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBZwAAAAAAAAAAA",
+              "DocumentIndex": 47,
+              "Title": "IWorkItemsRespository.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IWorkItemsRespository.cs",
+              "RelativeDocumentMoniker": "DAL\\Irepositeries\\IWorkItemsRespository.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Irepositeries\\IWorkItemsRespository.cs",
+              "RelativeToolTip": "DAL\\Irepositeries\\IWorkItemsRespository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T09:12:54.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T15:27:55.004Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "20240618082026_adding_new_tables_area_and_iteration.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240618082026_adding_new_tables_area_and_iteration.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20240618082026_adding_new_tables_area_and_iteration.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240618082026_adding_new_tables_area_and_iteration.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20240618082026_adding_new_tables_area_and_iteration.cs",
+              "DocumentIndex": 48,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPplication.UI\\Program.cs",
+              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\Program.cs",
+              "RelativeToolTip": "WebAPplication.UI\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T08:20:27.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Class1.cs",
-              "RelativeDocumentMoniker": "DAL\\Class1.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Class1.cs",
-              "RelativeToolTip": "DAL\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T10:07:21.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "20240617080046_add_status_taable.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240617080046_add_status_taable.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20240617080046_add_status_taable.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240617080046_add_status_taable.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20240617080046_add_status_taable.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T08:00:46.979Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "20240616191059_Add User_table.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240616191059_Add User_table.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20240616191059_Add User_table.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240616191059_Add User_table.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20240616191059_Add User_table.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T19:11:00.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "20240616195605_Add ForigenKey Comments_table.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240616195605_Add ForigenKey Comments_table.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20240616195605_Add ForigenKey Comments_table.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240616195605_Add ForigenKey Comments_table.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20240616195605_Add ForigenKey Comments_table.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T19:56:05.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "20240616184615_Add_WorkItems_table.cs",
-              "DocumentMoniker": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240616184615_Add_WorkItems_table.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\20240616184615_Add_WorkItems_table.cs",
-              "ToolTip": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\Migrations\\20240616184615_Add_WorkItems_table.cs",
-              "RelativeToolTip": "DAL\\Migrations\\20240616184615_Add_WorkItems_table.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T18:46:15.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T16:06:18.438Z"
             }
           ]
         },

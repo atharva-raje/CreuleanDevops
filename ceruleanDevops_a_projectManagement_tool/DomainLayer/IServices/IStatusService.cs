@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLOgic.Models;
+using DAL.Entites;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,5 +11,7 @@ namespace BusinessLOgic.IServices
     public interface IStatusService
     {
         Task<int> GetStatusId(string name);
+        Task<IEnumerable<Status>> GetStatuses();
+        Task<string> GetStatusName(int statusId);
     }
 }

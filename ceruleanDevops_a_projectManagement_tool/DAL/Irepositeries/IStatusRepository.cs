@@ -10,5 +10,7 @@ namespace DAL.Irepositeries
     public interface IStatusRepository
     {
         Task<Status> GetStatusId(string name);
+        Task<IEnumerable<Status>> GetStatuses();
+        Task<Status> GetStatusName(int  statusId);
     }
 }

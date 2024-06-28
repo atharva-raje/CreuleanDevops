@@ -17,9 +17,20 @@ namespace DAL.repositeries
         {
             _workItemsDbContext = workItemsDbContext;
         }
+
+        public async Task<IEnumerable<Status>> GetStatuses()
+        {
+             return await _workItemsDbContext.statuses.ToListAsync();
+        }
+
         public async Task<Status> GetStatusId(string name)
         {
             return await _workItemsDbContext.statuses.FirstOrDefaultAsync(e => e.Name == name);
+        }
+
+        public async Task<Status> GetStatusName(int statusId)
+        {
+            return await _workItemsDbContext.statuses.FirstOrDefaultAsync(e => e.Id == statusId);
         }
     }
 }
