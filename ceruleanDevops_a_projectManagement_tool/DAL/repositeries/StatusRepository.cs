@@ -2,6 +2,7 @@
 using DAL.Entites;
 using DAL.Irepositeries;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,17 +21,22 @@ namespace DAL.repositeries
 
         public async Task<IEnumerable<Status>> GetStatuses()
         {
-             return await _workItemsDbContext.statuses.ToListAsync();
+             return await _workItemsDbContext.Statuses.ToListAsync();
+        }
+
+        public async Task<IEnumerable<Status>> GetStatusesByType(int typeid)
+        {
+            return await _workItemsDbContext.Statuses.Where(s => s.Type.TypeId == typeid).ToListAsync();
         }
 
         public async Task<Status> GetStatusId(string name)
         {
-            return await _workItemsDbContext.statuses.FirstOrDefaultAsync(e => e.Name == name);
+            return await _workItemsDbContext.Statuses.FirstOrDefaultAsync(e => e.StatusName == name);
         }
 
         public async Task<Status> GetStatusName(int statusId)
         {
-            return await _workItemsDbContext.statuses.FirstOrDefaultAsync(e => e.Id == statusId);
+            return await _workItemsDbContext.Statuses.FirstOrDefaultAsync(e => e.StatusId == statusId);
         }
     }
 }

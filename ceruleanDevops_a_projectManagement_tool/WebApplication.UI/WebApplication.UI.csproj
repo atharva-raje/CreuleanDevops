@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\UpdateWorkItem.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
      
     <PackageReference Include="Blazor.Bootstrap" Version="2.2.0" />
      
@@ -32,18 +28,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DomainLayer\BusinessLOgic.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\UpdateWorkItem.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\UpdateWorkItem.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\UpdateWorkItem.razor" />
   </ItemGroup>
 
  

@@ -22,6 +22,11 @@ namespace BusinessLOgic.sevices
             statusRepository = _statusRepository;
         }
 
+        public async Task<IEnumerable<Status>> GetStatusByType(int typeid)
+        {
+            return await statusRepository.GetStatusesByType(typeid);
+        }
+
         public async Task<IEnumerable<Status>> GetStatuses()
         {
             return await statusRepository.GetStatuses();
@@ -30,13 +35,13 @@ namespace BusinessLOgic.sevices
         public async Task<int> GetStatusId(string name)
         {
             var result = await statusRepository.GetStatusId(name);
-            return result.Id;
+            return result.StatusId;
         }
 
         public async Task<string> GetStatusName(int  statusId)
         {
             var result = await statusRepository.GetStatusName(statusId);
-            return result.Name;
+            return result.StatusName;
         }
     }
 }

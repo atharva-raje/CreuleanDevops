@@ -30,10 +30,10 @@ namespace WebApplication1.Controllers
             var model = _mapper.Map<IEnumerable<AreaWithoutId>>(result);
             return Ok(model);
         }
-        [HttpGet("{name}")]
-        public async Task<IActionResult> GetAreas(string name)
+        [HttpGet("name/{areaId}")]
+        public async Task<IActionResult> GetAreaIterations(int areaId)
         {
-            var result = await areaServices.GetAreaId(name);
+            var result = await areaServices.GetAreaName(areaId);
             return Ok(result);
         }
 

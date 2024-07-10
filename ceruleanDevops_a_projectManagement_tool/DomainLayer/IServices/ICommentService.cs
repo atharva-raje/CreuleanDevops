@@ -10,7 +10,7 @@ namespace BusinessLOgic.IServices
 {
     public  interface ICommentService
     {
-        Task<IEnumerable<Comments>> GetComments();
+        Task<IEnumerable<Comments>> GetCommentsById(string workItemId);
         Task<Comments> AddComment(CommentModel comment);
     }
 }

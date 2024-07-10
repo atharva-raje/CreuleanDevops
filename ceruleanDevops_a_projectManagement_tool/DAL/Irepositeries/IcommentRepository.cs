@@ -10,7 +10,6 @@ namespace DAL.Irepositeries
     public  interface IcommentRepository
     {
         Task<Comments> AddComment(Comments comments);
-        Task<IEnumerable<Comments>> GetComments();
-
+        Task<IEnumerable<Comments>> GetCommentsById(string worktiemId);
     }
 }

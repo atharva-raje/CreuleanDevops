@@ -1,0 +1,96 @@
+﻿@page "/upload/{id}"
+@inject HttpClient Http
+@using Apicall
+@using BusinessLOgic.Models
+@inject FileUploadApiCall fileUpload
+
+<h3>Upload Files</h3>
+<InputFile class="bi-menu-button" OnChange="UploadFiles" multiple />
+<p>@statusMessage</p>
+<h3>Attachments</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>ContentType</th>
+            <th>Date Attached</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var file in files)
+        {
+            <tr>
+                <td>@file.FileName</td>
+                <td>@file.SizeFormatted</td>
+                <td>@file.ContentType</td>
+                <td>@file.UploadDate.ToString("g")</td>
+                 
+            </tr>
+        }
+    </tbody>
+</table>
+@code {
+    private ElementReference inputFile;
+    private string statusMessage;
+    private List<FileModel> files = new List<FileModel>();
+    [Parameter] public string id { get; set;}
+
+    private async Task UploadFiles(InputFileChangeEventArgs e)
+    {
+        var inputFileChangeEventArgs = e as InputFileChangeEventArgs;
+        var files = inputFileChangeEventArgs?.GetMultipleFiles();
+        if (files == null || files.Count == 0)
+        {
+            statusMessage = "No files selected.";
+            return;
+        }
+
+        using var content = new MultipartFormDataContent();
+        content.Add(new StringContent(id.ToString()), "workItemId");
+
+        foreach (var file in files)
+        {
+            var fileContent = new StreamContent(file.OpenReadStream(1024 * 1024 * 20)); // 20 MB limit
+            fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(file.ContentType);
+            content.Add(fileContent, "files", file.Name);
+        }
+
+        var result = await fileUpload.UploadFile(content);
+        if (result.IsSuccessStatusCode)
+        {
+            statusMessage = "Files uploaded successfully.";
+            await FetchFiles();
+        }
+        else
+        {
+            statusMessage = "File upload failed.";
+        }
+    }
+    private async Task FetchFiles()
+    {
+
+        var files1 = await fileUpload.GetFilesForWorkItem(id);
+        files = files1.ToList();
+    }
+    protected async  override Task OnInitializedAsync()
+    {
+        var files1 = await fileUpload.GetFilesForWorkItem(id);
+        files = files1.ToList();
+    }
+}
+<style>
+    .attachment-icon-container {
+        position: relative;
+        float: right;
+        margin-top: -2rem;
+        margin-right: 1rem;
+    }
+
+    .attachment-icon {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+</style>

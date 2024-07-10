@@ -1254,3 +1254,8 @@ D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\Web
 D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebAPplication.UI\bin\Debug\net8.0\BlazorBootstrap.dll
 D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebAPplication.UI\obj\Debug\net8.0\webcil\BlazorBootstrap.wasm
 D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebAPplication.UI\obj\Debug\net8.0\compressed\0xla6zpbin.gz
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebAPplication.UI\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Features.wasm
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebAPplication.UI\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Features.wasm.gz
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebAPplication.UI\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Features.dll
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebAPplication.UI\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Http.Features.wasm
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebAPplication.UI\obj\Debug\net8.0\compressed\20q2btyg7f.gz

@@ -4,6 +4,7 @@ using DAL.Irepositeries;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,9 +25,9 @@ namespace DAL.repositeries
             return result.Entity;
         }
 
-        public async Task<IEnumerable<Comments>> GetComments()
+        public async Task<IEnumerable<Comments>> GetCommentsById(string id)
         {
-            return await _workItemsDbContext.Comments.ToListAsync(); 
+            return  await _workItemsDbContext.Comments.Where(u => u.WorkItemId == id).ToListAsync(); 
         }
     }
 }

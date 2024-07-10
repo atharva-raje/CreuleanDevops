@@ -30,12 +30,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbWVudHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+[D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/FileUpload.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlsZVVwbG9hZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+[D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/Links.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlua3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/ListofWorkItems.razor]
@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/NewWorkItem.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3V29ya0l0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/UpdateWorkItem.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXBkYXRlV29ya0l0ZW0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/_Imports.razor]

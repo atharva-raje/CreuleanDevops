@@ -1,189 +1,206 @@
-﻿@page "/workitem"
+﻿@page "/UpdateWorkItem/{id}"
 @using Blazorise
 @using BusinessLOgic.Models
-@using Microsoft.AspNetCore.Components.Forms
-@using Apicall
+@using WebAPplication.UI.Apicall
 @using WebAPplication.UI.UiModels
-@inject WorkItemCall workitemcall
 @inject NavigationManager NavManager
-
+@inject WorkItemCall workitemcall
+@inject UserAPiCall usercall
 <Alert @ref="myAlert" Color="Color.Success">
     <AlertMessage>Success!</AlertMessage>
-    <AlertDescription>You successfully created a new Work-Item!</AlertDescription>
+    <AlertDescription>You successfully updated the Work-Item!</AlertDescription>
     <CloseButton />
 </Alert>
 <Alert @ref="myAlertFailed" Color="Color.Danger">
     <AlertMessage>Failed!</AlertMessage>
-    <AlertDescription>Failed to create a Work Item</AlertDescription>
+    <AlertDescription>Failed to update a Work Item</AlertDescription>
     <CloseButton />
 </Alert>
-<div class="container-fluid bg-primary-subtle">
-    <h3>Create Work-Item</h3>
-    <EditForm Model="uIWorkItem" OnSubmit="AddWorkitem">
-        <DataAnnotationsValidator />
-        <div class="form-row">
-            <div class="col-md-12  ">
-                <label class="fw-bold" for="name">Title</label>
-                <InputText id="name" class="form-control shadow" @bind-Value="uIWorkItem.name" />
-                <ValidationMessage For="@(() => uIWorkItem.name)" />
-            </div>
-        </div>
-        <br />
-        <div class="row">
-            <div class="col-md-12  ">
-                <label class="fw-bold" for="description">Description</label>
-                <InputTextArea id="description" class="form-control shadow" @bind-Value="uIWorkItem.description" />
-                <ValidationMessage For="@(() => uIWorkItem.description)" />
-            </div>
-        </div>
-        <br />
-        <div class="row">
-            <div class="col-md-3  ">
-                <label class="fw-bold" for="type">Type</label>
-                <InputText id="type" class="form-control shadow" @bind-Value="uIWorkItem.type" />
-                <ValidationMessage For="@(() => uIWorkItem.type)" />
-            </div>
-            <br />
-            <div class="col-md-3  ">
-                <label class="fw-bold" for="status">Status</label>
-                @*<InputText id="status" class="form-control" @bind-Value="uIWorkItem.status" />*@
-
-                <InputSelect id="statusSelect" class="form-control shadow" @bind-Value="uIWorkItem.status">
-                    <option hidden value="">Please select an status</option>
-                    @foreach (var status in statuses)
-                    {
-                        <option value="@status.Name">@status.Name</option>
-                    }
-                </InputSelect>
-                <ValidationMessage For="@(() => uIWorkItem.area)" />
-            </div>
-            <div class="col-md-3  ">
-                <label class="fw-bold" id="Priorityselect">Priority</label>
-                <InputSelect id="prioritySelect" class="form-control shadow" @bind-Value="uIWorkItem.priority">
-                    <option hidden value="">Please select an priority</option>
-                    <option value="@priorites[0]">High</option>
-                    <option value="@priorites[1]">Medium</option>
-                    <option value="@priorites[2]">Low</option>
-                </InputSelect>
-                <ValidationMessage For="@(() => uIWorkItem.priority)" />
-            </div>
-
-        </div>
-        <br />
-        <div class="row">
-
-            <div class="col-md-3 ">
-                <label class="fw-bold" for="area">Area</label>
-                @*<InputText id="area" class="form-control" @bind-Value="uIWorkItem.area" />*@
-                <InputSelect id="areaSelect" class="form-control  shadow" @bind-Value="uIWorkItem.area" @oninput=AreaSelected>
-                    <option hidden value="">Please select an area</option>
-                    @foreach (var area in areas)
-                    {
-                        <option value="@area.areaName">@area.areaName</option>
-                    }
-                </InputSelect>
-                <ValidationMessage For="@(() => uIWorkItem.area)" />
-            </div>
-
-            <br />
-
-            <div class="col-md-3  ">
-
-                <label class="fw-bold" for="iteration">Iteration</label>
-                <InputSelect id="iterationSelect" class="form-control  shadow" @bind-Value="uIWorkItem.iteration" Disabled="@(!iterations.Any())">
-                    <option hidden value="">Please select an iteration</option>
-                    @foreach (var iteration in iterations)
-                    {
-                        <option value="@iteration.IterationName">@iteration.IterationName</option>
-                    }
-                </InputSelect>
-                <ValidationMessage For="@(() => uIWorkItem.iteration)" />
-            </div>
-            <br />
-            <div class="col-md-3">
-                <label class="fw-bold" for="status">Assign User</label>
-                <InputSelect id="statusSelect" class="form-control shadow " @bind-Value="uIWorkItem.user">
-                    <option hidden value="">Please select an user</option>
-                    @foreach (var user in users)
-                    {
-                        <option value="@user.UserName"><i class="bi bi-person-circle"></i>@user.UserName</option>
-                    }
-                </InputSelect>
-                <ValidationMessage For="@(() => uIWorkItem.user)" />
-            </div>
-        </div>
-        <br />
-        <div class="row">
-            <div class="col-md-3  ">
-                <Label class="fw-bold" for="startdate">Start Date</Label>
-                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.startdate" />
-                <ValidationMessage For="@(() => uIWorkItem.startdate )" />
-
-            </div>
-            <br />
-            <div class="col-md-3 ">
-                <Label class="fw-bold" for="startdate">End Date</Label>
-                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.endate" />
-                <ValidationMessage For="@(() =>uIWorkItem.endate )" />
-
-            </div>
-        </div>
-        <br />
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </EditForm>
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Update Work-Item</h3>
+    <div class="d-flex">
+        <button class="btn btn-info me-2" @onclick="UploadAttachment">
+            <i class="fas fa-paperclip"></i> Attachments
+        </button>
+        <button class="btn btn-info" @onclick="AddLink">
+            <i class="fas fa-link"></i> Add Links
+        </button>
+    </div>
 </div>
+
+<EditForm Model="uIWorkItem" OnSubmit="UpdateWorkitem" >
+    <DataAnnotationsValidator />
+    <div class="form-row">
+            <div class="col-md-12  ">
+            <label class="fw-bold" for="name">Title</label>
+                <InputText id="name" class="form-control shadow" @bind-Value="uIWorkItem.Name" />
+            <ValidationMessage For="@(() => uIWorkItem.Name)" />
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+            <div class="col-md-12  ">
+            <label class="fw-bold" for="description">Description</label>
+                <InputTextArea id="description" class="form-control shadow" @bind-Value="uIWorkItem.Description" />
+            <ValidationMessage For="@(() => uIWorkItem.Description)" />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+            <div class="col-md-3  ">
+            <label class ="fw-bold" for="type">Type</label>
+            <InputSelect id="statusSelect" class="form-control shadow" @bind-Value="uIWorkItem.TypeId" @oninput=TypeSelected>
+                <option hidden value="">Please select an type</option>
+                @foreach (var type in types)
+                {
+                    <option value="@type.TypeId">@type.TypeName</option>
+                }
+            </InputSelect>
+            <ValidationMessage For="@(() => uIWorkItem.TypeId)" />
+        </div>
+        <br />
+            <div class="col-md-3  ">
+            <label class="fw-bold" for="status">Status</label>
+               <InputSelect id="statusSelect" class="form-control shadow" @bind-Value="uIWorkItem.StatusId" Disabled="@(!statuses.Any())">
+                    <option hidden value="">Please select an status</option>
+                @foreach (var status in statuses)
+                {
+                        <option value="@status.StatusId">@status.StatusName</option>
+                }
+            </InputSelect>
+                <ValidationMessage For="@(() => uIWorkItem.StatusId)" />
+        </div>
+            <div class="col-md-3  ">
+            <label class="fw-bold" id="Priorityselect">Priority</label>
+            <InputSelect id="prioritySelect" class="form-control shadow" @bind-Value="uIWorkItem.PriorityId">
+                <option hidden value="">Please select an priority</option>
+                @foreach (var priority in priorites)
+                {
+                    <option value="@priority.PriorityId">@priority.PritoryName</option>
+                }
+            </InputSelect>
+            <ValidationMessage For="@(() => uIWorkItem.PriorityId)" />
+        </div>
+         
+    </div>
+    <br />
+    <div class="row">
+
+            <div class="col-md-3 ">
+            <label class="fw-bold" for="area">Area</label>
+            
+            <InputSelect id="areaSelect" class="form-control  shadow" @bind-Value="uIWorkItem.AreaId" @oninput=AreaOnChanged>
+                    <option hidden value="">Please select an area</option>
+                @foreach (var area in areas)
+                {
+                    <option value="@area.Id">@area.AreaName</option>
+                }
+            </InputSelect>
+            <ValidationMessage For="@(() => uIWorkItem.AreaId)" />
+        </div>
+     
+         <br />
+
+            <div class="col-md-3  ">
+            
+            <label class="fw-bold" for="iteration">Iteration</label>
+                <InputSelect id="iterationSelect" class="form-control  shadow" @bind-Value="uIWorkItem.IterationId" Disabled="@(!iterations.Any())">
+                    <option hidden value="">Please select an iteration</option>
+                @foreach (var iteration in iterations)
+                {
+                    <option value="@iteration.IterationId"  >@iteration.IterationName</option>
+                }
+            </InputSelect>
+            <ValidationMessage For="@(() => uIWorkItem.IterationId)" />
+        </div>
+        <br />
+            <div class="col-md-3">
+            <label class="fw-bold" for="status">Assign User</label>
+                <InputSelect id="statusSelect" class="form-control shadow " @bind-Value="uIWorkItem.AssigneeName">
+                    <option hidden value="">Please select an user</option>
+                @foreach (var user in users)
+                {
+                        <option value="@user.UserName"><i class="bi bi-person-circle"></i>@user.UserName</option>
+                }
+            </InputSelect>
+            <ValidationMessage For="@(() => uIWorkItem.AssigneeName)" />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+            <div class="col-md-3  ">
+            <Label class="fw-bold" for="startdate">Created At</Label>
+                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ActualStartDate" />
+            <ValidationMessage For="@(() => uIWorkItem.ActualStartDate )" />
+             
+        </div>
+        <br />
+            <div class="col-md-3 ">
+                <Label class="fw-bold" for="enddate">Actual Due Date</Label>
+                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ActualEndDate" />
+            <ValidationMessage For="@(() =>uIWorkItem.ActualEndDate )" />
+             
+        </div>
+        <div class="col-md-3  ">
+            <Label class="fw-bold" for="ExpectedEndDate">Expected start Date</Label>
+            <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ExpectedStartDate" />
+            <ValidationMessage For="@(() => uIWorkItem.ExpectedStartDate)" />
+        </div>
+        <div class="col-md-3  ">
+            <Label class="fw-bold" for="ExpectedEndDate">Expected Due Date</Label>
+            <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ExpectedEndDate" />
+            <ValidationMessage For="@(() => uIWorkItem.ExpectedEndDate)" />
+        </div>
+
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Update</button>
+</EditForm>
 <br />
-<Comments></Comments>
-@*@if(saved)
-{
-
-    NavManager.NavigateTo("/ListWorkItems");
-}*@
-
+<Comments userId="@userid" workitemId="@(id)"></Comments>
+ <br />
 @code {
-    private string name;
-    private string description;
-    private string type;
-    private string area;
-    private string iteration;
-    private string status;
+    [Parameter] public string id{ get; set; }
     private List<StatusModelWithoutId> statuses = new List<StatusModelWithoutId>();
     private List<UserModel> users = new List<UserModel>();
-    private List<string> priorites = new List<string> { "high", "medium", "low" };
+    private List<PriorityModel> priorites = new List<PriorityModel>();
+    private List<TypeModel> types = new List<TypeModel>();
     public UIWorkItem uIWorkItem = new UIWorkItem();
     private bool saved = false;
+    private int userid;
     Alert myAlert;
     Alert myAlertFailed;
-
-
     private List<AreaWithoutId> areas = new List<AreaWithoutId>();
     private List<IterationWIthoutId> iterations = new List<IterationWIthoutId>();
-    private bool IsNameValid => !string.IsNullOrWhiteSpace(uIWorkItem.area);
-    private async Task AddWorkitem()
-
+    private async Task UpdateWorkitem()
     {
 
         try
         {
             saved = false;
-            var result = await workitemcall.AddWorkItem(uIWorkItem);
+            var result = await workitemcall.UpdateWorkItem(uIWorkItem);
             Console.WriteLine("Modal shown");
             saved = true;
-            @*NavManager.NavigateTo("/workitem", forceLoad: true);*@
+            //NavManager.NavigateTo("/UpdateWorkItem/{id}", forceLoad: true);
             if (result.IsSuccessStatusCode)
             {
                 myAlert.Show();
-
-                uIWorkItem = new UIWorkItem
-                    {
-                        startdate = DateTime.Today,
-                        endate = DateTime.Today
-                    };
+                uIWorkItem = await workitemcall.GetWorkItemById(id);
+                userid = await usercall.GetUserIdByName(uIWorkItem.AssigneeName);
+                var areas1 = await workitemcall.GetAreas();
+                areas = areas1.ToList();
+                var t = await workitemcall.GetTypeModels();
+                types = t.ToList();
+                var p = await workitemcall.GetPriorityModels();
+                priorites = p.ToList();
+                var u = await workitemcall.GetUsers();
+                users = u.ToList();
                 StateHasChanged();
             }
             else
             {
                 myAlertFailed.Show();
+                StateHasChanged();
             }
         }
         catch (Exception ex)
@@ -191,25 +208,65 @@
             Console.WriteLine(ex.Message);
         }
     }
-    private async void AreaSelected(ChangeEventArgs e)
+    private async void TypeSelected(ChangeEventArgs e)
     {
-        var AreaSelected = e.Value.ToString();
-        var iterations1 = await workitemcall.Getiterations(AreaSelected);
-        iterations = iterations1.ToList();
+        var typeSelected = Int32.Parse(e.Value.ToString());
+        await TypeSelected(typeSelected);
+
+    }
+    private async Task TypeSelected(int typeSelected)
+    {
+        var statuses1 = await workitemcall.GetStatusModels(typeSelected);
+        statuses = statuses1.ToList();
+        if (!statuses.Any(status => status.StatusId == uIWorkItem.StatusId))
+        {
+            uIWorkItem.StatusId = null;
+        }
         StateHasChanged();
 
     }
+    private async void AreaOnChanged(ChangeEventArgs e)
+    {
+        var areaSelected = Int32.Parse(e.Value.ToString());
+        await AreaSelected(areaSelected);
 
+    }
+    private async Task AreaSelected(int areaSelected)
+    {
+        var iterations1 = await workitemcall.Getiterations(areaSelected);
+        iterations = iterations1.ToList();
+        if (!iterations.Any(iteration => iteration.IterationId == uIWorkItem.IterationId))
+        {
+            uIWorkItem.IterationId = null;
+        }
+        StateHasChanged();
+    }
+
+    private async Task UploadAttachment()
+    {
+        NavManager.NavigateTo($"/upload/{id}");
+    }
+    private async Task  AddLink()
+    {
+        NavManager.NavigateTo($"/linkworkitems");
+    }
     protected override async Task OnInitializedAsync()
     {
+        uIWorkItem = await workitemcall.GetWorkItemById(id);
         var areas1 = await workitemcall.GetAreas();
         areas = areas1.ToList();
-        var s = await workitemcall.GetStatusModels();
-        statuses = s.ToList();
-        uIWorkItem.startdate = DateTime.Today;
-        uIWorkItem.endate = DateTime.Today;
+        var t = await workitemcall.GetTypeModels();
+        types = t.ToList();
+        var p = await workitemcall.GetPriorityModels();
+        priorites = p.ToList();
+        await AreaSelected(uIWorkItem.AreaId);
+        await TypeSelected(uIWorkItem.TypeId);
+        userid = await usercall.GetUserIdByName(uIWorkItem.AssigneeName);
+        uIWorkItem.ExpectedStartDate = DateTime.Now;
+        uIWorkItem.ExpectedEndDate = DateTime.Now;
         var u = await workitemcall.GetUsers();
         users = u.ToList();
     }
-
 }
+
+

@@ -1,0 +1,97 @@
+﻿@* @page "/linkworkitems"
+@using Blazorise
+@using BusinessLOgic.Models
+@using Microsoft.AspNetCore.Components.Forms
+@using Apicall
+@using WebAPplication.UI.UiModels
+@inject WorkItemCall workitemcall
+@inject NavigationManager NavManager
+@inject WorkItemLinkApiCall linkcall
+
+<PageTitle>Link Work Items</PageTitle>
+
+<div class="container mt-4">
+    <h1 class="mb-4">Link Work Items</h1>
+
+    <div class="row mb-3">
+        <div class="col">
+            <label for="sourceWorkItem" class="form-label">Linking From</label>
+            <select id="sourceWorkItem" class="form-select" @bind="sourceWorkItemId">
+                <option value="">Select a work item</option>
+                @foreach (var item in workItems)
+                {
+                    <option value="@item.Id">@item.Name (@item.UniqueKey)</option>
+                }
+            </select>
+        </div>
+        <div class="col">
+            <label for="targetWorkItem" class="form-label">Linking To</label>
+            <select id="targetWorkItem" class="form-select" @bind="targetWorkItemId">
+                <option value="">Select a work item</option>
+                @foreach (var item in workItems)
+                {
+                    <option value="@item.Id">@item.Name (@item.UniqueKey)</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col">
+            <label for="linkType" class="form-label">Link Type</label>
+            <select id="targetWorkItem" class="form-select" @bind="linkType">
+                <option typeof="">Select a type</option>
+                <option value="Parent">Parent</option>
+                <option value="Child">Child</option>
+                <option value="Related">Related</option>            
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" @onclick="LinkWorkItems">Link Work Items</button>
+        </div>
+    </div>
+
+    @if (linkingResult != null)
+    {
+        <div class="row mt-3">
+            <div class="col">
+                <div class="alert @linkingResultClass">
+                    @linkingResult
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private List<WorkItemModel> workItems = new List<WorkItemModel>();
+    private int sourceWorkItemId;
+    private int targetWorkItemId;
+    private string linkType;
+    private string linkingResult;
+    private string linkingResultClass;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var workItems1 = await workitemcall.GetWorkItems();
+        workItems = workItems1.ToList();
+    }
+
+    private async Task LinkWorkItems()
+    {
+        var result = await linkcall.LinkWorkItems(sourceWorkItemId, targetWorkItemId, linkType);
+        if (result)
+        {
+            linkingResult = "Work items linked successfully.";
+            linkingResultClass = "alert-success";
+        }
+        else
+        {
+            linkingResult = "Failed to link work items.";
+            linkingResultClass = "alert-danger";
+        }
+    }
+} *@

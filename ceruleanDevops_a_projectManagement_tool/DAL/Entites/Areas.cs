@@ -11,7 +11,8 @@ namespace DAL.Entites
     {
        
         public int Id { get; set; }
-        public string areaName { get; set; }
-        public ICollection<Iterations> iterations { get; set; }
+        public string AreaName { get; set; }
+        public ICollection<Iterations> Iterations { get; set; }
+        public ICollection<WorkItem> WorkItems { get; set; }    
     }
 }

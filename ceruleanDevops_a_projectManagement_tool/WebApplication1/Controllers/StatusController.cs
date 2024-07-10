@@ -49,5 +49,12 @@ namespace WebApplication1.Controllers
             var result = await statusService.GetStatusName(statusId);
             return Ok(result);
         }
+        [HttpGet("{typeId}")]
+        public async Task<IActionResult> GetStatusByType(int typeId)
+        {
+            var result = await statusService.GetStatusByType(typeId);
+            var model = _mapper.Map<IEnumerable<StatusModelWithoutId>>(result);
+            return Ok(model);
+        }
     }
 }

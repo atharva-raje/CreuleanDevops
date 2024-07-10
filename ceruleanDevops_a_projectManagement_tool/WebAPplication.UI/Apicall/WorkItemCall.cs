@@ -1,7 +1,9 @@
-﻿using AutoMapper.Execution;
+﻿using AutoMapper;
+using AutoMapper.Execution;
 using Azure.Core;
 using BusinessLOgic.Models;
 using DAL.Entites;
+using Microsoft.Identity.Client;
 using System.Net.Http.Json;
 using System.Runtime.CompilerServices;
 using WebAPplication.UI.IApicall;
@@ -13,34 +15,24 @@ namespace WebAPplication.UI.Apicall
 {
     public class WorkItemCall : IWorkItemAPiCall
     {
+        private readonly IMapper _mapper;
         private readonly HttpClient _httpClient;
-        public WorkItemCall(HttpClient httpClient)
+        public WorkItemCall(HttpClient httpClient,IMapper mapper)
         {
             _httpClient = httpClient;
+            _mapper = mapper;
         }
 
         public async Task<HttpResponseMessage> AddWorkItem(UIWorkItem uiWorkItem)
         {
-            var sid = await _httpClient.GetFromJsonAsync<int>($"api/status/name/{uiWorkItem.status}");
-            WorkItemModel newWorkItem = new WorkItemModel
-            {
-                Name = uiWorkItem.name,
-                Description = uiWorkItem.description,
-                iteration = uiWorkItem.iteration,
-                area = uiWorkItem.area,
-                Type = uiWorkItem.type,
-                startDate = uiWorkItem.startdate,
-                endDate = uiWorkItem.endate,
-                priority = uiWorkItem.priority,
-                statusId = sid,
-                user = uiWorkItem.user
-            };
-            return await _httpClient.PostAsJsonAsync("api", newWorkItem);
+            
+            return await _httpClient.PostAsJsonAsync("api", uiWorkItem);
 
         }
 
-        public async Task<bool> deleteWorkItem(int id)
+        public async Task<bool> deleteWorkItem(string id)
         {
+            var dlink = await _httpClient.DeleteAsync($"api/link/delete/{id}");
             var result = await _httpClient.DeleteAsync($"api/delete/{id}");
             if(result.IsSuccessStatusCode)
             {
@@ -52,16 +44,31 @@ namespace WebAPplication.UI.Apicall
             }
         }
 
+        public async Task<string> GetAreaName(int id)
+        {
+            return await _httpClient.GetStringAsync($"api/areas/name/{id}");
+        }
+
         public async Task<IEnumerable<AreaWithoutId>> GetAreas()
         {
             var result = await _httpClient.GetFromJsonAsync<AreaWithoutId[]>("api/areas");
             return result;
         }
 
-        public async Task<IEnumerable<IterationWIthoutId>> Getiterations(string areaname)
+        public async Task<string> GetIterationName(int id)
         {
-            var id = await _httpClient.GetFromJsonAsync<int>($"api/areas/{areaname}");
-            var result = await _httpClient.GetFromJsonAsync<IterationWIthoutId[]>($"api/iterations/{id}");
+            return await _httpClient.GetStringAsync ($"api/iterations/name/{id}");
+        }
+
+        public async Task<IEnumerable<IterationWIthoutId>> Getiterations(int areaId)
+        {
+            var result = await _httpClient.GetFromJsonAsync<IterationWIthoutId[]>($"api/iterations/{areaId}");
+            return result;
+        }
+
+        public async Task<IEnumerable<PriorityModel>> GetPriorityModels()
+        {
+            var result = await _httpClient.GetFromJsonAsync<PriorityModel[]>($"api/priority/getall");
             return result;
         }
 
@@ -71,14 +78,48 @@ namespace WebAPplication.UI.Apicall
             return result;
         }
 
-        public async Task<IEnumerable<StatusModelWithoutId>> GetStatusModels()
+        public async Task<IEnumerable<StatusModelWithoutId>> GetStatusModels(int TypeId)
         {
-            return await _httpClient.GetFromJsonAsync<StatusModelWithoutId[]>("api/status");
+            return await _httpClient.GetFromJsonAsync<StatusModelWithoutId[]>($"api/status/{TypeId}");
+        }
+
+        public async Task<string> GetStatusName(int id)
+        {
+            return await _httpClient.GetStringAsync ($"api/status/id/{id}");
+        }
+
+        public async Task<IEnumerable<TypeModel>> GetTypeModels()
+        {
+            return await _httpClient.GetFromJsonAsync<TypeModel[]>("api/types/getall");
+        }
+
+        public async Task<string> GetTypeName(int id)
+        {
+            return await _httpClient.GetStringAsync ($"api/types/name/{id}");
+        }
+
+        public async Task<string> GetUserName(int id)
+        {
+            return await _httpClient.GetStringAsync ($"api/users/getById/{id}");
         }
 
         public async Task<IEnumerable<UserModel>> GetUsers()
         {
             return await _httpClient.GetFromJsonAsync<UserModel[]>("api/users/getall");
+        }
+
+        public async Task<UIWorkItem> GetWorkItemById(string id)
+        {
+            var result = await _httpClient.GetFromJsonAsync<WorkItemModel>($"api/GetById/{id}");
+            var userName = await GetUserName(result.UserId);
+            var model = _mapper.Map<UIWorkItem>(result);
+            model.AssigneeName = userName;
+            return model;
+        }
+
+        public async Task<int> GetWorkItemIdByKey(string key)
+        {
+            return await _httpClient.GetFromJsonAsync<int>($"api/key/{key}");
         }
 
         public async Task<IEnumerable<WorkItemModel>> GetWorkItems()
@@ -89,7 +130,11 @@ namespace WebAPplication.UI.Apicall
             return result;
 
         }
-        
 
+        public async Task<HttpResponseMessage> UpdateWorkItem(UIWorkItem uiWorkItem)
+        {
+            return await _httpClient.PutAsJsonAsync("api/update", uiWorkItem);
+        }
+        
     }
 }

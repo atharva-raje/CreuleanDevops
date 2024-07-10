@@ -11,10 +11,10 @@ namespace BusinessLOgic.Models
     public  class CommentModel
     {
 
-        [Required]
-        public string decription { get; set; }
+ 
+        public string Description { get; set; }
         public DateTime dateTime { get; set; }
         public int userid { get; set; }
-        public int workItemId {  get; set; }
+        public string workItemId {  get; set; }
     }
 }

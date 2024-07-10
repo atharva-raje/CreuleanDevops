@@ -13,5 +13,7 @@ namespace BusinessLOgic.IServices
         Task<int> GetStatusId(string name);
         Task<IEnumerable<Status>> GetStatuses();
         Task<string> GetStatusName(int statusId);
+        Task<IEnumerable<Status>> GetStatusByType(int typeid);
+
     }
 }

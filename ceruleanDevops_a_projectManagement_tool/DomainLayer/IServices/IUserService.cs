@@ -11,6 +11,8 @@ namespace BusinessLOgic.IServices
     public interface IUserSerivce
     {
         Task<IEnumerable<User>> GetUsers();
+        Task<String> GetUser(int userId);
+        Task<int> GetUserIdByName(string name);
 
 
     }

@@ -22,10 +22,10 @@ namespace BusinessLOgic.sevices
             areaRepository = _statusRepository;
         }
 
-        public async Task<int> GetAreaId(string name)
+        public async Task<string> GetAreaName(int name)
         {
-            var result = await areaRepository.GetAreaId(name);
-            return  result.Id;
+            var result = await areaRepository.GetAreaName(name);
+            return  result.AreaName;
         }
 
         public async Task<IEnumerable<Areas>> GetAreas()

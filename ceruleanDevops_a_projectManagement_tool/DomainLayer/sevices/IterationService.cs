@@ -20,6 +20,19 @@ namespace BusinessLOgic.sevices
             _mapper = mapper;
             iterationRepository = _iterationRepository;
         }
+
+        public async Task<int> GetIterationId(string iterationName)
+        {
+            var result = await iterationRepository.GetIterationsIdAsync(iterationName);
+            return result.IterationId;    
+        }
+
+        public async Task<string> GetIterationName(int id)
+        {
+            var result = await iterationRepository.GetIterationsNameAsync(id);
+            return result.IterationName;
+        }
+
         public async Task<IEnumerable<Iterations>> GetIterations(int AreaId)
         {
              return await iterationRepository.GetIterations(AreaId);

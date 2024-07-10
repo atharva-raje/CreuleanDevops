@@ -14,17 +14,14 @@ namespace DAL.Entites
     {
         
         public int Id { get; set; }
-        
-        [ForeignKey("User")]
+        [ForeignKey(nameof(User))]
         public int UserId {  get; set; }
-        public User User { get; set; }
-
+        public User User {  get; set; }
         public string Description {  get; set; }
-        public DateTime dateTime { get; set; }
-        [ForeignKey("WorkItem")]
-        public int WorkItemId {  get; set; }
-        public WorkItem workItem { get; set; }
-
+        public DateTime DateTime { get; set; }
+        [ForeignKey(nameof(WorkItem))]
+        public string WorkItemId {  get; set; }
+        public WorkItem WorkItem {  get; set; }
 
     }
 }

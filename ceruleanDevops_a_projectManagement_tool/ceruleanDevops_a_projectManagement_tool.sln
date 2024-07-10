@@ -13,6 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication.Api", "WebAp
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPplication.UI", "WebAPplication.UI\WebAPplication.UI.csproj", "{E248D2CA-2677-4A56-8164-DD065D5C952E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{88D07366-8C1E-4654-879C-EF15295664F4} = {88D07366-8C1E-4654-879C-EF15295664F4}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,12 +9,13 @@ namespace DAL.Irepositeries
 {
     public interface IWorkItemsRespository
     {
-        Task<IEnumerable<WorkItem>> GetWorkitems();
-        Task<WorkItem> GetWorkitem(int WorkItemId);
-        Task<WorkItem> AddWorkitem(WorkItem WorkItem);
-        Task<WorkItem> UpdateWorkitem(int id,WorkItem WorkItem);
-        Task<int> DeleteWorkItem(int WorkItemId);
-
+        Task<IEnumerable<WorkItem>> GetWorkitemsAsync();
+        Task<WorkItem> GetWorkitemByIdAsync(string WorkItemId);
+        Task<WorkItem> AddWorkitemAsync(WorkItem WorkItem);
+        Task<WorkItem> UpdateWorkitemAsync(WorkItem WorkItem);
+        Task<int> DeleteWorkItemAsync(string WorkItemId);
+        Task<WorkItem> GetWorkItemIdByUniqueKey(string  UniqueKey);
+         
 
     }
 }

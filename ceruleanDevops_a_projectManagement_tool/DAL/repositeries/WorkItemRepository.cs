@@ -19,7 +19,7 @@ namespace DAL.repositeries
         {
             _workItemsDbContext = workItemsDbContext;
         }
-        public async Task<WorkItem> AddWorkitem(WorkItem workItem)
+        public async Task<WorkItem> AddWorkitemAsync(WorkItem workItem)
         {
             var result = await _workItemsDbContext.WorkItems.AddAsync(workItem);
             await _workItemsDbContext.SaveChangesAsync();
@@ -27,10 +27,10 @@ namespace DAL.repositeries
 
         }
 
-        public async Task<int> DeleteWorkItem(int WorkItemId)
+        public async Task<int> DeleteWorkItemAsync(string WorkItemId)
         {
             var result = await _workItemsDbContext.WorkItems
-                .FirstOrDefaultAsync(e => e.Id == WorkItemId);
+                .FirstOrDefaultAsync(e => e.WorkItemId == WorkItemId);
             if (result != null)
             {
                 _workItemsDbContext.WorkItems.Remove(result);
@@ -39,33 +39,43 @@ namespace DAL.repositeries
             }
             return 0;
         }
-            public async Task<WorkItem> GetWorkitem(int WorkItemId)
+            public async Task<WorkItem> GetWorkitemByIdAsync(string WorkItemId)
             {
-                return await _workItemsDbContext.WorkItems.FirstOrDefaultAsync(w => w.Id == WorkItemId);
+                return await _workItemsDbContext.WorkItems.FirstOrDefaultAsync(w => w.WorkItemId == WorkItemId);
             }
 
-            public async Task<IEnumerable<WorkItem>> GetWorkitems()
+        public async Task<WorkItem> GetWorkItemIdByUniqueKey(string UniqueKey)
+        {
+             return await _workItemsDbContext.WorkItems.FirstOrDefaultAsync(w => w.WorkItemId == UniqueKey);
+        }
+
+        public async Task<IEnumerable<WorkItem>> GetWorkitemsAsync()
             {
                 return await _workItemsDbContext.WorkItems.ToListAsync();
             }
 
-            public async Task<WorkItem> UpdateWorkitem(int id,WorkItem WorkItem)
+            public async Task<WorkItem> UpdateWorkitemAsync(WorkItem WorkItem)
             {
                 var result = await _workItemsDbContext.WorkItems
-                    .FirstOrDefaultAsync(e => e.Id == id);
+                    .FirstOrDefaultAsync(e => e.WorkItemId == WorkItem.WorkItemId);
 
                 if (result != null)
                 {
-                    result.Id = id;
+                     
                     result.Name = WorkItem.Name;
                     result.Description = WorkItem.Description;
-                    result.iteration = WorkItem.iteration;
-                    result.area = WorkItem.area;
-                    result.Type = WorkItem.Type;
-                    result.startDate = WorkItem.startDate;
-                    result.endDate = WorkItem.endDate;
-                    result.status = WorkItem.status;
-                    result.priority = WorkItem.priority;
+                    result.IterationId = WorkItem.IterationId;
+                    result.AreaId = WorkItem.AreaId;
+                    result.TypeId = WorkItem.TypeId;
+                    result.ActualStartDate = WorkItem.ActualStartDate;
+                    result.ActualEndDate = WorkItem.ActualEndDate;
+                    result.StatusId = WorkItem.StatusId;
+                    result.PriorityId = WorkItem.PriorityId;
+                    result.ExpectedStartDate = WorkItem.ExpectedStartDate;
+                    result.ExpectedEndDate = WorkItem.ExpectedEndDate;
+                    result.AssigneeId = WorkItem.AssigneeId;
+                    result.ReporterId = WorkItem.ReporterId;
+                    result.StoryPoints = WorkItem.StoryPoints;
                     await _workItemsDbContext.SaveChangesAsync();
                     return result;
 
@@ -73,5 +83,6 @@ namespace DAL.repositeries
                 return null;
             }
         
+
     }
 }

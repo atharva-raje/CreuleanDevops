@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pX1OmovGxAE=",
+  "dgSpecHash": "P/oOTYU/gL8=",
   "success": true,
   "projectFilePath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\WebAPplication.UI.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\athar\\.nuget\\packages\\microsoft.aspnetcore.components.web\\8.0.6\\microsoft.aspnetcore.components.web.8.0.6.nupkg.sha512",
     "C:\\Users\\athar\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.5\\microsoft.aspnetcore.components.webassembly.8.0.5.nupkg.sha512",
     "C:\\Users\\athar\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\8.0.5\\microsoft.aspnetcore.components.webassembly.devserver.8.0.5.nupkg.sha512",
+    "C:\\Users\\athar\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\athar\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.6\\microsoft.aspnetcore.metadata.8.0.6.nupkg.sha512",
     "C:\\Users\\athar\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\athar\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

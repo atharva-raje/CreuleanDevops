@@ -13,5 +13,6 @@ namespace DAL.Irepositeries
         Task<User> GetUser(int UserId);
         Task<User> AddUser(User user);
         Task<User> UpdateUser(User user);
+        Task<User> GetUserIdByName(string name);
     }
 }

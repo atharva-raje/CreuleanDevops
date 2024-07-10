@@ -18,6 +18,7 @@ namespace BusinessLOgic.Models
         public string priority { get; set; }
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
+        public DateTime ExpectedEndDate {  get; set; }
         public string user {  get; set; }
     }
 }

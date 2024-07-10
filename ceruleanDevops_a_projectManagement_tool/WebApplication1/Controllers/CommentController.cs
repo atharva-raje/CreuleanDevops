@@ -21,10 +21,10 @@ namespace WebApplication1.Controllers
             _mapper = mapper;
         }
         [HttpGet]
-        [Route("getall")]
-        public async Task<IActionResult> GetComments()
+        [Route("getall/{workitemId}")]
+        public async Task<IActionResult> GetCommentsById(string workitemId)
         {
-            var results = await commentServices.GetComments();
+            var results = await commentServices.GetCommentsById(workitemId);
             var model = _mapper.Map<IEnumerable<CommentModel>>(results);
 
             return Ok(model);

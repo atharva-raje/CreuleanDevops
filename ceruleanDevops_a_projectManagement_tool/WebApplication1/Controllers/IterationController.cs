@@ -32,6 +32,12 @@ namespace WebApplication1.Controllers
             var model = _mapper.Map<IEnumerable<IterationWIthoutId>>(result);
             return Ok(model);
         }
- 
+        [HttpGet("name/{id}")]
+        public async Task<IActionResult> GetIterationName(int id)
+        {
+            var result = await iterationServices.GetIterationName(id);
+             
+            return Ok(result);
+        }
     }
 }

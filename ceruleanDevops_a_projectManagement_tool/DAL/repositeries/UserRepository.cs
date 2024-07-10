@@ -22,14 +22,19 @@ namespace DAL.repositeries
             throw new NotImplementedException();
         }
 
-        public Task<User> GetUser(int UserId)
+        public async Task<User> GetUser(int UserId)
         {
-            throw new NotImplementedException();
+            return await _workItemsDbContext.Users.FirstOrDefaultAsync(u => u.UserId == UserId);
         }
 
         public async Task<IEnumerable<User>> GetUsers()
         {
             return await _workItemsDbContext.Users.ToListAsync();
+        }
+
+        public async Task<User> GetUserIdByName(string name)
+        {
+            return await _workItemsDbContext.Users.FirstOrDefaultAsync(u => u.UserName == name);
         }
 
         public Task<User> UpdateUser(User user)

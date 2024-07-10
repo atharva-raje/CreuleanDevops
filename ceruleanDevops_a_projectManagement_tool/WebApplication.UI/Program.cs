@@ -1,6 +1,7 @@
 using Blazorise;
 using Blazorise.Bootstrap;
 using Blazorise.Icons.FontAwesome;
+using Blazorise.Licensing;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using WebAPplication.UI;
@@ -21,4 +22,9 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https:/
 
 //builder.Services.AddHttpClient<IWorkItemAPiCall, WorkItemCall>(client => { client.BaseAddress = new Uri("https://localhost:7294/"); client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("accept: */*")); });
 builder.Services.AddScoped<WorkItemCall>();
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddScoped<FileUploadApiCall>();
+builder.Services.AddScoped<WorkItemLinkApiCall>();
+builder.Services.AddScoped<CommentCallApi>();
+builder.Services.AddScoped<UserAPiCall>();
 await builder.Build().RunAsync();

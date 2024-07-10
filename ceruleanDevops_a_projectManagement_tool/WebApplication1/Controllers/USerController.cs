@@ -29,5 +29,15 @@ namespace WebApplication1.Controllers
 
             return Ok(model);
         }
+        [HttpGet("getById/{UserId}")]
+        public async Task<string> GetUserName(int UserId)
+        {
+            return await userServices.GetUser(UserId);
+        }
+        [HttpGet("getByName/{Name}")]
+        public async Task<int> GetUserIdByName(string Name)
+        {
+            return await userServices.GetUserIdByName(Name);
+        }
     }
 }

@@ -21,5 +21,15 @@ namespace DAL.repositeries
         {
             return await _workItemsDbContext.Iterations.Where(i => i.AreaId == AreaId).ToListAsync();
         }
+
+        public async Task<Iterations> GetIterationsIdAsync(string IterationName)
+        {
+            return await _workItemsDbContext.Iterations.FirstOrDefaultAsync(i => i.IterationName == IterationName);
+        }
+
+        public async Task<Iterations> GetIterationsNameAsync(int iterationId)
+        {
+            return await _workItemsDbContext.Iterations.FirstOrDefaultAsync(i => i.IterationId == iterationId);
+        }
     }
 }

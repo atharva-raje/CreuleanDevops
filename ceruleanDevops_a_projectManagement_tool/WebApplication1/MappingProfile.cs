@@ -25,8 +25,14 @@ namespace WebApplication1
             CreateMap<UserModel, User>();
             CreateMap<CommentModel, Comments>();
             CreateMap<Comments,CommentModel>();
-
-
+            CreateMap<WorkItemLinkModel, WorkitemLink>();
+            CreateMap<WorkitemLink, WorkItemLinkModel>();
+            CreateMap<FileModel,FileUploads>();
+            CreateMap<FileUploads,FileModel>();
+            CreateMap<TypeModel, Types>();
+            CreateMap<Types, TypeModel>();
+            CreateMap<Priorities, PriorityModel>();
+            CreateMap<PriorityModel, Priorities>();
         }
     }
 }

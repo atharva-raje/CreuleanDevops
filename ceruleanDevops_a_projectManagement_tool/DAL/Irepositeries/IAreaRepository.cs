@@ -10,7 +10,7 @@ namespace DAL.Irepositeries
     public interface IAreaRepository
     {
         Task<IEnumerable<Areas>> GetAreas();
-        Task<Areas> GetAreaId(string name);
+        Task<Areas> GetAreaName(int name);
 
     }
 }

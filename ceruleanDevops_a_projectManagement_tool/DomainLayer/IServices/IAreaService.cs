@@ -10,6 +10,6 @@ namespace BusinessLOgic.IServices
     public interface IAreaService
     {
         Task<IEnumerable<Areas>> GetAreas();
-        Task<int> GetAreaId(string name);
+        Task<string> GetAreaName(int id);
     }
 }

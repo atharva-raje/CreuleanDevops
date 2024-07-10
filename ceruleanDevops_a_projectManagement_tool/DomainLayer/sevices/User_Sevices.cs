@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization.Metadata;
 using System.Threading.Tasks;
 
 namespace BusinessLOgic.sevices
@@ -20,6 +21,18 @@ namespace BusinessLOgic.sevices
             _mapper = mapper;
             userRespository = workItemsRespository;
         }
+
+        public async Task<string> GetUser(int userId)
+        {
+            var result = await userRespository.GetUser(userId);
+            return result.UserName;
+        }
+        public async Task<int> GetUserIdByName(string name)
+        {
+            var result = await userRespository.GetUserIdByName(name);
+            return result.UserId;
+        }
+
         public async Task<IEnumerable<User>> GetUsers()
         {
             return await userRespository.GetUsers();

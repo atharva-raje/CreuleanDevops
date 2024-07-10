@@ -7,76 +7,214 @@
 @using WebAPplication.UI.UiModels
 @inject WorkItemCall workitemcall
 @inject NavigationManager NavManager 
-  @*   <div class="container accordion" id="discussion">
-        <div class="accordion-item"> 
-       <header1 class="accordion-header fw-bold" id="headingDiscussion">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Discussion
-      </button>
-      </header1>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingDiscussion" data-bs-parent="#discussion">
-    <div class="accordion-body"> 
-    <EditForm  Model="comment">
-        <InputTextArea id="description" class="form-control shadow" @bind-Value="comment.decription" />
-    </EditForm>
-    <br />
-    <div>
-    <button type="submit" class="btn-primary">Save</button>
-    <CloseButton Clicked="@OnClicked" class="offset-sm-1">Close</CloseButton>
-    </div>
-    </div>
-  </div>
-  </div>
-</div>*@
-@*<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header fw-bold" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-         disscussion
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-                    <EditForm Model="comment">
-                        <InputTextArea id="description" class="form-control shadow" @bind-Value="comment.decription" />
-                    </EditForm>
-                    <br />
-                    <div>
-                        <button type="submit" class="btn-primary">Save</button>
-        <CloseButton Clicked="@OnClicked" class="offset-sm-1">Close</CloseButton>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  *@
+@inject CommentCallApi commentApi
+@inject UserAPiCall userapi
 <Accordion>
-        <AccordionItem @bind-Visible="@visible">
+    <AccordionItem @bind-Visible="@visible">
         <AccordionHeader>
             <Heading Size="HeadingSize.Is5">
                 <AccordionToggle>Discussion</AccordionToggle>
             </Heading>
         </AccordionHeader>
         <AccordionBody>
-            <EditForm Model="comment">
-                <InputTextArea id="description" class="form-control shadow" @bind-Value="comment.decription" />
+            <EditForm Model="comment" OnSubmit="AddComment">
+                <InputTextArea id="description" class="form-control shadow" PlaceHolder="Add a new Comment Here..." @bind-Value="comment.Description" />
+                <br />
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary me-2">Save</button>
+                    <CloseButton Clicked="@OnClicked">Cancel</CloseButton>
+                </div>
             </EditForm>
-            <br />
-            <div>
-                <button type="submit" class="btn-primary">Save</button>
-                <CloseButton Clicked="@OnClicked" class="offset-sm-1">Close</CloseButton>
+           @if(userNamesLoaded)
+           {
+            <div class="comments-list">
+                @if (comments != null && comments.Any())
+                {
+
+                    @foreach (var comment in comments.AsEnumerable().Reverse())
+                    {
+                        <div class="comment-box d-flex">
+                            <div class="avatar">
+                                <div class="avatar-circle">
+                                    @if (userNames.ContainsKey(comment.userid))
+                                    {
+                                        @userNames[comment.userid].Substring(0, 1)
+                                    }
+                                    else
+                                    {
+                                        <h6>Loading.....</h6>
+                                    }
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <strong>@(userNames.ContainsKey(comment.userid) ? userNames[comment.userid] : "Loading...")</strong>
+                                    commented  @GetRelativeTime(comment.dateTime)
+                                </div>
+                                <div class="comment-body">
+                                    @comment.Description
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
             </div>
+            } 
         </AccordionBody>
     </AccordionItem>
-    </Accordion>
+</Accordion>
+ 
  
 @code {
+    [Parameter] public int userId { get; set; }
+    [Parameter] public  string workitemId { get; set; }
     private CommentModel comment = new CommentModel();
-     bool visible = true;
+    private List<CommentModel> rcomments = new List<CommentModel>();
+    private Dictionary<int, string> userNames = new Dictionary<int, string>();
+    bool visible = true;
+    private List<CommentModel> comments = new List<CommentModel>();
+    bool userNamesLoaded = false;
+    private async  Task LoadComments()
+    {
+        try
+        {
+             
+            var result = await commentApi.GetComments(workitemId);
+            comments = result.ToList();
+            await LoadUserNames();
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
     Task OnClicked()
     {
         visible = false;
 
         return Task.CompletedTask;
     }
+    private async Task AddComment()
+    {
+        try
+        {
+            userNamesLoaded = false;
+            comment.dateTime = DateTime.Now;
+            comment.userid = userId;
+            comment.workItemId = workitemId;
+            var result = await commentApi.AddComment(comment);
+            if (result.IsSuccessStatusCode)
+            {
+                
+                await LoadComments();
+                comment.Description = string.Empty;
+                StateHasChanged();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+    }
+    private async Task LoadUserNames()
+    {
+        var userIds = comments.Select(c => c.userid).Distinct();
+        foreach (var id in userIds)
+        {
+            var user = await userapi.GetUser(id);
+            if (user != null && !userNames.ContainsKey(id))
+            {
+                userNames.Add(id, user);
+            }
+             
+                
+            
+        }
+        userNamesLoaded = true;
+
+    }
+    private string GetRelativeTime(DateTime dateTime)
+    {
+        var timeSpan = DateTime.Now - dateTime;
+
+        if (timeSpan.TotalMinutes < 1)
+            return "just now";
+        if (timeSpan.TotalMinutes < 60)
+            return $"{timeSpan.Minutes} min{(timeSpan.Minutes > 1 ? "s" : "")} ago";
+        if (timeSpan.TotalHours < 24)
+            return $"{timeSpan.Hours} hr{(timeSpan.Hours > 1 ? "s" : "")} {timeSpan.Minutes}min{(timeSpan.Minutes > 1 ? "s" : "")} ago";
+        if (timeSpan.TotalDays < 30)
+            return $"{timeSpan.Days} day{(timeSpan.Days > 1 ? "s" : "")} ago";
+        if (timeSpan.TotalDays < 365)
+            return $"{timeSpan.Days / 30} month{(timeSpan.Days / 30 > 1 ? "s" : "")} ago";
+
+        return $"{timeSpan.Days / 365} year{(timeSpan.Days / 365 > 1 ? "s" : "")} ago";
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadComments();
+    }
+
 }
+<style>
+    .comments-list {
+        margin-top: 20px;
+    }
+
+    .comment-box {
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .avatar {
+        margin-right: 10px;
+    }
+
+    .avatar-circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #0078d4;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .comment-content {
+        flex-grow: 2;
+    }
+
+    .comment-header {
+        margin-bottom: 8px;
+    }
+
+        .comment-header strong {
+            margin-right: 5px;
+        }
+
+    .comment-body {
+        white-space: pre-wrap;
+    }
+
+    .btn-primary {
+        background-color: #0078d4;
+        border-color: #0078d4;
+    }
+
+        .btn-primary:hover {
+            background-color: #005a9e;
+            border-color: #005a9e;
+        }
+
+</style>
+ 

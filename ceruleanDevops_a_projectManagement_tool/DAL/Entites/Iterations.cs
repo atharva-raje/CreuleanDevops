@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,11 +11,14 @@ namespace DAL.Entites
 {
     public class Iterations
     {
-        
-        public int Id {  get; set; }   
+
+        [Key]
+        public int IterationId {  get; set; }   
         public string IterationName { get; set;}
+
         [ForeignKey("Areas")]
         public int AreaId {  get; set; }
-        public Areas area { get; set; }
+        public Areas Area { get; set; }
+        public ICollection<WorkItem> WorkItems { get; set; }
     }
 }

@@ -1,7 +1,11 @@
-﻿@page "/ListWorkItems"
+﻿
+@page "/"
+@page "/ListWorkItems"
 @using Blazorise
 @using BusinessLOgic.Models
 @using Apicall
+@inject WorkItemLinkApiCall linkCall
+@inject NavigationManager NavManager
 @inject WorkItemCall workitemcall
 @inject HttpClient Http
 <Alert @ref="myAlert" Color="Color.Success">
@@ -21,46 +25,65 @@
 }
 else
 {
-    <Table class="table">
+    <div class="table-container"> 
+        <Table class="table">
         <TableHeader>
             <TableRow>
+                <TableRowCell class="fw-bold">Type</TableRowCell>
+                <TableRowCell class="fw-bold">Key</TableRowCell>
                 <TableRowCell class="fw-bold">Name</TableRowCell>
                 <TableRowCell class="fw-bold">Description</TableRowCell>
-                <TableRowCell class="fw-bold">Type</TableRowCell>
                 <TableRowCell class="fw-bold">Status</TableRowCell>
                 <TableRowCell class="fw-bold">Assignee</TableRowCell>
                 <TableRowCell class="fw-bold">Area</TableRowCell>
                 <TableRowCell class="fw-bold">Iteration</TableRowCell>
-                <TableRowCell class="fw-bold">StartDate</TableRowCell>
-                <TableRowCell class="fw-bold">EndDate</TableRowCell>
-                <TableRowCell class="fw-bold">Actions</TableRowCell>
+                <TableRowCell class="fw-bold">Created At</TableRowCell>
+                <TableRowCell class="fw-bold">Actual Due Date</TableRowCell>
+                <TableRowCell class="fw-bold">Expected Due Date</TableRowCell>
+                <TableRowCell class="fw-bold" ColumnSpan="3">Actions</TableRowCell>
             </TableRow>
         </TableHeader>
         <TableBody>
-            @foreach (var item in data)
+            @foreach (var item in displayData)
             {
                 <TableRow>
+                    <TableRowCell>@item.TypeId</TableRowCell>
+                    <TableRowCell>@item.WorkItemId</TableRowCell>
                     <TableRowCell>@item.Name</TableRowCell>
                     <TableRowCell>@item.Description</TableRowCell>
-                    <TableRowCell>@item.Type</TableRowCell>
-                    <TableRowCell>@statuses[data.ToList().IndexOf(item)]</TableRowCell>
-                    <TableRowCell>@item.user</TableRowCell>
-                    <TableRowCell>@item.area</TableRowCell>
-                    <TableRowCell>@item.iteration</TableRowCell>
-                    <TableRowCell>@item.startDate.ToShortDateString()</TableRowCell>
-                    <TableRowCell>@item.endDate.ToShortDateString()</TableRowCell>
-                    <TableRowCell>
-                        <button @onclick="() => DeleteWorkItem(item.Id)" class="btn btn-danger">Delete</button>
+                    <TableRowCell>@item.StatusId</TableRowCell>
+                    <TableRowCell>@item.UserId</TableRowCell>
+                    <TableRowCell>@item.AreaId</TableRowCell>
+                    <TableRowCell>@item.IterationId</TableRowCell>
+                    <TableRowCell>@item.ActualStartDate.ToShortDateString()</TableRowCell>
+                    <TableRowCell>@item.ActualEndDate.ToShortDateString()</TableRowCell>
+                    <TableRowCell>@(item.ExpectedEndDate != DateTime.MinValue ? item.ExpectedEndDate.ToShortDateString() : string.Empty)</TableRowCell>
+                      <TableRowCell>
+                        <Icon Name="@("fas fa-pen")" Class="text-secondary" Clicked="() => UpdateItem(data.First(i => i.WorkItemId == item.WorkItemId))" Style="cursor: pointer;" />
                     </TableRowCell>
+                     <TableRowCell>
+                        <Icon Name="@("fas fa-trash")" Class="text-danger" Clicked="() => DeleteWorkItem(item.WorkItemId)" Style="cursor: pointer;" />
+                         
+                    </TableRowCell>
+                    <TableRowCell>
+                        <Icon Name="@("fas fa-link")" Class="text-secondary" Clicked="() => LinkItems()" Style="cursor: pointer;" />
+                         
+                    </TableRowCell>
+                    <TableRowCell>
+                            <Icon Name="@("fas fa-upload")" Class="text-secondary" Clicked="() => UploadFiles(data.FirstOrDefault(i => i.WorkItemId == item.WorkItemId))" Style="cursor: pointer;" />
+                         
+                    </TableRowCell> 
                 </TableRow>
                 i++;
             }
         </TableBody>
     </Table>
+    </div>
 }
-
+ 
 @code {
     private IEnumerable<WorkItemModel> data;
+    private List<WorkItemModelWithString> displayData = new List<WorkItemModelWithString>();
     private List<string> statuses = new List<string>();
     private int i = 0;
     Alert myAlert;
@@ -70,8 +93,9 @@ else
         var result = await workitemcall.GetStatus(statusId);
         return result;
     }
-    private async Task DeleteWorkItem(int id)
+    private async Task DeleteWorkItem(string id)
     {
+        var LinkId = await linkCall.DeleteLinks(id); 
         var result = await workitemcall.deleteWorkItem(id);
         if(result)
         {
@@ -87,26 +111,66 @@ else
     private async Task LoadData()
     {
         data = await workitemcall.GetWorkItems();
-        statuses.Clear();
+        displayData.Clear();
         foreach (var item in data)
         {
-            i = 0;
-            var status = await GetStatus(item.statusId);
-            statuses.Add(status);
+            var element = new WorkItemModelWithString
+                {
+                    TypeId = await workitemcall.GetTypeName(item.TypeId),
+                    IterationId = await workitemcall.GetIterationName(item.IterationId),
+                    StatusId = await workitemcall.GetStatusName(item.StatusId),
+                    AreaId = await workitemcall.GetAreaName(item.AreaId),
+                    UserId = await workitemcall.GetUserName(item.UserId),
+                    WorkItemId = item.WorkItemId,
+                    Description = item.Description,
+                    ActualEndDate = item.ActualEndDate,
+                    ActualStartDate = item.ActualStartDate,
+                    ExpectedStartDate = item.ExpectedStartDate,
+                    ExpectedEndDate = item.ExpectedEndDate,
+                    Name = item.Name
+                };
+            displayData.Add(element);
         }
         StateHasChanged();
+    }
+    private async Task UpdateItem(WorkItemModel item)
+    {
+        NavManager.NavigateTo($"/UpdateWorkItem/{item.WorkItemId}");
+    }
+    private async Task LinkItems()
+    {
+        NavManager.NavigateTo($"/linkworkitems");
+
+    }
+    private async Task UploadFiles(WorkItemModel item)
+    {
+        NavManager.NavigateTo($"/upload/{item.WorkItemId}");
     }
     protected override async Task OnInitializedAsync()
     {
 
         data = await workitemcall.GetWorkItems();
-        foreach(var item in data)
-        {
-            var status = await GetStatus(item.statusId);
-            statuses.Add(status);
-
-        }
+        await LoadData();
 
     }
     
 }
+<style>
+    .table-container {
+        overflow-x: auto; /* Enables horizontal scrolling */
+        padding-bottom: 1rem; /* Adds space for scroll bar */
+    }
+
+    .table {
+        min-width: 1200px; /* Adjust based on the total width of your table columns */
+    }
+
+    /* Optional: Add styles for the table header and body */
+    .table-header {
+        background-color: #f8f9fa;
+    }
+
+    .table-body {
+        background-color: #ffffff;
+    }
+</style>

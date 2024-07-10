@@ -10,5 +10,8 @@ namespace DAL.Irepositeries
     public interface IIterationRepository
     {
         Task<IEnumerable<Iterations>> GetIterations(int AreaId);
+        Task<Iterations> GetIterationsIdAsync(string IterationName);
+        Task<Iterations> GetIterationsNameAsync(int iterationId);
+
     }
 }

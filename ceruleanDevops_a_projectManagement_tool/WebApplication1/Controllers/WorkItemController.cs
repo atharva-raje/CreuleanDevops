@@ -5,6 +5,7 @@ using DAL.Entites;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
+using WebAPplication.UI.UiModels;
 
 namespace WebApplication1.Controllers
 {
@@ -35,33 +36,43 @@ namespace WebApplication1.Controllers
             return Ok(model);
         }
         [HttpGet]
-        [Route("getById")]
-        public async Task<IActionResult> GetWorkItemsWithId()
+        [Route("getById/{workItemId}")]
+        public async Task<IActionResult> GetWorkItemsWithId(string workItemId)
         {
-            var results = await _workItemServices.GetWorkItemsService();
-            var model = _mapper.Map<IEnumerable<WorkItemModel>>(results);
+            var results = await _workItemServices.GetWorkItemById(workItemId);
+            var model = _mapper.Map<WorkItemModel>(results);
 
             return Ok(model);
         }
-        [HttpPost]
-        public async Task<IActionResult> AddWorkitem([FromBody]WorkItemModel workItemModel)
+        [HttpGet]
+        [Route("generateKey")]
+        public async Task<string> GenerateKey(UIWorkItem workItem)  
         {
-           
+            var result = await _workItemServices.GenerateUniqueKeyAsync(workItem);
+            return result;
+        }
+        [HttpGet("key/{uniqueKey}")]
+  
+
+        [HttpPost]
+        public async Task<IActionResult> AddWorkitem([FromBody]UIWorkItem workItemModel)
+        {
+            
             var results = await _workItemServices.AddWorkItemsService(workItemModel);
             var model = _mapper.Map<WorkItemModel>(results);
             return Ok(model);
         }
-        [HttpPut]
-        public async Task<IActionResult> UpdateWorkItem(int id,[FromBody]WorkItemModel workItemModel)
+        [HttpPut("update")]
+        public async Task<IActionResult> UpdateWorkItem([FromBody]UIWorkItem workItemModel)
         {
-            var results = await _workItemServices.UpdateWorkItemsService(id,workItemModel);
+            var results = await _workItemServices.UpdateWorkItemsService(workItemModel);
             var model = _mapper.Map<WorkItemModel>(results);
             return Ok(model);
         }
 
         [HttpDelete]
         [Route("delete/{WorkItemId}")]
-        public async Task<IActionResult> DeleteWorkItem(int WorkItemId)
+        public async Task<IActionResult> DeleteWorkItem(string WorkItemId)
         {
             var results = await _workItemServices.DeleteWorkItemsService(WorkItemId);
             if(results == 1)

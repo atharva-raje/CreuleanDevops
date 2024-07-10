@@ -10,22 +10,63 @@ namespace DAL.Entites
 {
     public class WorkItem
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        [Key]
+        [Required]
+        public string WorkItemId { get; set; }
+
+        [Required]
         public string Name { get; set; }
+
+        [Required]
         public string Description { get; set; }
-        [ForeignKey("Status")]
-        public int statusId { get; set; }
-        public Status status { get; set; }
+
+        [Required]
+        public int StatusId { get; set; }
+        [ForeignKey("StatusId")]
+        public Status Status { get; set; }
+
+        [Required]
+        public int TypeId { get; set; }
+        [ForeignKey("TypeId")]
+        public Types Type { get; set; }
+
+        [Required]
+        public int PriorityId { get; set; }
+        [ForeignKey("PriorityId")]
+        public Priorities Priority { get; set; }
+
+        [Required]
+        public int AreaId { get; set; }
+        [ForeignKey("AreaId")]
+        public Areas Area { get; set; }
+
+        [Required]
+        public int IterationId { get; set; }
+        [ForeignKey("IterationId")]
+        public Iterations Iteration { get; set; }
+
+        public DateTime ActualStartDate { get; set; }
+        public DateTime ActualEndDate { get; set; }
+
+        [Required]
+        [ForeignKey("User")]
+        public int AssigneeId { get; set; }
+         
+        public User Assignee { get; set; }
+        [Required]
+        [ForeignKey("User")]
+        public int ReporterId { get; set; }
+        public User Reporter { get; set; }
+        public int StoryPoints {  get; set; }
         
-        public string Type { get; set; }
-        public string priority { get; set; }
-        public string area { get; set; }
-        public string iteration {  get; set; }
-        public DateTime startDate {  get; set; }
-        public DateTime endDate { get; set; }
-        public string user {  get; set; }
-        public ICollection<Comments> comments { get; set; }
+
+        public DateTime ExpectedStartDate { get; set; }
+        public DateTime ExpectedEndDate { get; set; }
+
+        public ICollection<Comments> Comments { get; set; }
+        public ICollection<FileUploads> FileUploads { get; set; }
+        public ICollection<WorkitemLink> SourceLinks { get; set; }
+        public ICollection<WorkitemLink> TargetLinks { get; set; }
 
     }
 }

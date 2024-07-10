@@ -28,9 +28,9 @@ namespace BusinessLOgic.sevices
             Comments newComment = new Comments
             {
                  
-                Description = comment.decription,
+                Description = comment.Description,
                 UserId = comment.userid,
-                dateTime = comment.dateTime,
+                DateTime = comment.dateTime,
                 WorkItemId = comment.workItemId
 
             };
@@ -38,9 +38,9 @@ namespace BusinessLOgic.sevices
             return result;
         }
 
-        public async Task<IEnumerable<Comments>> GetComments()
+        public async Task<IEnumerable<Comments>> GetCommentsById(string id)
         {
-             return await commentRepository.GetComments();
+             return await commentRepository.GetCommentsById(id);
         }
     }
 }
