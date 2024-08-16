@@ -24,6 +24,25 @@ namespace BusinessLOgic.sevices
             workitemRespository = _userRepository;
         }
 
+        public async Task<bool> Deletefile(int id)
+        {
+            var result = await fileRespository.DeletefileAsync(id);
+            if(result)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+             
+        }
+
+        public async Task<FileUploads> GetFileByFileId(int id)
+        {
+            return await fileRespository.GetFilesByFileIdAsync(id);
+        }
+
         public async Task<IEnumerable<FileUploads>> GetFilesWithId(string id)
         {
             return await fileRespository.GetFilesByIdAsync(id); 

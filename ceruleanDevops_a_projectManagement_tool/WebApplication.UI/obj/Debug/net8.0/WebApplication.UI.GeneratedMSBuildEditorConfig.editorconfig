@@ -3,6 +3,9 @@ build_property.EnableAotAnalyzer =
 build_property.EnableSingleFileAnalyzer = 
 build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudIllegalParameters = 
 build_property.TargetFramework = net8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -26,8 +29,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/AutoComplete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0b0NvbXBsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/AutoComponentForLinks.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0b0NvbXBvbmVudEZvckxpbmtzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/Comments.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbWVudHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/DashBoard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaEJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/ExperimentalNeworkItems.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhwZXJpbWVudGFsTmV3b3JrSXRlbXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/FileUpload.razor]
@@ -40,6 +59,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/ListofWorkItems.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdG9mV29ya0l0ZW1zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/NewExperimentalPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3RXhwZXJpbWVudGFsUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/adtechsource/repos/New_repository/ceruleanDevops_a_projectManagement_tool/WebAPplication.UI/Pages/NewWorkItem.razor]

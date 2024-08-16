@@ -11,6 +11,8 @@ namespace DAL.Irepositeries
     {
         Task<IEnumerable<Areas>> GetAreas();
         Task<Areas> GetAreaName(int name);
+        Task<Areas> GetAreaId(string name);
+         
 
     }
 }

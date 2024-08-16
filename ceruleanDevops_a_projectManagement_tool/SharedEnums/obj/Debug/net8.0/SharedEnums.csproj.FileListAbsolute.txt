@@ -1,0 +1,13 @@
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\bin\Debug\net8.0\SharedEnums.deps.json
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\bin\Debug\net8.0\SharedEnums.dll
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\bin\Debug\net8.0\SharedEnums.pdb
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\obj\Debug\net8.0\SharedEnums.GeneratedMSBuildEditorConfig.editorconfig
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\obj\Debug\net8.0\SharedEnums.AssemblyInfoInputs.cache
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\obj\Debug\net8.0\SharedEnums.AssemblyInfo.cs
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\obj\Debug\net8.0\SharedEnums.csproj.CoreCompileInputs.cache
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\obj\Debug\net8.0\SharedEnums.sourcelink.json
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\obj\Debug\net8.0\SharedEnums.dll
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\obj\Debug\net8.0\refint\SharedEnums.dll
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\obj\Debug\net8.0\SharedEnums.pdb
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\obj\Debug\net8.0\ref\SharedEnums.dll
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\SharedEnums\obj\Debug\net8.0\SharedEnums.csproj.AssemblyReference.cache

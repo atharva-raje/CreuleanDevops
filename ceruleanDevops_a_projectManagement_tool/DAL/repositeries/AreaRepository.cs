@@ -18,6 +18,11 @@ namespace DAL.repositeries
             _workItemsDbContext = workItemsDbContext;
         }
 
+        public async Task<Areas> GetAreaId(string name)
+        {
+            return await _workItemsDbContext.Areas.FirstOrDefaultAsync(e => e.AreaName == name);
+        }
+
         public async Task<Areas> GetAreaName(int name)
         {
             return await _workItemsDbContext.Areas.FirstOrDefaultAsync(e => e.Id == name);

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Blazorise;
 using BusinessLOgic.Models;
 using Microsoft.AspNetCore.Components.Forms;
 using System.Net.Http.Json;
@@ -18,9 +19,29 @@ namespace WebAPplication.UI.Apicall
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<FileModel>> GetFilesForWorkItem(string id)
+        public async Task<bool> DeleteFile(int id)
         {
-            return await _httpClient.GetFromJsonAsync<FileModel[]>($"api/files/getallById/{id}");
+            var result = await _httpClient.DeleteAsync($"api/files/delete/{id}");
+            if (result.IsSuccessStatusCode)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public async Task<FileModel> GetFileById(int id)
+        {
+            return await _httpClient.GetFromJsonAsync<FileModel>($"getallByFileId/{id}");
+
+        }
+
+        public async Task<IEnumerable<FileModelWithoutData>> GetFilesForWorkItem(string id)
+        {
+            return await _httpClient.GetFromJsonAsync<FileModelWithoutData[]>($"api/files/getallById/{id}");
         }
 
         public async Task<HttpResponseMessage> UploadFile(MultipartFormDataContent file)

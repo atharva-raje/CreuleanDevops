@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using BusinessLOgic.IServices;
 using BusinessLOgic.Models;
+using BusinessLOgic.sevices;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using Microsoft.Extensions.Logging;
@@ -24,33 +26,44 @@ namespace WebApplication1.Controllers
             _workItemLinkService = workItemService;
         }
 
-        [HttpPost("link")]
-        public async Task<IActionResult> AddWorkItemLink([FromBody]WorkItemLinkModel workItemLinkModel)
+        
+        [HttpGet("GetLinksForWorkItem/{workItemId}")]
+        public async Task<ActionResult<List<WorkItemLinkModel>>> GetLinksForWorkItem(string workItemId)
         {
-             var result  = await _workItemLinkService.AddWorkItemLinkAsync(workItemLinkModel.sourceWorkItemId, workItemLinkModel.targetWorkItemId, workItemLinkModel.linkType);
-            if(result == 1)
+            var links = await _workItemLinkService.GetWorkItemLinksAsync(workItemId);
+            if (links == null)
             {
-                return Ok();
+                return NotFound();
             }
-            else
-            {
-                return BadRequest();
-            }
-        }
-
-        [HttpGet("{id}/links")]
-        public async Task<IActionResult> GetWorkItemLinks(string id)
-        {
-            var workItemLinks = await _workItemLinkService.GetWorkItemLinksAsync(id);
-            var model = _mapper.Map<List<WorkItemLinkModel>>(workItemLinks);
+            var model = _mapper.Map<IList<WorkItemLinkModel>>(links);
             return Ok(model);
         }
-        [HttpDelete("link/delete/{id}")]
-        public async Task<IActionResult> DeleteWorkItemLink(string id)
+
+        [HttpPost("LinkWorkItems")]
+        public async Task<ActionResult<bool>> LinkWorkItems([FromBody] LinkWorkItemsRequest request)
         {
+            var result = await _workItemLinkService.AddWorkItemLinkAsync(request.SourceWorkItemId, request.TargetWorkItemId, request.LinkType);
+            if (!result)
+            {
+                return BadRequest("Failed to link work items.");
+            }
+            return Ok(true);
+        }
+    
+
+    public class LinkWorkItemsRequest
+    {
+        public string SourceWorkItemId { get; set; }
+        public string TargetWorkItemId { get; set; }
+        public int LinkType { get; set; }
+    }
+    [HttpDelete("link/delete/{id}")]
+        public async Task<IActionResult> DeleteWorkItemLink(string id)
+    {
             var result = await _workItemLinkService.DeleteWorkItemLinkAsync(id);
             
              return Ok(result);
         }
     }
 }
+

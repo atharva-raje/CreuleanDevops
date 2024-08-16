@@ -140,3 +140,6 @@ D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\Web
 D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebApplication1\obj\Debug\net8.0\WebApplication.Api.pdb
 D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebApplication1\obj\Debug\net8.0\WebApplication.Api.genruntimeconfig.cache
 D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebApplication1\obj\Debug\net8.0\ref\WebApplication.Api.dll
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebApplication1\bin\Debug\net8.0\SharedEnums.dll
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebApplication1\bin\Debug\net8.0\SharedEnums.pdb
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\WebApplication1\bin\Debug\net8.0\Microsoft.JSInterop.dll

@@ -1,4 +1,4 @@
-﻿
+﻿@* 
 @page "/"
 @page "/ListWorkItems"
 @using Blazorise
@@ -19,57 +19,64 @@
 <PageTitle>WorkItem</PageTitle>
 <h1>List</h1>
 <br />
+<!-- Search Box -->
+<InputText @bind-Value="searchQuery" Placeholder="Search by keyword..." />
 @if (data == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
-    <div class="table-container"> 
-        <Table class="table">
+     
+        <Table Responsive="true">
         <TableHeader>
             <TableRow>
                 <TableRowCell class="fw-bold">Type</TableRowCell>
                 <TableRowCell class="fw-bold">Key</TableRowCell>
                 <TableRowCell class="fw-bold">Name</TableRowCell>
                 <TableRowCell class="fw-bold">Description</TableRowCell>
-                <TableRowCell class="fw-bold">Status</TableRowCell>
+                <TableRowCell class="fw-bold">State</TableRowCell>
                 <TableRowCell class="fw-bold">Assignee</TableRowCell>
+                <TableRowCell class="fw-bold">Reporter</TableRowCell>
                 <TableRowCell class="fw-bold">Area</TableRowCell>
                 <TableRowCell class="fw-bold">Iteration</TableRowCell>
-                <TableRowCell class="fw-bold">Created At</TableRowCell>
+                    <TableRowCell class="fw-bold">Expected Start Date</TableRowCell>
+                    <TableRowCell class="fw-bold">Expected Due Date</TableRowCell>
+                <TableRowCell class="fw-bold">Actual Start Date</TableRowCell>
                 <TableRowCell class="fw-bold">Actual Due Date</TableRowCell>
-                <TableRowCell class="fw-bold">Expected Due Date</TableRowCell>
-                <TableRowCell class="fw-bold" ColumnSpan="3">Actions</TableRowCell>
+                <TableRowCell class="fw-bold">StoryPoints</TableRowCell>
+                <TableRowCell class="fw-bold" ColumnSpan="4">Actions</TableRowCell>
             </TableRow>
         </TableHeader>
         <TableBody>
             @foreach (var item in displayData)
             {
                 <TableRow>
-                    <TableRowCell>@item.TypeId</TableRowCell>
-                    <TableRowCell>@item.WorkItemId</TableRowCell>
-                    <TableRowCell>@item.Name</TableRowCell>
-                    <TableRowCell>@item.Description</TableRowCell>
-                    <TableRowCell>@item.StatusId</TableRowCell>
-                    <TableRowCell>@item.UserId</TableRowCell>
-                    <TableRowCell>@item.AreaId</TableRowCell>
-                    <TableRowCell>@item.IterationId</TableRowCell>
-                    <TableRowCell>@item.ActualStartDate.ToShortDateString()</TableRowCell>
-                    <TableRowCell>@item.ActualEndDate.ToShortDateString()</TableRowCell>
-                    <TableRowCell>@(item.ExpectedEndDate != DateTime.MinValue ? item.ExpectedEndDate.ToShortDateString() : string.Empty)</TableRowCell>
-                      <TableRowCell>
+                    <TableRowCell style="min-width: 100px;">@item.TypeId</TableRowCell>
+                    <TableRowCell style="min-width: 100px;">@item.WorkItemId</TableRowCell>
+                    <TableRowCell style="min-width: 100px;">@item.Name</TableRowCell>
+                        <TableRowCell style="min-width: 100px;">@item.Description</TableRowCell>
+                        <TableRowCell style="min-width: 100px;">@item.StatusId</TableRowCell>
+                    <TableRowCell style="min-width: 100px;">@item.AssigneeName</TableRowCell>
+                        <TableRowCell style="min-width: 100px;">@item.ReporterName</TableRowCell>
+                        <TableRowCell style="min-width: 100px;">@item.AreaId</TableRowCell>
+                        <TableRowCell style="min-width: 100px;"> @item.IterationId</TableRowCell>
+                        <TableRowCell style="min-width: 100px;">@(item.ExpectedStartDate != DateTime.MinValue ? item.ExpectedStartDate.ToShortDateString() : string.Empty)</TableRowCell>
+                        <TableRowCell style="min-width: 100px;">@(item.ExpectedEndDate != DateTime.MinValue ? item.ExpectedEndDate.ToShortDateString() : string.Empty)</TableRowCell>
+                        <TableRowCell style="min-width: 100px;">@(item.ActualStartDate != DateTime.MinValue ? item.ActualStartDate.ToShortDateString() : string.Empty)</TableRowCell>
+                        <TableRowCell style="min-width: 100px;">@(item.ActualEndDate != DateTime.MinValue ? item.ActualEndDate.ToShortDateString() : string.Empty)</TableRowCell>
+                        <TableRowCell>@item.StoryPoints</TableRowCell>
+                        <TableRowCell >
                         <Icon Name="@("fas fa-pen")" Class="text-secondary" Clicked="() => UpdateItem(data.First(i => i.WorkItemId == item.WorkItemId))" Style="cursor: pointer;" />
                     </TableRowCell>
-                     <TableRowCell>
+                        <TableRowCell >
                         <Icon Name="@("fas fa-trash")" Class="text-danger" Clicked="() => DeleteWorkItem(item.WorkItemId)" Style="cursor: pointer;" />
-                         
                     </TableRowCell>
-                    <TableRowCell>
+                        <TableRowCell >
                         <Icon Name="@("fas fa-link")" Class="text-secondary" Clicked="() => LinkItems()" Style="cursor: pointer;" />
                          
                     </TableRowCell>
-                    <TableRowCell>
+                        <TableRowCell>
                             <Icon Name="@("fas fa-upload")" Class="text-secondary" Clicked="() => UploadFiles(data.FirstOrDefault(i => i.WorkItemId == item.WorkItemId))" Style="cursor: pointer;" />
                          
                     </TableRowCell> 
@@ -78,14 +85,16 @@ else
             }
         </TableBody>
     </Table>
-    </div>
+     
 }
  
 @code {
     private IEnumerable<WorkItemModel> data;
     private List<WorkItemModelWithString> displayData = new List<WorkItemModelWithString>();
     private List<string> statuses = new List<string>();
+    private List<WorkItemModelWithString> filteredData = new List<WorkItemModelWithString>();
     private int i = 0;
+    private string searchQuery = string.Empty;
     Alert myAlert;
     Alert myAlertFailed;
     private async Task<string> GetStatus(int statusId)
@@ -120,7 +129,9 @@ else
                     IterationId = await workitemcall.GetIterationName(item.IterationId),
                     StatusId = await workitemcall.GetStatusName(item.StatusId),
                     AreaId = await workitemcall.GetAreaName(item.AreaId),
-                    UserId = await workitemcall.GetUserName(item.UserId),
+                    AssigneeName = await workitemcall.GetUserName(item.AssigneeId),
+                    ReporterName = await workitemcall.GetUserName(item.ReporterId),
+                    StoryPoints = item.StoryPoints,
                     WorkItemId = item.WorkItemId,
                     Description = item.Description,
                     ActualEndDate = item.ActualEndDate,
@@ -131,7 +142,29 @@ else
                 };
             displayData.Add(element);
         }
+        FilterData();
         StateHasChanged();
+    }
+    private void FilterData()
+    {
+        if (string.IsNullOrWhiteSpace(searchQuery))
+        {
+            filteredData = displayData;
+        }
+        else
+        {
+            filteredData = displayData.Where(item =>
+                item.TypeId.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                item.WorkItemId.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                item.Name.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                item.Description.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                item.StatusId.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                item.AssigneeName.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                item.ReporterName.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                item.AreaId.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                item.IterationId.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)
+            ).ToList();
+        }
     }
     private async Task UpdateItem(WorkItemModel item)
     {
@@ -158,12 +191,16 @@ else
 <style>
     .table-container {
         overflow-x: auto; /* Enables horizontal scrolling */
-        padding-bottom: 1rem; /* Adds space for scroll bar */
+        max-width: 100%; /* Adjust as necessary to fit within your layout */
     }
 
     .table {
-        min-width: 1200px; /* Adjust based on the total width of your table columns */
+        min-width: 1300px; /* Adjust based on the total width of your table columns */
     }
+
+        .table th, .table td {
+            white-space: nowrap; /* Prevents text from wrapping */
+        }
 
     /* Optional: Add styles for the table header and body */
     .table-header {
@@ -173,4 +210,4 @@ else
     .table-body {
         background-color: #ffffff;
     }
-</style>
+</style> *@

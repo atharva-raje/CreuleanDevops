@@ -31,7 +31,7 @@ namespace BusinessLOgic.sevices
         public async Task<string> GetPriorityName(int id)
         {
             var result = await _priorityRepository.GetPriorityName(id);
-            return result.PritoryName; 
+            return result.PriorityName; 
      
         }
     }

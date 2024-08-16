@@ -72,9 +72,9 @@ namespace WebAPplication.UI.Apicall
             return result;
         }
 
-        public async Task<string> GetStatus(int statusId)
+        public async Task<int> GetStatusId(string statusName)
         {
-            var result = await _httpClient.GetStringAsync($"api/status/id/{statusId}");
+            var result = await _httpClient.GetFromJsonAsync<int>($"api/status/name/{statusName}");
             return result;
         }
 
@@ -111,9 +111,11 @@ namespace WebAPplication.UI.Apicall
         public async Task<UIWorkItem> GetWorkItemById(string id)
         {
             var result = await _httpClient.GetFromJsonAsync<WorkItemModel>($"api/GetById/{id}");
-            var userName = await GetUserName(result.UserId);
+            var assigneeName = await GetUserName(result.AssigneeId);
+            var reporterName = await GetUserName(result.ReporterId);
             var model = _mapper.Map<UIWorkItem>(result);
-            model.AssigneeName = userName;
+            model.AssigneeName = assigneeName;
+            model.ReporterName = reporterName;
             return model;
         }
 
@@ -131,10 +133,17 @@ namespace WebAPplication.UI.Apicall
 
         }
 
+        public async Task<IEnumerable<WorkItemModelWithString>> GetWorkItemsWithName()
+        {
+            var result = await _httpClient.GetFromJsonAsync<WorkItemModelWithString[]>($"api/getallWithName");
+            return result;
+        }
+
         public async Task<HttpResponseMessage> UpdateWorkItem(UIWorkItem uiWorkItem)
         {
             return await _httpClient.PutAsJsonAsync("api/update", uiWorkItem);
         }
-        
+
+         
     }
 }

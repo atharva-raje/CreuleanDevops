@@ -1,0 +1,311 @@
+﻿@page "/workitem"
+@using Blazorise
+@using Blazorise.Components
+@using BusinessLOgic.Models
+@using Microsoft.AspNetCore.Components.Forms
+@using Apicall
+@using WebAPplication.UI.UiModels
+@inject WorkItemCall workitemcall
+@inject NavigationManager NavManager
+@inject UserAPiCall usercall
+
+<Alert @ref="myAlert" Color="Color.Success">
+    <AlertMessage>Success!</AlertMessage>
+    <AlertDescription>You successfully created a new Work-Item!</AlertDescription>
+    <CloseButton />
+</Alert>
+<Alert @ref="myAlertFailed" Color="Color.Danger">
+    <AlertMessage>Failed!</AlertMessage>
+    <AlertDescription>Failed to create a Work Item</AlertDescription>
+    <CloseButton />
+</Alert>
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>Create Work-Item</h3>
+    </div>
+    <EditForm Model="uIWorkItem" OnValidSubmit="AddWorkitem">
+        <DataAnnotationsValidator />
+        <Blazorise.ValidationSummary />
+        <Validations>
+            <div class="form-row">
+                <div class="col-md-12">
+                    <label class="fw-bold" for="name">Title</label>
+                    <InputText id="name" placeholder="Enter Title" class="form-control shadow" @bind-Value="uIWorkItem.Name" />
+                    <Validation For="@(() => uIWorkItem.Name)" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <label class="fw-bold" for="description">Description</label>
+                    <InputTextArea id="description" placeholder="Enter Description..." class="form-control shadow" @bind-Value="uIWorkItem.Description" />
+                    <Validation For="@(() => uIWorkItem.Description)" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="fw-bold" for="type">Type</label>
+                    <AutoComplete TItem="TypeModel" Items="@types" DisplayPropertyName="TypeName" IdPropertyName="TypeId" ValueChanged="OnValueChangedType" />
+                    <Validation For="@(() => uIWorkItem.TypeId)" />
+                </div>
+                <br />
+                <div class="col-md-3">
+                    <label class="fw-bold" for="status">Status</label>
+                    <AutoComplete TItem="StatusModelWithoutId" Items="@statuses" DisplayPropertyName="StatusName" IdPropertyName="StatusId" ValueChanged="OnValueChangedStatus" />
+                    <Validation For="@(() => uIWorkItem.StatusId)" />
+                </div>
+                <div class="col-md-3">
+                    <label class="fw-bold" id="Priorityselect">Priority</label>
+                    <InputSelect id="prioritySelect" class="form-control shadow" @bind-Value="uIWorkItem.PriorityId">
+                        <option hidden value="">Please select a priority</option>
+                        @foreach (var priority in priorites)
+                        {
+                            <option value="@priority.PriorityId">@priority.PriorityName</option>
+                        }
+                    </InputSelect>
+                    <Validation For="@(() => uIWorkItem.PriorityId)" />
+                </div>
+                <div class="col-md-3">
+                    <label class="fw-bold" for="name">Storypoints</label>
+                    <InputSelect id="storypoint" class="form-control shadow" @bind-Value="uIWorkItem.StoryPoints">
+                        <option hidden value="">Please select story points</option>
+                        @foreach (var point in fibonacciSeries)
+                        {
+                            <option value="@point">@point</option>
+                        }
+                    </InputSelect>
+                    <Validation For="@(() => uIWorkItem.StoryPoints)" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="fw-bold" for="area">Area</label>
+                    <AutoComplete TItem="AreaWithoutId" Items="@allAreas" DisplayPropertyName="AreaName" IdPropertyName="Id" ValueChanged="OnValueChanged" />
+                    <Validation For="@(() => uIWorkItem.AreaId)" />
+                </div>
+                <br />
+                <div class="col-md-3">
+                    <label class="fw-bold" for="iteration">Iteration</label>
+                    <AutoComplete TItem="IterationWIthoutId" Items="@iterations" DisplayPropertyName="IterationName" IdPropertyName="IterationId" ValueChanged="OnValueChangedIterations" />
+                    <Validation For="@(() => uIWorkItem.IterationId)" />
+                </div>
+                <br />
+                <div class="col-md-3">
+                    <label class="fw-bold" for="status">Assign Assignee</label>
+                    <InputSelect id="assigneeSelect" class="form-control shadow" @bind-Value="uIWorkItem.AssigneeName">
+                        <option hidden value="">Please select a user</option>
+                        @foreach (var user in users)
+                        {
+                            <option value="@user.UserName">@user.UserName</option>
+                        }
+                    </InputSelect>
+                    <Validation For="@(() => uIWorkItem.AssigneeName)" />
+                </div>
+                <div class="col-md-3">
+                    <label class="fw-bold" for="status">Assign Reporter</label>
+                    <InputSelect id="reporterSelect" class="form-control shadow" @bind-Value="uIWorkItem.ReporterName">
+                        <option hidden value="">Please select a user</option>
+                        @foreach (var user in users)
+                        {
+                            <option value="@user.UserName">@user.UserName</option>
+                        }
+                    </InputSelect>
+                    <Validation For="@(() => uIWorkItem.ReporterName)" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="fw-bold" for="startdate">Start Date</label>
+                    <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ExpectedStartDate" />
+                    <Validation For="@(() => uIWorkItem.ExpectedStartDate)" />
+                </div>
+                <br />
+                <div class="col-md-3">
+                    <label class="fw-bold" for="enddate">End Date</label>
+                    <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ExpectedEndDate" />
+                    <Validation For="@(() => uIWorkItem.ExpectedEndDate)" />
+                </div>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">Create</button>
+        </Validations>
+    </EditForm>
+</div>
+<br />
+@code {
+    private string name;
+    private string description;
+    private string type;
+    private string area;
+    private string iteration;
+    private string status;
+    private List<StatusModelWithoutId> statuses = new List<StatusModelWithoutId>();
+    private List<UserModel> users = new List<UserModel>();
+    private List<TypeModel> types = new List<TypeModel>();
+    private List<PriorityModel> priorites = new List<PriorityModel>();
+    public UIWorkItem uIWorkItem = new UIWorkItem();
+    private bool saved = false;
+    Alert myAlert;
+    Alert myAlertFailed;
+    private List<AreaWithoutId> filteredAreas = new List<AreaWithoutId>();
+    private List<AreaWithoutId> allAreas = new List<AreaWithoutId>();
+    private List<AreaWithoutId> areas = new List<AreaWithoutId>();
+    private List<IterationWIthoutId> iterations = new List<IterationWIthoutId>();
+    private List<int> fibonacciSeries = new List<int> { 1, 2, 3, 5, 8, 13, 21 };
+
+    private async Task AddWorkitem()
+    {
+        try
+        {
+            saved = false;
+            var result = await workitemcall.AddWorkItem(uIWorkItem);
+            saved = true;
+
+            if (result.IsSuccessStatusCode)
+            {
+                myAlert.Show();
+
+                uIWorkItem = new UIWorkItem
+                {
+                    ExpectedStartDate = DateTime.Now,
+                    ExpectedEndDate = DateTime.Now
+                };
+                StateHasChanged();
+            }
+            else
+            {
+                myAlertFailed.Show();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    private async void AreaSelected(int id)
+    {
+        var AreaSelected = id;
+        uIWorkItem.AreaId = id;
+        var iterations1 = await workitemcall.Getiterations(AreaSelected);
+        iterations = iterations1.ToList();
+        if (!iterations.Any(iteration => iteration.IterationId == uIWorkItem.IterationId))
+        {
+            uIWorkItem.IterationId = null;
+        }
+        StateHasChanged();
+    }
+
+    private async void TypeSelected(ChangeEventArgs e)
+    {
+        var typeSelected = Int32.Parse(e.Value.ToString());
+        var statuses1 = await workitemcall.GetStatusModels(typeSelected);
+        statuses = statuses1.ToList();
+        if (!statuses.Any(status => status.StatusId == uIWorkItem.StatusId))
+        {
+            uIWorkItem.StatusId = null;
+        }
+        StateHasChanged();
+    }
+
+    private async Task UploadAttachment()
+    {
+        NavManager.NavigateTo($"/upload/{await usercall.GetUserIdByName(uIWorkItem.Name)}");
+    }
+
+    private async Task AddLink()
+    {
+        NavManager.NavigateTo($"/linkworkitems");
+    }
+
+    private List<AreaWithoutId> FilterAreas(AreaWithoutId item, string searchValue)
+    {
+        if (string.IsNullOrEmpty(searchValue))
+        {
+            return allAreas.ToList();
+        }
+        else
+        {
+            return allAreas.Where(area =>
+                area.AreaName.IndexOf(searchValue, StringComparison.OrdinalIgnoreCase) >= 0)
+                .ToList();
+        }
+    }
+
+    private string? searchTerm = "";
+
+    private async Task HandleAutocompleteFocus(FocusEventArgs e)
+    {
+        if (string.IsNullOrEmpty(searchTerm))
+        {
+            var areas = await workitemcall.GetAreas();
+            allAreas = areas.ToList();
+        }
+    }
+
+    private async Task LoadAllAreas()
+    {
+        if (allAreas == null || !allAreas.Any())
+        {
+            var areas1 = await workitemcall.GetAreas();
+            allAreas = areas1.ToList();
+            filteredAreas = allAreas.ToList();
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var areas1 = await workitemcall.GetAreas();
+        allAreas = areas1.ToList();
+        searchTerm = " ";
+        filteredAreas = allAreas;
+        var t = await workitemcall.GetTypeModels();
+        types = t.ToList();
+        var p = await workitemcall.GetPriorityModels();
+        priorites = p.ToList();
+        uIWorkItem.ExpectedStartDate = DateTime.Now;
+        uIWorkItem.ExpectedEndDate = DateTime.Now;
+        var u = await workitemcall.GetUsers();
+        users = u.ToList();
+    }
+
+    private async void OnValueChanged(int id)
+    {
+        uIWorkItem.AreaId = id;
+        var AreaSelected = id;
+        uIWorkItem.AreaId = id;
+        var iterations1 = await workitemcall.Getiterations(AreaSelected);
+        iterations = iterations1.ToList();
+        if (!iterations.Any(iteration => iteration.IterationId == uIWorkItem.IterationId))
+        {
+            uIWorkItem.IterationId = null;
+        }
+        StateHasChanged();
+    }
+
+    private async void OnValueChangedIterations(int id)
+    {
+        uIWorkItem.IterationId = id;
+    }
+
+    private async void OnValueChangedStatus(int id)
+    {
+        uIWorkItem.StatusId = id;
+    }
+
+    private async void OnValueChangedType(int id)
+    {
+        uIWorkItem.TypeId = id;
+        var typeSelected = id;
+        var statuses1 = await workitemcall.GetStatusModels(typeSelected);
+        statuses = statuses1.ToList();
+        if (!statuses.Any(status => status.StatusId == uIWorkItem.StatusId))
+        {
+            uIWorkItem.StatusId = null;
+        }
+        StateHasChanged();
+    }
+}

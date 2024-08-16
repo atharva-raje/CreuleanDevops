@@ -25,7 +25,7 @@ namespace DAL.repositeries
 
         public async Task<Priorities> GetPriorityId(string priorityName)
         {
-            return await _workItemsDbContext.Priorities.FirstOrDefaultAsync(p => p.PritoryName == priorityName);
+            return await _workItemsDbContext.Priorities.FirstOrDefaultAsync(p => p.PriorityName == priorityName);
         }
         public async Task<Priorities> GetPriorityName(int priorityid)
         {

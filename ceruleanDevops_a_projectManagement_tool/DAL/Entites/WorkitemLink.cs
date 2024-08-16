@@ -22,7 +22,7 @@ namespace DAL.Entites
         [InverseProperty("TargetLinks")]
         public string TargetWorkItemId { get; set; }
             public WorkItem TargetWorkItem { get; set; }
-            public string LinkType { get; set; }
+            public int LinkType { get; set; }
         }
     
 }

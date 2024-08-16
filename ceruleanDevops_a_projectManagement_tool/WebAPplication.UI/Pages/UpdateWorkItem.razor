@@ -1,11 +1,13 @@
 ﻿@page "/UpdateWorkItem/{id}"
 @using Blazorise
+@using Blazorise.Components
 @using BusinessLOgic.Models
 @using WebAPplication.UI.Apicall
 @using WebAPplication.UI.UiModels
 @inject NavigationManager NavManager
 @inject WorkItemCall workitemcall
 @inject UserAPiCall usercall
+ 
 <Alert @ref="myAlert" Color="Color.Success">
     <AlertMessage>Success!</AlertMessage>
     <AlertDescription>You successfully updated the Work-Item!</AlertDescription>
@@ -16,16 +18,20 @@
     <AlertDescription>Failed to update a Work Item</AlertDescription>
     <CloseButton />
 </Alert>
+ 
+
+ 
+
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h3>Update Work-Item</h3>
-    <div class="d-flex">
+    @* <div class="d-flex">
         <button class="btn btn-info me-2" @onclick="UploadAttachment">
             <i class="fas fa-paperclip"></i> Attachments
         </button>
         <button class="btn btn-info" @onclick="AddLink">
             <i class="fas fa-link"></i> Add Links
         </button>
-    </div>
+    </div> *@
 </div>
 
 <EditForm Model="uIWorkItem" OnSubmit="UpdateWorkitem" >
@@ -76,27 +82,30 @@
                 <option hidden value="">Please select an priority</option>
                 @foreach (var priority in priorites)
                 {
-                    <option value="@priority.PriorityId">@priority.PritoryName</option>
+                    <option value="@priority.PriorityId">@priority.PriorityName</option>
                 }
             </InputSelect>
             <ValidationMessage For="@(() => uIWorkItem.PriorityId)" />
         </div>
-         
+        <div class="col-md-3  ">
+            <label class="fw-bold" for="name">Storypoints</label>
+            <InputNumber id="storypoint" PlaceHolder="Enter storypoints" class="form-control shadow" @bind-Value="uIWorkItem.StoryPoints" Step="1" />
+            <ValidationMessage For="@(() => uIWorkItem.StoryPoints)" />
+        </div>
     </div>
     <br />
     <div class="row">
 
             <div class="col-md-3 ">
             <label class="fw-bold" for="area">Area</label>
-            
-            <InputSelect id="areaSelect" class="form-control  shadow" @bind-Value="uIWorkItem.AreaId" @oninput=AreaOnChanged>
-                    <option hidden value="">Please select an area</option>
-                @foreach (var area in areas)
-                {
-                    <option value="@area.Id">@area.AreaName</option>
-                }
-            </InputSelect>
-            <ValidationMessage For="@(() => uIWorkItem.AreaId)" />
+            <Autocomplete TItem="AreaWithoutId" TValue="int"
+                              Data="@areas"
+                              @bind-SelectedValue="uIWorkItem.AreaId"
+                              TextField="@(( item ) => item.AreaName)"
+                              ValueField="@(( item ) => item.Id)"
+                              @onchange="AreaOnChanged"
+                              Placeholder="Please select an area" />
+                <ValidationMessage For="@(() => uIWorkItem.AreaId)" />
         </div>
      
          <br />
@@ -125,31 +134,42 @@
             </InputSelect>
             <ValidationMessage For="@(() => uIWorkItem.AssigneeName)" />
         </div>
+        <div class="col-md-3">
+            <label class="fw-bold" for="status">Assign Reporter</label>
+            <InputSelect id="statusSelect" class="form-control shadow " @bind-Value="uIWorkItem.ReporterName">
+                <option hidden value="">Please select an user</option>
+                @foreach (var user in users)
+                {
+                    <option value="@user.UserName"><i class="bi bi-person-circle"></i>@user.UserName</option>
+                }
+            </InputSelect>
+            <ValidationMessage For="@(() => uIWorkItem.ReporterName)" />
+        </div>
     </div>
     <br />
     <div class="row">
             <div class="col-md-3  ">
-            <Label class="fw-bold" for="startdate">Created At</Label>
-                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ActualStartDate" />
-            <ValidationMessage For="@(() => uIWorkItem.ActualStartDate )" />
+            <Label class="fw-bold" for="startdate">Expected start Date</Label>
+                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ExpectedStartDate" />
+            <ValidationMessage For="@(() => uIWorkItem.ExpectedStartDate )" />
              
         </div>
         <br />
             <div class="col-md-3 ">
-                <Label class="fw-bold" for="enddate">Actual Due Date</Label>
-                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ActualEndDate" />
-            <ValidationMessage For="@(() =>uIWorkItem.ActualEndDate )" />
+                <Label class="fw-bold" for="enddate">Expected Due Date</Label>
+                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ExpectedEndDate" />
+            <ValidationMessage For="@(() =>uIWorkItem.ExpectedEndDate )" />
              
         </div>
         <div class="col-md-3  ">
-            <Label class="fw-bold" for="ExpectedEndDate">Expected start Date</Label>
-            <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ExpectedStartDate" />
-            <ValidationMessage For="@(() => uIWorkItem.ExpectedStartDate)" />
+            <Label class="fw-bold" for="ExpectedEndDate">Actual start Date</Label>
+            <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ActualStartDate" />
+            <ValidationMessage For="@(() => uIWorkItem.ActualStartDate)" />
         </div>
         <div class="col-md-3  ">
-            <Label class="fw-bold" for="ExpectedEndDate">Expected Due Date</Label>
-            <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ExpectedEndDate" />
-            <ValidationMessage For="@(() => uIWorkItem.ExpectedEndDate)" />
+            <Label class="fw-bold" for="ExpectedEndDate">Actual Due Date</Label>
+            <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ActualEndDate" />
+            <ValidationMessage For="@(() => uIWorkItem.ActualEndDate)" />
         </div>
 
     </div>
@@ -157,7 +177,31 @@
     <button type="submit" class="btn btn-primary">Update</button>
 </EditForm>
 <br />
-<Comments userId="@userid" workitemId="@(id)"></Comments>
+<Tabs SelectedTab="@selectedTab" Class="cursor-pointer" SelectedTabChanged="@OnSelectedTabChanged">
+    <Items>
+        
+        <Tab Name="Comments">Comments</Tab>
+        <Tab Name="Uploads">Attachments</Tab>
+        <Tab Name="Links">Links</Tab>
+    </Items>
+    <Content>
+         
+        <TabPanel Name="Comments">
+            <Comments userId="@userid" workitemId="@(id)"></Comments>
+        </TabPanel>
+        <TabPanel Name="Uploads">
+            @if (isFileUploadTabSelected)
+            {
+                <FileUpload id="@id"></FileUpload>
+            }
+        </TabPanel>
+        <TabPanel Name="Links">
+             <Links sourceWorkItemId="@id" ></Links>
+        </TabPanel>
+    </Content>
+</Tabs>
+<br />
+@*<Comments userId="@userid" workitemId="@(id)"></Comments>*@
  <br />
 @code {
     [Parameter] public string id{ get; set; }
@@ -172,6 +216,9 @@
     Alert myAlertFailed;
     private List<AreaWithoutId> areas = new List<AreaWithoutId>();
     private List<IterationWIthoutId> iterations = new List<IterationWIthoutId>();
+    private bool isFileUploadTabSelected = false;
+
+     
     private async Task UpdateWorkitem()
     {
 
@@ -248,8 +295,25 @@
     }
     private async Task  AddLink()
     {
-        NavManager.NavigateTo($"/linkworkitems");
+        NavManager.NavigateTo($"/linkworkitems/{id}");
     }
+    string selectedTab = "Comments";
+
+    private async Task OnSelectedTabChanged(string name)
+    {
+        selectedTab = name;
+        if (selectedTab == "Uploads")
+        {
+            isFileUploadTabSelected = true;
+
+        }
+        else
+        {
+            isFileUploadTabSelected = false;
+        }
+    }
+  
+
     protected override async Task OnInitializedAsync()
     {
         uIWorkItem = await workitemcall.GetWorkItemById(id);
@@ -262,11 +326,15 @@
         await AreaSelected(uIWorkItem.AreaId);
         await TypeSelected(uIWorkItem.TypeId);
         userid = await usercall.GetUserIdByName(uIWorkItem.AssigneeName);
-        uIWorkItem.ExpectedStartDate = DateTime.Now;
-        uIWorkItem.ExpectedEndDate = DateTime.Now;
+        uIWorkItem.ActualStartDate = DateTime.Now;
+        uIWorkItem.ActualEndDate = DateTime.Now;
         var u = await workitemcall.GetUsers();
         users = u.ToList();
     }
 }
-
+<style>
+    .cursor-pointer {
+        cursor: pointer;
+    }
+</style>
 

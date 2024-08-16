@@ -22,6 +22,13 @@ namespace BusinessLOgic.sevices
             areaRepository = _statusRepository;
         }
 
+        public async Task<int> GetAreaId(string name)
+        {
+            var result = await areaRepository.GetAreaId(name);
+            return result.Id;
+
+        }
+
         public async Task<string> GetAreaName(int name)
         {
             var result = await areaRepository.GetAreaName(name);

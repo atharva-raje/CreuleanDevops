@@ -137,7 +137,7 @@ namespace DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PriorityId"));
 
-                    b.Property<string>("PritoryName")
+                    b.Property<string>("PriorityName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -220,7 +220,6 @@ namespace DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ExpectedEndDate")
@@ -278,9 +277,8 @@ namespace DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("LinkType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("LinkType")
+                        .HasColumnType("int");
 
                     b.Property<string>("SourceWorkItemId")
                         .IsRequired()

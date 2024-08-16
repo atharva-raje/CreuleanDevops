@@ -181,12 +181,20 @@
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\obj\\Debug\\net8.0\\compressed\\0ianrfwhtk.gz",
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\obj\\Debug\\net8.0\\compressed\\h3f5rv8ea3.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
       "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebAPplication.UI.styles.css",
       "PackagePath": "staticwebassets\\WebAPplication.UI.styles.css"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\JavaScriptCustom\\dragDropHelper.js",
+      "PackagePath": "staticwebassets\\JavaScriptCustom\\dragDropHelper.js"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\blazorDownloadFile.js",
+      "PackagePath": "staticwebassets\\blazorDownloadFile.js"
     },
     {
       "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\css\\app.css",
@@ -211,6 +219,10 @@
     {
       "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\initializeInteractJs.js",
+      "PackagePath": "staticwebassets\\initializeInteractJs.js"
     },
     {
       "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.svg",
@@ -7433,548 +7445,1024 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\sticky.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\stop-btn-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\stop-btn-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\stop-btn.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\stop-btn.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.min.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\stop-circle-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\stop-circle-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.min.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\stop-circle.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\stop-circle.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.rtl.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\stop-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\stop-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.rtl.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\stop.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\stop.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.rtl.min.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\stoplights-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\stoplights-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\stoplights.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\stoplights.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\stopwatch-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\stopwatch-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\stopwatch.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\stopwatch.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.min.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\strava.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\strava.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.min.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\stripe.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\stripe.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\subscript.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\subscript.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\substack.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\substack.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.min.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\subtract.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\subtract.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suit-club-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suit-club-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suit-club.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suit-club.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suit-diamond-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suit-diamond-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.min.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suit-diamond.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suit-diamond.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.min.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suit-heart-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suit-heart-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suit-heart.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suit-heart.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suit-spade-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suit-spade-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.min.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suit-spade.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suit-spade.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suitcase-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suitcase-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suitcase-lg-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suitcase-lg-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suitcase-lg.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suitcase-lg.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.min.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suitcase.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suitcase.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.min.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suitcase2-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suitcase2-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.rtl.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\suitcase2.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\suitcase2.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.rtl.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\sun-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\sun-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.rtl.min.css"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\sun.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\sun.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\css\\bootstrap.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.rtl.min.css.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\sunglasses.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\sunglasses.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.bundle.js"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\sunrise-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\sunrise-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.bundle.js.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\sunrise.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\sunrise.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.bundle.min.js"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\sunset-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\sunset-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.bundle.min.js.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\sunset.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\sunset.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.esm.js"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\superscript.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\superscript.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.esm.js.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\symmetry-horizontal.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\symmetry-horizontal.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.esm.min.js"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\symmetry-vertical.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\symmetry-vertical.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.esm.min.js.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\table.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\table.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.js"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tablet-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tablet-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.js.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tablet-landscape-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tablet-landscape-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.min.js"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tablet-landscape.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tablet-landscape.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.min.js.map"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tablet.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tablet.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_accordion.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_accordion.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tag-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tag-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_alert.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_alert.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tag.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tag.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_badge.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_badge.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tags-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tags-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_breadcrumb.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_breadcrumb.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tags.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tags.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_button-group.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_button-group.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\taxi-front-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\taxi-front-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_buttons.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_buttons.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\taxi-front.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\taxi-front.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_card.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_card.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telegram.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telegram.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_carousel.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_carousel.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_close.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_close.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-forward-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-forward-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_containers.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_containers.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-forward.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-forward.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_dropdown.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_dropdown.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-inbound-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-inbound-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_forms.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_forms.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-inbound.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-inbound.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_functions.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_functions.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-minus-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-minus-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_grid.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_grid.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-minus.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-minus.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_helpers.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_helpers.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-outbound-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-outbound-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_images.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_images.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-outbound.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-outbound.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_list-group.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_list-group.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-plus-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-plus-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_maps.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_maps.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-plus.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-plus.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_mixins.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_mixins.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-x-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-x-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_modal.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_modal.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone-x.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone-x.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_nav.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_nav.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\telephone.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\telephone.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_navbar.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_navbar.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tencent-qq.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tencent-qq.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_offcanvas.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_offcanvas.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\terminal-dash.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\terminal-dash.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_pagination.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_pagination.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\terminal-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\terminal-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_placeholders.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_placeholders.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\terminal-plus.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\terminal-plus.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_popover.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_popover.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\terminal-split.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\terminal-split.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_progress.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_progress.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\terminal-x.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\terminal-x.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_reboot.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_reboot.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\terminal.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\terminal.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_root.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_root.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\text-center.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\text-center.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_spinners.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_spinners.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\text-indent-left.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\text-indent-left.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_tables.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_tables.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\text-indent-right.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\text-indent-right.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_toasts.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_toasts.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\text-left.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\text-left.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_tooltip.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_tooltip.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\text-paragraph.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\text-paragraph.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_transitions.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_transitions.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\text-right.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\text-right.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_type.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_type.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\text-wrap.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\text-wrap.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_utilities.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_utilities.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\textarea-resize.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\textarea-resize.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_variables-dark.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_variables-dark.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\textarea-t.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\textarea-t.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\_variables.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\_variables.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\textarea.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\textarea.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\bootstrap-grid.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\bootstrap-grid.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\thermometer-half.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\thermometer-half.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\bootstrap-reboot.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\bootstrap-reboot.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\thermometer-high.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\thermometer-high.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\bootstrap-utilities.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\bootstrap-utilities.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\thermometer-low.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\thermometer-low.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\bootstrap.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\bootstrap.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\thermometer-snow.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\thermometer-snow.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\forms\\_floating-labels.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_floating-labels.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\thermometer-sun.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\thermometer-sun.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\forms\\_form-check.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_form-check.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\thermometer.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\thermometer.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\forms\\_form-control.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_form-control.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\threads-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\threads-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\forms\\_form-range.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_form-range.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\threads.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\threads.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\forms\\_form-select.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_form-select.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\three-dots-vertical.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\three-dots-vertical.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\forms\\_form-text.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_form-text.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\three-dots.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\three-dots.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\forms\\_input-group.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_input-group.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\thunderbolt-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\thunderbolt-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\forms\\_labels.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_labels.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\thunderbolt.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\thunderbolt.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\forms\\_validation.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\forms\\_validation.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\ticket-detailed-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\ticket-detailed-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_clearfix.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_clearfix.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\ticket-detailed.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\ticket-detailed.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_color-bg.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_color-bg.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\ticket-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\ticket-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_colored-links.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_colored-links.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\ticket-perforated-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\ticket-perforated-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_focus-ring.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_focus-ring.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\ticket-perforated.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\ticket-perforated.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_icon-link.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_icon-link.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\ticket.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\ticket.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_position.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_position.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tiktok.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tiktok.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_ratio.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_ratio.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\toggle-off.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\toggle-off.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_stacks.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_stacks.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\toggle-on.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\toggle-on.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_stretched-link.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\toggle2-off.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\toggle2-off.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_text-truncation.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\toggle2-on.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\toggle2-on.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\toggles.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\toggles.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\helpers\\_vr.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\helpers\\_vr.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\toggles2.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\toggles2.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_alert.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_alert.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tools.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tools.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_backdrop.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_backdrop.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tornado.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tornado.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_banner.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_banner.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\train-freight-front-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\train-freight-front-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_border-radius.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_border-radius.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\train-freight-front.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\train-freight-front.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_box-shadow.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\train-front-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\train-front-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_breakpoints.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\train-front.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\train-front.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_buttons.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_buttons.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\train-lightrail-front-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\train-lightrail-front-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_caret.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_caret.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\train-lightrail-front.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\train-lightrail-front.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_clearfix.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_clearfix.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\translate.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\translate.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_color-mode.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_color-mode.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\transparency.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\transparency.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_color-scheme.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\trash-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\trash-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_container.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_container.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\trash.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\trash.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_deprecate.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_deprecate.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\trash2-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\trash2-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_forms.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_forms.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\trash2.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\trash2.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_gradients.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_gradients.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\trash3-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\trash3-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_grid.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_grid.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\trash3.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\trash3.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_image.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_image.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tree-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tree-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_list-group.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_list-group.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tree.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tree.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_lists.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_lists.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\trello.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\trello.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_pagination.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_pagination.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\triangle-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\triangle-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_reset-text.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_reset-text.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\triangle-half.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\triangle-half.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_resize.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_resize.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\triangle.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\triangle.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_table-variants.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_table-variants.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\trophy-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\trophy-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_text-truncate.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\trophy.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\trophy.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_transition.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_transition.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tropical-storm.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tropical-storm.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_utilities.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_utilities.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\truck-flatbed.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\truck-flatbed.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\truck-front-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\truck-front-fill.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\utilities\\_api.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\utilities\\_api.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\truck-front.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\truck-front.svg"
     },
     {
-      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap\\scss\\vendor\\_rfs.scss",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\scss\\vendor\\_rfs.scss"
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\truck.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\truck.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tsunami.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tsunami.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tv-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tv-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\tv.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\tv.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\twitch.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\twitch.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\twitter-x.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\twitter-x.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\twitter.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\twitter.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\type-bold.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\type-bold.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\type-h1.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\type-h1.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\type-h2.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\type-h2.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\type-h3.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\type-h3.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\type-h4.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\type-h4.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\type-h5.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\type-h5.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\type-h6.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\type-h6.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\type-italic.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\type-italic.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\type-strikethrough.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\type-strikethrough.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\type-underline.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\type-underline.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\type.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\type.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\ubuntu.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\ubuntu.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\ui-checks-grid.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\ui-checks-grid.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\ui-checks.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\ui-checks.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\ui-radios-grid.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\ui-radios-grid.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\ui-radios.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\ui-radios.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\umbrella-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\umbrella-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\umbrella.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\umbrella.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\unindent.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\unindent.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\union.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\union.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\unity.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\unity.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\universal-access-circle.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\universal-access-circle.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\universal-access.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\universal-access.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\unlock-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\unlock-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\unlock.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\unlock.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\upc-scan.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\upc-scan.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\upc.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\upc.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\upload.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\upload.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb-c-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb-c-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb-c.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb-c.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb-drive-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb-drive-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb-drive.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb-drive.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb-micro-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb-micro-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb-micro.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb-micro.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb-mini-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb-mini-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb-mini.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb-mini.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb-plug-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb-plug-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb-plug.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb-plug.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb-symbol.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb-symbol.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\usb.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\usb.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\valentine.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\valentine.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\valentine2.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\valentine2.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\vector-pen.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\vector-pen.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\view-list.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\view-list.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\view-stacked.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\view-stacked.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\vignette.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\vignette.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\vimeo.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\vimeo.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\vinyl-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\vinyl-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\vinyl.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\vinyl.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\virus.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\virus.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\virus2.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\virus2.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\voicemail.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\voicemail.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\volume-down-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\volume-down-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\volume-down.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\volume-down.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\volume-mute-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\volume-mute-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\volume-mute.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\volume-mute.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\volume-off-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\volume-off-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\volume-off.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\volume-off.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\volume-up-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\volume-up-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\volume-up.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\volume-up.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\vr.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\vr.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wallet-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wallet-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wallet.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wallet.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wallet2.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wallet2.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\watch.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\watch.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\water.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\water.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\webcam-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\webcam-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\webcam.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\webcam.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wechat.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wechat.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\whatsapp.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\whatsapp.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wifi-1.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wifi-1.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wifi-2.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wifi-2.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wifi-off.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wifi-off.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wifi.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wifi.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wikipedia.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wikipedia.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wind.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wind.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\window-dash.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\window-dash.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\window-desktop.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\window-desktop.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\window-dock.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\window-dock.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\window-fullscreen.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\window-fullscreen.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\window-plus.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\window-plus.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\window-sidebar.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\window-sidebar.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\window-split.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\window-split.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\window-stack.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\window-stack.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\window-x.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\window-x.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\window.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\window.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\windows.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\windows.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wordpress.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wordpress.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wrench-adjustable-circle-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wrench-adjustable-circle-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wrench-adjustable-circle.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wrench-adjustable-circle.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wrench-adjustable.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wrench-adjustable.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\wrench.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\wrench.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\x-circle-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\x-circle-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\x-circle.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\x-circle.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\x-diamond-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\x-diamond-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\x-diamond.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\x-diamond.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\x-lg.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\x-lg.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\x-octagon-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\x-octagon-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\x-octagon.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\x-octagon.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\x-square-fill.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\x-square-fill.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\x-square.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\x-square.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\x.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\x.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\xbox.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\xbox.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\yelp.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\yelp.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\yin-yang.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\yin-yang.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\youtube.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\youtube.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\zoom-in.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\zoom-in.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\bootstrap-icons\\icons\\zoom-out.svg",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\icons\\zoom-out.svg"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\fontawesome-iconpicker\\css\\fontawesome-iconpicker.css",
+      "PackagePath": "staticwebassets\\lib\\fontawesome-iconpicker\\css\\fontawesome-iconpicker.css"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\fontawesome-iconpicker\\css\\fontawesome-iconpicker.min.css",
+      "PackagePath": "staticwebassets\\lib\\fontawesome-iconpicker\\css\\fontawesome-iconpicker.min.css"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\fontawesome-iconpicker\\js\\fontawesome-iconpicker.js",
+      "PackagePath": "staticwebassets\\lib\\fontawesome-iconpicker\\js\\fontawesome-iconpicker.js"
+    },
+    {
+      "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\lib\\fontawesome-iconpicker\\js\\fontawesome-iconpicker.min.js",
+      "PackagePath": "staticwebassets\\lib\\fontawesome-iconpicker\\js\\fontawesome-iconpicker.min.js"
     },
     {
       "Id": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\WebAPplication.UI\\wwwroot\\sample-data\\weather.json",

@@ -35,7 +35,9 @@ namespace BusinessLOgic.Models
         public DateTime ActualEndDate { get; set; }
 
         [Required]
-        public string UserId { get; set; }
+        public string AssigneeName { get; set; }
+        public string ReporterName { get; set; }
+        public int StoryPoints { get; set; }
         public DateTime ExpectedStartDate { get; set; }
         public DateTime ExpectedEndDate { get; set; }
     }

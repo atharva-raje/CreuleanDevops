@@ -30,3 +30,5 @@ D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\Dom
 D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\DomainLayer\obj\Debug\net8.0\BusinessLOgic.pdb
 D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\DomainLayer\obj\Debug\net8.0\BusinessLOgic.genruntimeconfig.cache
 D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\DomainLayer\obj\Debug\net8.0\ref\BusinessLOgic.dll
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\DomainLayer\bin\Debug\net8.0\SharedEnums.dll
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\DomainLayer\bin\Debug\net8.0\SharedEnums.pdb

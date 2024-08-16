@@ -36,6 +36,13 @@ namespace WebApplication1.Controllers
             return Ok(model);
         }
         [HttpGet]
+        [Route("getallWithName")]
+        public async Task<IActionResult> GetWorkItemsWithName()
+        {
+            var results = await _workItemServices.GetWorkItemsWithNames();
+            return Ok(results);
+        }
+        [HttpGet]
         [Route("getById/{workItemId}")]
         public async Task<IActionResult> GetWorkItemsWithId(string workItemId)
         {
@@ -66,6 +73,13 @@ namespace WebApplication1.Controllers
         public async Task<IActionResult> UpdateWorkItem([FromBody]UIWorkItem workItemModel)
         {
             var results = await _workItemServices.UpdateWorkItemsService(workItemModel);
+            var model = _mapper.Map<WorkItemModel>(results);
+            return Ok(model);
+        }
+        [HttpPut("update/name")]
+        public async Task<IActionResult> UpdateWorkItemWithNames([FromBody] WorkItemModelWithString workItemModel)
+        {
+            var results = await _workItemServices.UpdateWorkItemsServiceWithNames(workItemModel);
             var model = _mapper.Map<WorkItemModel>(results);
             return Ok(model);
         }

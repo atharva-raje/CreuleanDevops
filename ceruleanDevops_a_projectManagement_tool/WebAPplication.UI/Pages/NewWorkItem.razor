@@ -1,4 +1,4 @@
-﻿@page "/workitem"
+﻿@* @page "/workitem"
 @using Blazorise
 @using BusinessLOgic.Models
 @using Microsoft.AspNetCore.Components.Forms
@@ -60,7 +60,7 @@
         <br />
             <div class="col-md-3  ">
             <label class="fw-bold" for="status">Status</label>
-            @*<InputText id="status" class="form-control" @bind-Value="uIWorkItem.status" />*@
+            @*<InputText id="status" class="form-control" @bind-Value="uIWorkItem.status" />
 
                 <InputSelect id="statusSelect" class="form-control shadow" @bind-Value="uIWorkItem.StatusId" Disabled="@(!statuses.Any())">
                     <option hidden value="">Please select an status</option>
@@ -82,14 +82,18 @@
             </InputSelect>
                 <ValidationMessage For="@(() => uIWorkItem.PriorityId)" />
         </div>
-         
+            <div class="col-md-3  ">
+                <label class="fw-bold" for="name">Storypoints</label>
+                <InputNumber id="storypoint" PlaceHolder="Enter storypoints" class="form-control shadow" @bind-Value="uIWorkItem.StoryPoints" Step="1" />
+                <ValidationMessage For="@(() => uIWorkItem.StoryPoints)" />
+            </div>
     </div>
     <br />
     <div class="row">
 
             <div class="col-md-3 ">
             <label class="fw-bold" for="area">Area</label>
-            @*<InputText id="area" class="form-control" @bind-Value="uIWorkItem.area" />*@
+             
                 <InputSelect id="areaSelect" class="form-control  shadow" @bind-Value="uIWorkItem.AreaId" @oninput=AreaSelected>
                     <option hidden value="">Please select an area</option>
                 @foreach (var area in areas)
@@ -142,16 +146,17 @@
     <div class="row">
             <div class="col-md-3  ">
             <Label class="fw-bold" for="startdate">Start Date</Label>
-                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ActualStartDate" />
-                <ValidationMessage For="@(() => uIWorkItem.ActualStartDate )" />
+                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ExpectedStartDate" />
+                <ValidationMessage For="@(() => uIWorkItem.ExpectedStartDate )" />
              
         </div>
         <br />
             <div class="col-md-3 ">
                 <Label class="fw-bold" for="startdate">End Date</Label>
-                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ActualEndDate" />
-                <ValidationMessage For="@(() =>uIWorkItem.ActualEndDate )" />
+                <Blazorise.DateEdit TValue="DateTime" class="shadow" @bind-Date="uIWorkItem.ExpectedEndDate" />
+                <ValidationMessage For="@(() =>uIWorkItem.ExpectedEndDate )" />
         </div>
+        
     </div>
     <br />
     <button type="submit" class="btn btn-primary">Create</button>
@@ -161,12 +166,6 @@
 </div>
 <br />
  
-@*@if(saved)
-{
-    
-    NavManager.NavigateTo("/ListWorkItems");
-}*@
-
 @code {
     private string name;
     private string description;
@@ -201,8 +200,8 @@
 
                 uIWorkItem = new UIWorkItem
                     {
-                        ActualStartDate = DateTime.Now,
-                        ActualEndDate = DateTime.Now
+                        ExpectedStartDate = DateTime.Now,
+                        ExpectedEndDate = DateTime.Now
                     };
                 StateHasChanged();
             }
@@ -257,10 +256,11 @@
         types = t.ToList();
         var p = await workitemcall.GetPriorityModels();
         priorites = p.ToList();
-        uIWorkItem.ActualStartDate = DateTime.Now;
-        uIWorkItem.ActualEndDate = DateTime.Now;
+        uIWorkItem.ExpectedStartDate = DateTime.Now;
+        uIWorkItem.ExpectedEndDate = DateTime.Now;
         var u = await workitemcall.GetUsers();
         users = u.ToList();
     }
 
 }
+ *@

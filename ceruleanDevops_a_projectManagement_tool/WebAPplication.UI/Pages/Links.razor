@@ -1,50 +1,32 @@
-﻿@* @page "/linkworkitems"
-@using Blazorise
+﻿@using Blazorise
+@using Blazorise.Components
 @using BusinessLOgic.Models
 @using Microsoft.AspNetCore.Components.Forms
 @using Apicall
+@using SharedEnums
 @using WebAPplication.UI.UiModels
 @inject WorkItemCall workitemcall
 @inject NavigationManager NavManager
 @inject WorkItemLinkApiCall linkcall
 
-<PageTitle>Link Work Items</PageTitle>
-
 <div class="container mt-4">
-    <h1 class="mb-4">Link Work Items</h1>
-
+    <h1 class="mb-4">@pageTitle</h1>
     <div class="row mb-3">
         <div class="col">
-            <label for="sourceWorkItem" class="form-label">Linking From</label>
-            <select id="sourceWorkItem" class="form-select" @bind="sourceWorkItemId">
-                <option value="">Select a work item</option>
-                @foreach (var item in workItems)
+            <label for="linkType" class="form-label">Link Type</label>
+            <select id="linkType" class="form-select" @bind="linkType">
+                <option value="">Select a type</option>
+                @foreach (LinkType linkTypeEnum in Enum.GetValues(typeof(LinkType)))
                 {
-                    <option value="@item.Id">@item.Name (@item.UniqueKey)</option>
-                }
-            </select>
-        </div>
-        <div class="col">
-            <label for="targetWorkItem" class="form-label">Linking To</label>
-            <select id="targetWorkItem" class="form-select" @bind="targetWorkItemId">
-                <option value="">Select a work item</option>
-                @foreach (var item in workItems)
-                {
-                    <option value="@item.Id">@item.Name (@item.UniqueKey)</option>
+                    <option value="@(Convert.ToInt32(linkTypeEnum))">@linkTypeEnum</option>
                 }
             </select>
         </div>
     </div>
-
     <div class="row mb-3">
         <div class="col">
-            <label for="linkType" class="form-label">Link Type</label>
-            <select id="targetWorkItem" class="form-select" @bind="linkType">
-                <option typeof="">Select a type</option>
-                <option value="Parent">Parent</option>
-                <option value="Child">Child</option>
-                <option value="Related">Related</option>            
-            </select>
+            <label  class="fw-bold">Linking To</label>
+            <AutoComponentForLinks TItem="WorkItemModel" Items="@workItems" DisplayPropertyName="Name" IdPropertyName="WorkItemId" ValueChanged="OnValueChangedLinks" />
         </div>
     </div>
 
@@ -64,20 +46,64 @@
             </div>
         </div>
     }
+    <br />
+    @if (categorizedLinks != null && categorizedLinks.Count > 0)
+    {
+        <Accordion>
+            @foreach (var category in categorizedLinks)
+            {
+                <AccordionItem>
+                    <AccordionHeader>
+                        <Heading Size="HeadingSize.Is5">
+                            <AccordionToggle>@category.Key</AccordionToggle>
+                        </Heading>
+                    </AccordionHeader>
+                    <AccordionBody>
+                        <ul>
+                            @foreach (var link in category.Value)
+                            {
+                                <li>
+                                    <NavLink href=@($"/UpdateWorkItem/{@link.targetWorkItemId}")>
+                                        @link.targetWorkItemId
+                                    </NavLink>
+                                </li>
+                                <br />
+                            }
+                        </ul>
+                    </AccordionBody>
+                </AccordionItem>
+            }
+        </Accordion>
+    }
 </div>
 
 @code {
     private List<WorkItemModel> workItems = new List<WorkItemModel>();
-    private int sourceWorkItemId;
-    private int targetWorkItemId;
-    private string linkType;
+    private Dictionary<string, List<WorkItemLinkModel>> categorizedLinks = new Dictionary<string, List<WorkItemLinkModel>>();
+    [Parameter] public string sourceWorkItemId { get; set; }
+    private string targetWorkItemId;
+    private string pageTitle;
+    private int linkType; // Change to int
     private string linkingResult;
     private string linkingResultClass;
+    bool accordionItem1Visible = true;
 
     protected override async Task OnInitializedAsync()
     {
         var workItems1 = await workitemcall.GetWorkItems();
         workItems = workItems1.ToList();
+        pageTitle = $"Link Work Items - {sourceWorkItemId}";
+
+        await FetchLinks();
+    }
+
+    private async Task FetchLinks()
+    {
+        var links = await linkcall.GetLinksForWorkItem(sourceWorkItemId);
+
+        categorizedLinks = links
+            .GroupBy(link => link.LinkTypeName)
+            .ToDictionary(group => group.Key, group => group.ToList());
     }
 
     private async Task LinkWorkItems()
@@ -87,6 +113,7 @@
         {
             linkingResult = "Work items linked successfully.";
             linkingResultClass = "alert-success";
+            await FetchLinks();
         }
         else
         {
@@ -94,4 +121,8 @@
             linkingResultClass = "alert-danger";
         }
     }
-} *@
+    private async void OnValueChangedLinks(string id)
+    {
+        targetWorkItemId = id;
+    }
+}

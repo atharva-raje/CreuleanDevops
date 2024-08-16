@@ -6,95 +6,109 @@
 @using Apicall
 @using WebAPplication.UI.UiModels
 @inject WorkItemCall workitemcall
-@inject NavigationManager NavManager 
+@inject NavigationManager NavManager
 @inject CommentCallApi commentApi
 @inject UserAPiCall userapi
-<Accordion>
-    <AccordionItem @bind-Visible="@visible">
-        <AccordionHeader>
-            <Heading Size="HeadingSize.Is5">
-                <AccordionToggle>Discussion</AccordionToggle>
-            </Heading>
-        </AccordionHeader>
-        <AccordionBody>
-            <EditForm Model="comment" OnSubmit="AddComment">
-                <InputTextArea id="description" class="form-control shadow" PlaceHolder="Add a new Comment Here..." @bind-Value="comment.Description" />
-                <br />
-                <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary me-2">Save</button>
-                    <CloseButton Clicked="@OnClicked">Cancel</CloseButton>
-                </div>
-            </EditForm>
-           @if(userNamesLoaded)
-           {
-            <div class="comments-list">
-                @if (comments != null && comments.Any())
-                {
 
-                    @foreach (var comment in comments.AsEnumerable().Reverse())
-                    {
-                        <div class="comment-box d-flex">
-                            <div class="avatar">
-                                <div class="avatar-circle">
-                                    @if (userNames.ContainsKey(comment.userid))
-                                    {
-                                        @userNames[comment.userid].Substring(0, 1)
-                                    }
-                                    else
-                                    {
-                                        <h6>Loading.....</h6>
-                                    }
-                                </div>
-                            </div>
-                            <div class="comment-content">
-                                <div class="comment-header">
-                                    <strong>@(userNames.ContainsKey(comment.userid) ? userNames[comment.userid] : "Loading...")</strong>
-                                    commented  @GetRelativeTime(comment.dateTime)
-                                </div>
-                                <div class="comment-body">
-                                    @comment.Description
-                                </div>
-                            </div>
+<EditForm Model="comment" OnSubmit="AddComment">
+    <InputTextArea id="description" class="form-control shadow"
+                   PlaceHolder=@placeholderText
+                   @bind-Value="comment.Description"
+                   @onfocus="OnTextAreaFocus"
+                   @onblur="OnTextAreaBlur" 
+                   style="width: 100%; height: 150px; resize: vertical;"/>
+    @if (isFocused)
+    {
+        <div class="toolbar">
+            <!-- Add your toolbar elements here -->
+        </div>
+        <br />
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary me-2">Save</button>
+            <button type="button" class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+        </div>
+    }
+</EditForm>
+
+@if (userNamesLoaded)
+{
+    <div class="comments-list">
+        @if (comments != null && comments.Any())
+        {
+            @foreach (var comment in comments.AsEnumerable().Reverse())
+            {
+                <div class="comment-box d-flex">
+                    <div class="avatar">
+                        <div class="avatar-circle">
+                            @if (userNames.ContainsKey(comment.userid))
+                            {
+                                @userNames[comment.userid].Substring(0, 1)
+                            }
+                            else
+                            {
+                                <h6>Loading...</h6>
+                            }
                         </div>
-                    }
-                }
-            </div>
-            } 
-        </AccordionBody>
-    </AccordionItem>
-</Accordion>
- 
- 
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <strong>@(userNames.ContainsKey(comment.userid) ? userNames[comment.userid] : "Loading...")</strong>
+                            commented @GetRelativeTime(comment.dateTime)
+                        </div>
+                        <div class="comment-body">
+                            @comment.Description
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+}
+
 @code {
     [Parameter] public int userId { get; set; }
-    [Parameter] public  string workitemId { get; set; }
+    [Parameter] public string workitemId { get; set; }
     private CommentModel comment = new CommentModel();
     private List<CommentModel> rcomments = new List<CommentModel>();
     private Dictionary<int, string> userNames = new Dictionary<int, string>();
     bool visible = true;
     private List<CommentModel> comments = new List<CommentModel>();
     bool userNamesLoaded = false;
-    private async  Task LoadComments()
+    private bool isFocused = false;
+    private string placeholderText = "Add a new Comment Here...";
+    private async Task LoadComments()
     {
         try
         {
-             
             var result = await commentApi.GetComments(workitemId);
             comments = result.ToList();
             await LoadUserNames();
-
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }
     }
-    Task OnClicked()
-    {
-        visible = false;
 
-        return Task.CompletedTask;
+    private void OnTextAreaFocus()
+    {
+        isFocused = true;
+        placeholderText = "";
+
     }
+
+    private void OnTextAreaBlur()
+    {
+        isFocused = false;
+        placeholderText = "Add a new Comment Here...";
+    }
+
+    private void Cancel()
+    {
+        isFocused = false;
+        visible = false;
+    }
+
     private async Task AddComment()
     {
         try
@@ -106,7 +120,6 @@
             var result = await commentApi.AddComment(comment);
             if (result.IsSuccessStatusCode)
             {
-                
                 await LoadComments();
                 comment.Description = string.Empty;
                 StateHasChanged();
@@ -116,8 +129,8 @@
         {
             Console.WriteLine(ex.Message);
         }
-
     }
+
     private async Task LoadUserNames()
     {
         var userIds = comments.Select(c => c.userid).Distinct();
@@ -128,17 +141,13 @@
             {
                 userNames.Add(id, user);
             }
-             
-                
-            
         }
         userNamesLoaded = true;
-
     }
+
     private string GetRelativeTime(DateTime dateTime)
     {
         var timeSpan = DateTime.Now - dateTime;
-
         if (timeSpan.TotalMinutes < 1)
             return "just now";
         if (timeSpan.TotalMinutes < 60)
@@ -149,15 +158,15 @@
             return $"{timeSpan.Days} day{(timeSpan.Days > 1 ? "s" : "")} ago";
         if (timeSpan.TotalDays < 365)
             return $"{timeSpan.Days / 30} month{(timeSpan.Days / 30 > 1 ? "s" : "")} ago";
-
         return $"{timeSpan.Days / 365} year{(timeSpan.Days / 365 > 1 ? "s" : "")} ago";
     }
+
     protected override async Task OnInitializedAsync()
     {
         await LoadComments();
     }
-
 }
+
 <style>
     .comments-list {
         margin-top: 20px;
@@ -216,5 +225,13 @@
             border-color: #005a9e;
         }
 
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
 </style>
- 

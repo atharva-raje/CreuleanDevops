@@ -11,7 +11,7 @@ namespace DAL.Entites
     {
         [Key]
         public int  PriorityId {  get; set; }
-        public string PritoryName {  get; set; }
+        public string PriorityName {  get; set; }
         public ICollection<WorkItem> WorkItems { get; set; }
         
     }

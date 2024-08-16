@@ -6,6 +6,8 @@ namespace WebAPplication.UI.IApicall
     public interface IFileUploadApiCall
     {
         Task<HttpResponseMessage> UploadFile(MultipartFormDataContent file);
-        Task<IEnumerable<FileModel>> GetFilesForWorkItem(string id);
+        Task<IEnumerable<FileModelWithoutData>> GetFilesForWorkItem(string id);
+        Task<FileModel> GetFileById(int id);
+        Task<bool> DeleteFile(int id);
     }
 }

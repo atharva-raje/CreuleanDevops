@@ -17,9 +17,9 @@ namespace BusinessLOgic.Models
         public string WorkItemId { get; set; }
         [Required]
         public string Name { get; set; }
-        [Required]
+       
 
-        public string Description { get; set; }
+        public string? Description { get; set; }
         [Required]
         
         public int StatusId { get; set; }
@@ -39,7 +39,9 @@ namespace BusinessLOgic.Models
         public DateTime ActualEndDate { get; set; }
          
         [Required]
-        public int UserId { get; set; }
+        public int AssigneeId { get; set; }
+        public int ReporterId { get; set; }
+        public int StoryPoints { get; set; }
         public DateTime ExpectedStartDate { get; set; }
         public DateTime ExpectedEndDate { get; set; }
 

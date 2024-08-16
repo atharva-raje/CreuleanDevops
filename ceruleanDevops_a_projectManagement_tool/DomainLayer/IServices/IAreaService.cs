@@ -11,5 +11,6 @@ namespace BusinessLOgic.IServices
     {
         Task<IEnumerable<Areas>> GetAreas();
         Task<string> GetAreaName(int id);
+        Task<int> GetAreaId(string name);
     }
 }

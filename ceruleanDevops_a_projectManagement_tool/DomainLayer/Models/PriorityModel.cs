@@ -9,6 +9,6 @@ namespace BusinessLOgic.Models
     public class PriorityModel
     {
         public int PriorityId { get; set; }
-        public string PritoryName { get; set; }
+        public string PriorityName { get; set; }
     }
 }

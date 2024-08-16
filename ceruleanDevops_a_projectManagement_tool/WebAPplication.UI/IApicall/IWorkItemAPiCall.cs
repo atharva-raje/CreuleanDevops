@@ -14,7 +14,7 @@ namespace WebAPplication.UI.IApicall
         Task<IEnumerable<StatusModelWithoutId>> GetStatusModels(int TypeId);
         Task<IEnumerable<UserModel>> GetUsers();
         Task<bool> deleteWorkItem(string id);
-        Task<string> GetStatus(int statusId);
+        Task<int> GetStatusId(string statusName);
         Task<HttpResponseMessage> UpdateWorkItem(UIWorkItem uiWorkItem);
         Task<UIWorkItem> GetWorkItemById(string id);
         Task<int> GetWorkItemIdByKey(string key);
@@ -25,5 +25,8 @@ namespace WebAPplication.UI.IApicall
         Task<string> GetStatusName(int id);
         Task<string> GetUserName(int id);
         Task<string> GetAreaName(int id);
+        Task<IEnumerable<WorkItemModelWithString>> GetWorkItemsWithName();
+       
+
     }
 }

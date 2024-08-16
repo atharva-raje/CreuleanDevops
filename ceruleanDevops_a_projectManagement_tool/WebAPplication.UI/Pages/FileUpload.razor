@@ -1,50 +1,136 @@
-﻿@page "/upload/{id}"
-@inject HttpClient Http
+﻿@inject HttpClient Http
 @using Apicall
 @using BusinessLOgic.Models
+@using Blazorise
+@using Blazorise.Animate
+@using Blazorise.SpinKit
+@using Blazorise.LoadingIndicator
+@using Blazorise.Extensions
+
+@inject IJSRuntime JSRuntime
 @inject FileUploadApiCall fileUpload
 
-<h3>Upload Files</h3>
-<InputFile class="bi-menu-button" OnChange="UploadFiles" multiple />
-<p>@statusMessage</p>
-<h3>Attachments</h3>
+<Alert @ref="myAlert" Color="Color.Success">
+    <AlertMessage>Delete Successful!</AlertMessage>
+    <CloseButton />
+</Alert>
+<Alert @ref="myAlertFailed" Color="Color.Danger">
+    <AlertMessage>Failed to Delete!</AlertMessage>
+    <CloseButton />
+</Alert>
+<Modal @ref="deleteModal" IsCentered="true" IsVisible="false">
+    <ModalContent>
+        <ModalHeader>
+            <h5 class="modal-title">Confirm Delete</h5>
+        </ModalHeader>
+        <ModalBody>
+            Are you sure you want to delete this file?
+        </ModalBody>
+        <ModalFooter>
+            <Button Color="Color.Danger" @onclick="ConfirmDelete">Delete</Button>
+            <Button Color="Color.Secondary" @onclick="CloseDeleteModal">Cancel</Button>
+        </ModalFooter>
+    </ModalContent>
+</Modal>
+@if (isLoading)
+{
+   <LoadingIndicator Visible="true" FullScreen FadeIn> 
+    <IndicatorTemplate>
+        <Animate Animation="Animations.FadeDownRight" Auto Duration="TimeSpan.FromMilliseconds( 700 )">
+            <Div>
+                    <SpinKit Color="blue" Type="SpinKitType.Circle" Size="80px" />
+            </Div>
+        </Animate>
+    </IndicatorTemplate>
+    </LoadingIndicator>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Size</th>
-            <th>ContentType</th>
-            <th>Date Attached</th>
-
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var file in files)
-        {
-            <tr>
-                <td>@file.FileName</td>
-                <td>@file.SizeFormatted</td>
-                <td>@file.ContentType</td>
-                <td>@file.UploadDate.ToString("g")</td>
-                 
-            </tr>
-        }
-    </tbody>
-</table>
+}
+else
+{
+    <h3>Attachments</h3>
+    <div>
+        <label class="custom-attachment-button" for="fileUpload">
+            <i class="fas fa-plus"></i> Add attachment
+        </label>
+        <InputFile id="fileUpload" class="custom-file-input" OnChange="UploadFiles" multiple />
+    </div>
+    <Table class="table">
+        <TableHeader>
+            <TableRow>
+                <TableRowCell Class="fw-bold">Name</TableRowCell>
+                <TableRowCell Class="fw-bold">Size</TableRowCell>
+                <TableRowCell Class="fw-bold">ContentType</TableRowCell>
+                <TableRowCell Class="fw-bold">Date Attached</TableRowCell>
+                <TableRowCell ColumnSpan="2" Class="fw-bold">Action</TableRowCell>
+            </TableRow>
+        </TableHeader>
+        <TableBody>
+            @foreach (var file in files)
+            {
+                <TableRow>
+                    <TableRowCell>@file.FileName</TableRowCell>
+                    <TableRowCell>@file.SizeFormatted</TableRowCell>
+                    <TableRowCell>@file.ContentType</TableRowCell>
+                    <TableRowCell>@file.UploadDate.ToString("g")</TableRowCell>
+                    <TableRowCell style="min-width: 50px;">
+                        <Icon Name=@("fas fa-trash") Class="text-danger" Clicked="() => ShowDeleteModal(file.Id)" />
+                    </TableRowCell>
+                    <TableRowCell style="min-width: 50px;">
+                        <Icon Name=@("fas fa-download") Class="text-primary" Clicked="() => DownloadFile(file.Id)" />
+                    </TableRowCell>
+                </TableRow>
+            }
+        </TableBody>
+    </Table>
+}
 @code {
     private ElementReference inputFile;
     private string statusMessage;
-    private List<FileModel> files = new List<FileModel>();
-    [Parameter] public string id { get; set;}
+    private List<FileModelWithoutData> files = new List<FileModelWithoutData>();
+    [Parameter] public string id { get; set; }
+    Alert? myAlert;
+    Alert? myAlertFailed;
+    private bool isLoading = true;
+    private Modal deleteModal;
+    private int fileIdToDelete;
+
+
+    private void ShowDeleteModal(int id)
+    {
+        fileIdToDelete = id;
+        deleteModal?.Show();
+    }
+
+    private async Task ConfirmDelete()
+    {
+        deleteModal?.Hide();
+        await DeleteFile(fileIdToDelete);
+    }
+
+    private void CloseDeleteModal()
+    {
+        deleteModal?.Hide();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        { 
+            isLoading = true; // Start loading
+            await FetchFiles();
+            isLoading = false; // Start loading
+        }
+    }
 
     private async Task UploadFiles(InputFileChangeEventArgs e)
     {
+        isLoading = true;
         var inputFileChangeEventArgs = e as InputFileChangeEventArgs;
         var files = inputFileChangeEventArgs?.GetMultipleFiles();
         if (files == null || files.Count == 0)
         {
             statusMessage = "No files selected.";
+            isLoading = false;
             return;
         }
 
@@ -53,34 +139,126 @@
 
         foreach (var file in files)
         {
-            var fileContent = new StreamContent(file.OpenReadStream(1024 * 1024 * 20)); // 20 MB limit
-            fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(file.ContentType);
-            content.Add(fileContent, "files", file.Name);
+            if (!string.IsNullOrWhiteSpace(file.ContentType))
+            {
+                var fileContent = new StreamContent(file.OpenReadStream(1024 * 1024 * 20)); // 20 MB limit
+                fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(file.ContentType);
+                content.Add(fileContent, "files", file.Name);
+            }
+            else
+            {
+                statusMessage = "One or more files have an invalid ContentType.";
+                isLoading = false;
+                return;
+            }
         }
 
         var result = await fileUpload.UploadFile(content);
         if (result.IsSuccessStatusCode)
         {
-            statusMessage = "Files uploaded successfully.";
             await FetchFiles();
         }
         else
         {
-            statusMessage = "File upload failed.";
+            statusMessage = "Failed to upload files.";
         }
+
+        isLoading = false;
     }
+
     private async Task FetchFiles()
     {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                statusMessage = "Work item ID is missing.";
+                isLoading = false;
+                return;
+            }
 
-        var files1 = await fileUpload.GetFilesForWorkItem(id);
-        files = files1.ToList();
+            var files1 = await fileUpload.GetFilesForWorkItem(id);
+
+            // Check if the API call was successful and if files1 is not null
+            if (files1 != null)
+            {
+                files = files1.ToList();
+                statusMessage = "Files fetched successfully.";
+            }
+            else
+            {
+                statusMessage = "Failed to retrieve files.";
+            }
+        }
+        catch (Exception ex)
+        {
+            statusMessage = $"Error fetching files: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged();
+        }
     }
-    protected async  override Task OnInitializedAsync()
+
+    private async Task DeleteFile(int id)
     {
-        var files1 = await fileUpload.GetFilesForWorkItem(id);
-        files = files1.ToList();
+        isLoading = true;
+        var result = await fileUpload.DeleteFile(id);
+        if (result)
+        {
+            myAlert?.Show();
+            await FetchFiles();
+        }
+        else
+        {
+            myAlertFailed?.Show();
+            await FetchFiles();
+        }
+        isLoading = false;
+    }
+
+    private async Task DownloadFile(int fileId)
+    {
+        isLoading = true;
+        var file = await fileUpload.GetFileById(fileId);
+        if (file.FileData != null)
+        {
+            var newFile = new FileContent(file.FileData, file.ContentType, file.FileName);
+            await JSRuntime.InvokeVoidAsync("blazorDownloadFile", newFile);
+        }
+        else
+        {
+            statusMessage = "Failed to download file.";
+        }
+        isLoading = false;
+    }
+
+    public class FileContent
+    {
+        public byte[] Data { get; }
+        public string ContentType { get; }
+        public string FileName { get; }
+
+        public FileContent(byte[] data, string contentType, string fileName)
+        {
+            Data = data;
+            ContentType = contentType;
+            FileName = fileName;
+        }
     }
 }
+
+<script>
+    window.blazorDownloadFile = (file) => {
+        var blob = new Blob([file.data], { type: file.contentType });
+        var link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = file.fileName;
+        link.click();
+    };
+</script>
+
 <style>
     .attachment-icon-container {
         position: relative;
@@ -93,4 +271,73 @@
         font-size: 1.5rem;
         cursor: pointer;
     }
+
+    .custom-file-input {
+        display: none;
+    }
+
+    .custom-file-label {
+        display: inline-block;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 0.25rem;
+        text-align: center;
+    }
+
+        .custom-file-label:hover {
+            background-color: #0056b3;
+        }
+
+    .custom-attachment-button {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 0.5rem;
+        background: none;
+        border: none;
+        color: black;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+        .custom-attachment-button i {
+            margin-right: 0.5rem;
+            color: green;
+        }
+
+        .custom-attachment-button:hover {
+            background-color: lightgrey;
+        }
+
+    .text-danger, .text-primary {
+        cursor: pointer;
+    }
+
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1050; /* Make sure it’s above other content */
+    }
+
+    .d-none {
+        display: none !important;
+    }
+
+    .text-primary {
+        cursor: pointer;
+    }
+
+        .text-primary:hover {
+            color: #0056b3; /* Optional: change color on hover */
+        }
 </style>

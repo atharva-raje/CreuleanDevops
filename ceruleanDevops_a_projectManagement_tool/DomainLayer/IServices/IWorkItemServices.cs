@@ -18,10 +18,12 @@ namespace BusinessLOgic.IServices
         Task<IEnumerable<WorkItem>> GetWorkItemsService();
         Task<WorkItem> AddWorkItemsService(UIWorkItem workItemModel);
         Task<WorkItem> UpdateWorkItemsService(UIWorkItem workItemModel);
+        
         Task<int>  DeleteWorkItemsService(string WorkItemId);
         Task<WorkItem> GetWorkItemById(string  Id);
         Task<string> GenerateUniqueKeyAsync(UIWorkItem workItem);
-
+        Task<IEnumerable<WorkItemModelWithString>> GetWorkItemsWithNames();
+        Task<WorkItem> UpdateWorkItemsServiceWithNames(WorkItemModelWithString workItemModel);
 
 
     }

@@ -16,6 +16,7 @@ namespace DAL.Entites
         public string ContentType { get; set; }
         public DateTime UploadDate { get; set; }
         public long Size { get; set; }
+        
         // Foreign key to WorkItem
         public string WorkItemId { get; set; }
         public WorkItem WorkItem { get; set; }

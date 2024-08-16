@@ -1,0 +1,17 @@
+﻿@page "/minipage"
+@using BusinessLOgic.Models
+@using Apicall
+@inject WorkItemCall workitemcall
+
+<div>
+    <button @onclick="Close">Close</button>
+</div>
+
+@code {
+    [Parameter] public EventCallback OnClose { get; set; }
+    [Parameter] public  string workitemId {  get; set; }
+    private void Close()
+    {
+        OnClose.InvokeAsync();
+    }
+}

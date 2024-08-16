@@ -1,0 +1,55 @@
+﻿@using BusinessLOgic.Models
+
+<div class="dropdown me-2 filter-dropdown">
+    <button class="btn dropdown-toggle" type="button" id="typeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        Type (@SelectedTypeIds.Count)
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="typeDropdown">
+        @foreach (var type in UniqueTypeIds)
+        {
+            <li>
+                <a class="dropdown-item @GetDropdownItemClass(type)" href="javascript:void(0);" @onclick="() => OnTypeFilterChanged(type)">
+                    <input type="checkbox" @bind="TypeCheckboxStates[type]" class="me-2" /> <!-- Checkbox with binding -->
+                    <i class="fa @GetIconClassForType(type) me-2"></i> @type <!-- Icon and text -->
+                </a>
+            </li>
+        }
+    </ul>
+</div>
+
+@code {
+    [Parameter] public List<string> UniqueTypeIds { get; set; } = new List<string>();
+    [Parameter] public List<string> SelectedTypeIds { get; set; } = new List<string>();
+    [Parameter] public EventCallback<List<string>> OnTypeFilterChangedCallback { get; set; }
+
+    private Dictionary<string, bool> TypeCheckboxStates = new Dictionary<string, bool>();
+
+    private string GetDropdownItemClass(string item)
+    {
+        return SelectedTypeIds.Contains(item) ? "checked" : string.Empty;
+    }
+
+    private void OnTypeFilterChanged(string type)
+    {
+        if (SelectedTypeIds.Contains(type))
+        {
+            SelectedTypeIds.Remove(type);
+        }
+        else
+        {
+            SelectedTypeIds.Add(type);
+        }
+        TypeCheckboxStates[type] = SelectedTypeIds.Contains(type); // Update checkbox state
+        OnTypeFilterChangedCallback.InvokeAsync(SelectedTypeIds);
+    }
+
+    private string GetIconClassForType(string type)
+    {
+        return type switch
+        {
+            "Task" => "fa-check-circle text-primary",
+            "Bug" => "fa-bug text-danger",
+            _ => "fa-question"
+        };
+    }
+}

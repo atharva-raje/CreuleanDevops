@@ -11,5 +11,8 @@ namespace DAL.Irepositeries
     {
         Task AddFileAsync(FileUploads fileUpload);
         Task<IEnumerable<FileUploads>> GetFilesByIdAsync(string id);
+        Task<FileUploads> GetFilesByFileIdAsync(int id);
+        Task<bool> DeletefileAsync(int id);
+         
     }
 }

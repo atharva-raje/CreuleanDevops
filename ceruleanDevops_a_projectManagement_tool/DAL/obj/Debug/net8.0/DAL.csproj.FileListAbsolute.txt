@@ -27,3 +27,6 @@ D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\DAL
 D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\DAL\obj\Debug\net8.0\DAL.pdb
 D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
 D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\DAL\obj\Debug\net8.0\ref\DAL.dll
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\DAL\bin\Debug\net8.0\SharedEnums.dll
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\DAL\bin\Debug\net8.0\SharedEnums.pdb
+D:\adtechsource\repos\New_repository\ceruleanDevops_a_projectManagement_tool\DAL\obj\Debug\net8.0\DAL.csproj.Up2Date

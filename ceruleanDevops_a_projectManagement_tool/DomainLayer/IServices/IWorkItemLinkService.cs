@@ -9,7 +9,7 @@ namespace BusinessLOgic.IServices
 {
     public interface IWorkItemLinkService
     {
-        Task<int> AddWorkItemLinkAsync(string sourceWorkItemId, string targetWorkItemId, string linkType);
+        Task<bool> AddWorkItemLinkAsync(string sourceWorkItemId, string targetWorkItemId, int linkType);
         Task<List<WorkitemLink>> GetWorkItemLinksAsync(string workItemId);
         Task<bool> DeleteWorkItemLinkAsync(string LinkId);
     }

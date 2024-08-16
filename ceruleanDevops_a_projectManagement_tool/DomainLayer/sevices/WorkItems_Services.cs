@@ -12,6 +12,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using WebAPplication.UI.UiModels;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BusinessLOgic.sevices
 {
@@ -25,8 +26,8 @@ namespace BusinessLOgic.sevices
         private readonly IStatusService _statusService;
         private readonly IPriorityService priorityService;
         private readonly IUserSerivce userSerivce;
-        public WorkItems_Services(IWorkItemsRespository workItemsRespository,IMapper mapper, IAreaService areaService, IIterationService iterationService, ITypeService typeRepository,
-                                  IStatusService statusService,IPriorityService priorityService,IUserSerivce userSerivce)
+        public WorkItems_Services(IWorkItemsRespository workItemsRespository, IMapper mapper, IAreaService areaService, IIterationService iterationService, ITypeService typeRepository,
+                                  IStatusService statusService, IPriorityService priorityService, IUserSerivce userSerivce)
         {
             _mapper = mapper;
             _workItemsRespository = workItemsRespository;
@@ -51,16 +52,16 @@ namespace BusinessLOgic.sevices
                 IterationId = (int)workItemModel.IterationId,
                 TypeId = workItemModel.TypeId,
                 StatusId = (int)workItemModel.StatusId,
-                ActualStartDate = workItemModel.ActualStartDate,
-                ActualEndDate = workItemModel.ActualEndDate,
+                ExpectedStartDate = workItemModel.ExpectedStartDate,
+                ExpectedEndDate = workItemModel.ExpectedEndDate,
                 PriorityId = workItemModel.PriorityId,
                 AssigneeId = await userSerivce.GetUserIdByName(workItemModel.AssigneeName),
                 ReporterId = await userSerivce.GetUserIdByName(workItemModel.ReporterName),
                 StoryPoints = workItemModel.StoryPoints
             };
             var result = await _workItemsRespository.AddWorkitemAsync(newWorkItem);
-            return result;    
-        }  
+            return result;
+        }
 
         public async Task<int> DeleteWorkItemsService(string WorkItemId)
         {
@@ -76,7 +77,7 @@ namespace BusinessLOgic.sevices
         {
             var result = await _workItemsRespository.GetWorkitemsAsync();
             return result;
-             
+
         }
 
         public async Task<WorkItem> UpdateWorkItemsService(UIWorkItem workItemModel)
@@ -84,22 +85,22 @@ namespace BusinessLOgic.sevices
 
             WorkItem newWorkItem = new WorkItem
             {
-                 
+
                 WorkItemId = workItemModel.WorkItemId,
                 Name = workItemModel.Name,
                 Description = workItemModel.Description,
                 AreaId = workItemModel.AreaId,
-                IterationId =  (int)workItemModel.IterationId,
-                TypeId =  workItemModel.TypeId,
+                IterationId = (int)workItemModel.IterationId,
+                TypeId = workItemModel.TypeId,
                 StatusId = (int)workItemModel.StatusId,
-                ActualStartDate = workItemModel.ActualStartDate,
-                ActualEndDate = workItemModel.ActualEndDate,
-                PriorityId =  workItemModel.PriorityId,
+                ExpectedStartDate = workItemModel.ExpectedStartDate,
+                ExpectedEndDate = workItemModel.ExpectedEndDate,
+                PriorityId = workItemModel.PriorityId,
                 AssigneeId = await userSerivce.GetUserIdByName(workItemModel.AssigneeName),
                 ReporterId = await userSerivce.GetUserIdByName(workItemModel.ReporterName),
                 StoryPoints = workItemModel.StoryPoints,
-                ExpectedStartDate = workItemModel.ExpectedStartDate,
-                ExpectedEndDate = workItemModel.ExpectedEndDate
+                ActualStartDate = workItemModel.ActualStartDate,
+                ActualEndDate = workItemModel.ActualEndDate
             };
             var result = await _workItemsRespository.UpdateWorkitemAsync(newWorkItem);
             return result;
@@ -107,15 +108,15 @@ namespace BusinessLOgic.sevices
         public async Task<string> GenerateUniqueKeyAsync(UIWorkItem workItem)
         {
             var typeName = await _typeService.GetTypeName(workItem.TypeId);
-            string prefix = typeName.Substring(0, 2).ToUpperInvariant(); 
+            string prefix = typeName.Substring(0, 2).ToUpperInvariant();
             const int numberLength = 4;
             string uniqueKey;
-             List<WorkItem> list = new List<WorkItem>();
+            List<WorkItem> list = new List<WorkItem>();
             do
             {
                 var list1 = await _workItemsRespository.GetWorkitemsAsync();
                 list = list1.ToList();
-                int maxNumber =  list
+                int maxNumber = list
                     .Where(w => w.WorkItemId.StartsWith(prefix))
                     .Select(w => int.Parse(w.WorkItemId.Substring(2)))
                     .DefaultIfEmpty(0)
@@ -126,5 +127,61 @@ namespace BusinessLOgic.sevices
 
             return uniqueKey;
         }
+
+        public async Task<IEnumerable<WorkItemModelWithString>> GetWorkItemsWithNames()
+        {
+            var data = await _workItemsRespository.GetWorkitemsAsync();
+            List<WorkItemModelWithString> displayData = new List<WorkItemModelWithString>();
+            foreach (var item in data)
+            {
+                var element = new WorkItemModelWithString
+                {
+                    TypeId = await _typeService.GetTypeName(item.TypeId),
+                    IterationId = await iterationService.GetIterationName(item.IterationId),
+                    StatusId = await _statusService.GetStatusName(item.StatusId),
+                    AreaId = await _areaService.GetAreaName(item.AreaId),
+                    AssigneeName = await userSerivce.GetUser(item.AssigneeId),
+                    ReporterName = await userSerivce.GetUser(item.ReporterId),
+                    PriorityId = await priorityService.GetPriorityName(item.PriorityId),
+                    StoryPoints = item.StoryPoints,
+                    WorkItemId = item.WorkItemId,
+                    Description = item.Description,
+                    ActualEndDate = item.ActualEndDate,
+                    ActualStartDate = item.ActualStartDate,
+                    ExpectedStartDate = item.ExpectedStartDate,
+                    ExpectedEndDate = item.ExpectedEndDate,
+                    Name = item.Name
+                };
+                displayData.Add(element);
+            }
+            return displayData;
+        }
+
+        public async Task<WorkItem> UpdateWorkItemsServiceWithNames(WorkItemModelWithString workItemModel)
+        {
+            WorkItem newWorkItem = new WorkItem
+            {
+
+                WorkItemId = workItemModel.WorkItemId,
+                Name = workItemModel.Name,
+                Description = workItemModel.Description,
+                AreaId = await _areaService.GetAreaId(workItemModel.AreaId),
+                IterationId = await iterationService.GetIterationId(workItemModel.IterationId),
+                TypeId = await _typeService.GetTypeId(workItemModel.AreaId),
+                StatusId = await _statusService.GetStatusId(workItemModel.StatusId),
+                ExpectedStartDate = workItemModel.ExpectedStartDate,
+                ExpectedEndDate = workItemModel.ExpectedEndDate,
+                PriorityId = await priorityService.GetPriorityId(workItemModel.PriorityId),
+                AssigneeId = await userSerivce.GetUserIdByName(workItemModel.AssigneeName),
+                ReporterId = await userSerivce.GetUserIdByName(workItemModel.ReporterName),
+                StoryPoints = workItemModel.StoryPoints,
+                ActualStartDate = workItemModel.ActualStartDate,
+                ActualEndDate = workItemModel.ActualEndDate
+            };
+            var result = await _workItemsRespository.UpdateWorkitemAsync(newWorkItem);
+            return result;
+        }
+
+       
     }
 }

@@ -12,5 +12,7 @@ namespace BusinessLOgic.IServices
     {
         Task<bool> UploadFilesAsync(List<IFormFile> files, string workItemId);
         Task<IEnumerable<FileUploads>> GetFilesWithId(string id);
+        Task<FileUploads> GetFileByFileId(int id);
+        Task<bool>  Deletefile(int id);
     }
 }

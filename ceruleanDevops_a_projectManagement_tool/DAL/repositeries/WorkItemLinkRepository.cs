@@ -41,9 +41,8 @@ namespace DAL.repositeries
         public async Task<List<WorkitemLink>> GetWorkItemLinksAsync(string workItemId)
         {
             return await _workItemsDbContext.WorkitemLinks
-                                 .Where(link => link.SourceWorkItemId == workItemId || link.TargetWorkItemId == workItemId)
+                                 .Where(link => link.SourceWorkItemId == workItemId)
                                  .Include(link => link.SourceWorkItem)
-                                 .Include(link => link.TargetWorkItem)
                                  .ToListAsync();
         }
          

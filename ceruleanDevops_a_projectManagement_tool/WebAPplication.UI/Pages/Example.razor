@@ -1,0 +1,57 @@
+﻿@page "/example-dropdown"
+@using Blazorise
+
+<Dropdown>
+    <DropdownToggle Class="custom-dropdown-toggle">
+        Dropdown With Checkboxes
+    </DropdownToggle>
+    <DropdownMenu Class="custom-dropdown-menu">
+        <DropdownItem Class="custom-dropdown-item" ShowCheckbox>Checkbox</DropdownItem>
+        <DropdownDivider />
+        <DropdownItem Class="custom-dropdown-item" ShowCheckbox>Another Checkbox</DropdownItem>
+        <DropdownItem Class="custom-dropdown-item disabled" ShowCheckbox Disabled>Checkbox Disabled</DropdownItem>
+        <DropdownItem Class="custom-dropdown-item">Action</DropdownItem>
+    </DropdownMenu>
+</Dropdown>
+
+<style>
+    /* custom.css */
+
+    .custom-dropdown-toggle {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        border: none; /* Remove border */
+        padding: 10px 20px; /* Add some padding */
+        font-size: 16px; /* Increase font size */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+        .custom-dropdown-toggle:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+    .custom-dropdown-menu {
+        background-color: #f9f9f9; /* Light grey background */
+        border: 1px solid #ccc; /* Grey border */
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add shadow */
+        z-index: 1; /* Ensure it stays on top */
+    }
+
+    .custom-dropdown-item {
+        color: black; /* Black text */
+        padding: 12px 16px; /* Add some padding */
+        text-decoration: none; /* Remove underline */
+        display: block; /* Make it a block element */
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+        .custom-dropdown-item:hover {
+            background-color: #ddd; /* Light grey background on hover */
+        }
+
+        .custom-dropdown-item.disabled {
+            color: grey; /* Grey text for disabled items */
+            cursor: not-allowed; /* Not-allowed cursor */
+        }
+</style>

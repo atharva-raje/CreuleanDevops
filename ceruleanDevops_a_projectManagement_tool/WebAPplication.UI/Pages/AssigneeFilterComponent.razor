@@ -1,0 +1,45 @@
+﻿@using BusinessLOgic.Models
+
+<div class="dropdown me-2 filter-dropdown">
+    <button class="btn dropdown-toggle" type="button" id="assigneeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        Assignee (@SelectedAssigneeIds.Count)
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="assigneeDropdown">
+        @foreach (var assignee in UniqueAssignees)
+        {
+            <li>
+                <a class="dropdown-item @GetDropdownItemClass(assignee)" href="javascript:void(0);" @onclick="() => OnAssigneeFilterChanged(assignee)">
+                    <input type="checkbox" @bind="AssigneeCheckboxStates[assignee]" class="me-2" /> <!-- Checkbox with binding -->
+                    <i class="fa fa-user me-2"></i> @assignee <!-- Icon and text -->
+                </a>
+            </li>
+        }
+    </ul>
+</div>
+
+@code {
+    [Parameter] public List<string> UniqueAssignees { get; set; } = new List<string>();
+    [Parameter] public List<string> SelectedAssigneeIds { get; set; } = new List<string>();
+    [Parameter] public EventCallback<List<string>> OnAssigneeFilterChangedCallback { get; set; }
+
+    private Dictionary<string, bool> AssigneeCheckboxStates = new Dictionary<string, bool>();
+
+    private string GetDropdownItemClass(string item)
+    {
+        return SelectedAssigneeIds.Contains(item) ? "checked" : string.Empty;
+    }
+
+    private void OnAssigneeFilterChanged(string assignee)
+    {
+        if (SelectedAssigneeIds.Contains(assignee))
+        {
+            SelectedAssigneeIds.Remove(assignee);
+        }
+        else
+        {
+            SelectedAssigneeIds.Add(assignee);
+        }
+        AssigneeCheckboxStates[assignee] = SelectedAssigneeIds.Contains(assignee); // Update checkbox state
+        OnAssigneeFilterChangedCallback.InvokeAsync(SelectedAssigneeIds);
+    }
+}

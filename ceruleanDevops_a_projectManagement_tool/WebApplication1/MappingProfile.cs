@@ -33,6 +33,8 @@ namespace WebApplication1
             CreateMap<Types, TypeModel>();
             CreateMap<Priorities, PriorityModel>();
             CreateMap<PriorityModel, Priorities>();
+            CreateMap<FileModelWithoutData,FileUploads>();
+            CreateMap<FileUploads,FileModelWithoutData>();
         }
     }
 }

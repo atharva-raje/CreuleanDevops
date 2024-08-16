@@ -1,0 +1,615 @@
+﻿@page "/"
+@page "/ListWorkItems"
+@using Blazorise
+@using Blazorise.SpinKit
+@using Blazorise.Animate
+@using Blazorise.LoadingIndicator
+@using BusinessLOgic.Models
+@using Apicall
+@inject WorkItemLinkApiCall linkCall
+@inject NavigationManager NavManager
+@inject WorkItemCall workitemcall
+@inject HttpClient Http
+@inject IJSRuntime js
+
+<Alert @ref="myAlert" Color="Color.Success">
+    <AlertMessage>Delete Successful!</AlertMessage>
+    <CloseButton />
+</Alert>
+<Alert @ref="myAlertFailed" Color="Color.Danger">
+    <AlertMessage>Failed to Delete!</AlertMessage>
+    <CloseButton />
+</Alert>
+<PageTitle>WorkItem</PageTitle>
+<h1>List</h1>
+<br />
+<div class="search-container">
+    <label class="custom-attachment-button" @onclick="CreateNewWorkItem">
+        <i class="fas fa-plus"></i> New Work Item
+    </label>
+</div>
+
+<div class="search-filter-container">
+    <div class="search-box-container">
+        <InputText @bind-Value="searchQuery" Placeholder="Search by keyword..." @oninput="OnSearchQueryChanged" Class="search-box" />
+        <i class="fas fa-search search-icon"></i>
+    </div>
+
+    <div class="filter-container">
+        <Select TValue="string" SelectedValue="@selectedAssignee" SelectedValueChanged="OnFilterChangedAssignee">
+            <SelectItem Value="@("")">All Assignees</SelectItem>
+            @foreach (var assignee in assignees)
+            {
+                <SelectItem Value="@assignee">@assignee</SelectItem>
+            }
+        </Select>
+
+        <Select TValue="string" SelectedValue="@selectedReporter" SelectedValueChanged="OnFilterChangedReporter" Placeholder="All Reporters">
+            <SelectItem Value="@("")">All Reporters</SelectItem>
+            @foreach (var reporter in reporters)
+            {
+                <SelectItem Value="@reporter">@reporter</SelectItem>
+            }
+        </Select>
+
+        <Select TValue="string" SelectedValue="@selectedType" SelectedValueChanged="OnFilterChangedType" Placeholder="All Types">
+            <SelectItem Value="@("")">All Types</SelectItem>
+            @foreach (var type in types)
+            {
+                <SelectItem Value="@type">@type</SelectItem>
+            }
+        </Select>
+
+        <Select TValue="string" SelectedValue="@selectedStatus" SelectedValueChanged="OnFilterChangedStatus" Placeholder="All Statuses">
+            <SelectItem Value="@("")">All Statuses</SelectItem>
+            @foreach (var status in statuses)
+            {
+                <SelectItem Value="@status">@status</SelectItem>
+            }
+        </Select>
+    </div>
+</div>
+<br />
+<br />
+
+ 
+ 
+@if(isLoading)
+{
+    
+
+<LoadingIndicator Visible="true" @ref="loadingIndicator" FullScreen FadeIn> 
+    <IndicatorTemplate>
+        <Animate Animation="Animations.FadeDownRight" Auto Duration="TimeSpan.FromMilliseconds( 700 )">
+            <Div>
+                    <SpinKit Color="blue" Type="SpinKitType.Circle" Size="80px" />
+            </Div>
+        </Animate>
+    </IndicatorTemplate>
+    </LoadingIndicator>
+
+}
+else
+{
+@if (data == null)
+    {
+        <p><em>No data availwmmmmmmmmmmable.</em></p>
+    }
+    else
+    {
+        <div class="list-container">
+            <Table>
+                <TableHeader>
+                    <TableRow>
+                        <TableRowCell class="fw-bold sortable" @onclick="() => SortData(Type)">
+                            Type @(currentSortColumn == "Type" ? (isSortAscending ? "▲" : "▼") : "")
+                        </TableRowCell>
+                        <TableRowCell class="fw-bold sortable key-column" @onclick="() => SortData(Key)">
+                            Key @(currentSortColumn == "Key" ? (isSortAscending ? "▲" : "▼") : "")
+                        </TableRowCell>
+                        <TableRowCell class="fw-bold sortable" @onclick="() => SortData(Name)">
+                            Name @(currentSortColumn == "Name" ? (isSortAscending ? "▲" : "▼") : "")
+                        </TableRowCell>
+                        <TableRowCell class="fw-bold">Description</TableRowCell>
+                        <TableRowCell class="fw-bold">State</TableRowCell>
+                        
+                        <TableRowCell class="fw-bold">Assignee</TableRowCell>
+                        <TableRowCell class="fw-bold">Reporter</TableRowCell>
+                        <TableRowCell class="fw-bold">Area</TableRowCell>
+                        <TableRowCell class="fw-bold">Iteration</TableRowCell>
+                        <TableRowCell class="fw-bold">Expected Start Date</TableRowCell>
+                        <TableRowCell class="fw-bold">Expected Due Date</TableRowCell>
+                        <TableRowCell class="fw-bold">Actual Start Date</TableRowCell>
+                        <TableRowCell class="fw-bold">Actual Due Date</TableRowCell>
+                        <TableRowCell class="fw-bold">StoryPoints</TableRowCell>
+                        <TableRowCell class="fw-bold" >Actions</TableRowCell>
+                    </TableRow>
+                </TableHeader>
+                <TableBody>
+                    @foreach (var item in filteredData)
+                    {
+                        <TableRow>
+                            <TableRowCell style="min-width: 100px;">@item.TypeId</TableRowCell>
+                            <TableRowCell style="min-width: 100px;color:#6395EE" Class="key-column">
+                                <a href="javascript:void(0)" @onclick="() => UpdateItem(data.First(i => i.WorkItemId == item.WorkItemId))">@item.WorkItemId</a>
+                            </TableRowCell>
+                            <TableRowCell style="min-width: 100px;">
+                                @if (!string.IsNullOrEmpty(item.Name))
+                                {
+                                    <Tooltip Text="@item.Name">
+                                        @(@item.Name.Length > 30
+                                            ? @item.Name.Substring(0, Math.Min(30, item.Name.Length)) + "..."
+                                            : @item.Name)
+                                    </Tooltip>
+                                }
+                                else
+                                {
+                                    <Tooltip Text="No Name">No Name</Tooltip>
+                                }
+                            </TableRowCell>
+                            <TableRowCell style="min-width: 100px; white-space: nowrap;">
+                                @if (!string.IsNullOrEmpty(item.Description))
+                                {
+                                    <Tooltip Text="@item.Description">
+                                        @(@item.Description.Length > 30
+                                            ? @item.Description.Substring(0, Math.Min(30, item.Description.Length)) + "..."
+                                            : @item.Description)
+                                    </Tooltip>
+                                }
+                                else
+                                {
+                                    <span></span>
+                                }
+                            </TableRowCell>
+                            <TableRowCell style="min-width: 100px;">
+                                @if (item.StatusId == "InProgress")
+                                {
+                                    <span>Doing</span>
+                                }
+                                else
+                                {
+                                    @item.StatusId
+                                }
+                            </TableRowCell>
+                            
+                            <TableRowCell style="min-width: 100px;">@item.AssigneeName</TableRowCell>
+                            <TableRowCell style="min-width: 100px;">@item.ReporterName</TableRowCell>
+                            <TableRowCell style="min-width: 100px; white-space: nowrap;">
+                                @if (!string.IsNullOrEmpty(item.AreaId))
+                                {
+                                    <Tooltip Text="@item.AreaId">
+                                        @(@item.AreaId.Length > 30
+                                            ? @item.AreaId.Substring(0, Math.Min(30, item.AreaId.Length)) + "..."
+                                            : @item.AreaId)
+                                    </Tooltip>
+                                }
+                                else
+                                {
+                                    <span>N/A</span>
+                                }
+                            </TableRowCell>
+                            <TableRowCell style="min-width: 100px; white-space: nowrap;">
+                                @if (!string.IsNullOrEmpty(item.IterationId))
+                                {
+                                    <Tooltip Text="@item.IterationId">
+                                        @(@item.IterationId.Length > 30
+                                            ? @item.IterationId.Substring(0, Math.Min(30, item.IterationId.Length)) + "..."
+                                            : @item.IterationId)
+                                    </Tooltip>
+                                }
+                                else
+                                {
+                                    <span>N/A</span>
+                                }
+                            </TableRowCell>
+                            <TableRowCell style="min-width: 100px;">@(item.ExpectedStartDate != DateTime.MinValue ? item.ExpectedStartDate.ToShortDateString() : string.Empty)</TableRowCell>
+                            <TableRowCell style="min-width: 100px;">@(item.ExpectedEndDate != DateTime.MinValue ? item.ExpectedEndDate.ToShortDateString() : string.Empty)</TableRowCell>
+                            <TableRowCell style="min-width: 100px;">@(item.ActualStartDate != DateTime.MinValue ? item.ActualStartDate.ToShortDateString() : string.Empty)</TableRowCell>
+                            <TableRowCell style="min-width: 100px;">@(item.ActualEndDate != DateTime.MinValue ? item.ActualEndDate.ToShortDateString() : string.Empty)</TableRowCell>
+                            <TableRowCell>@item.StoryPoints</TableRowCell>
+                            <TableRowCell>
+                                <Icon Name="@("fas fa-trash")" Class="text-danger icon-action" Clicked="() => ShowDeleteConfirmation(item.WorkItemId)" Style="cursor: pointer;" />
+                            </TableRowCell>
+                        </TableRow>
+                    }
+                </TableBody>
+            </Table>
+        </div>
+    }
+}
+<Modal @ref="modalRef">
+    <ModalContent>
+        <ModalHeader>Confirm Delete</ModalHeader>
+        <ModalBody>
+            Are you sure you want to delete this work item?
+        </ModalBody>
+        <ModalFooter>
+            <Button Color="Color.Danger" @onclick="ConfirmDelete">Delete</Button>
+            <Button Color="Color.Secondary" @onclick="CloseDeleteModal">Cancel</Button>
+        </ModalFooter>
+    </ModalContent>
+</Modal>
+@code {
+    private IEnumerable<WorkItemModel> data;
+    private List<WorkItemModelWithString> displayData = new List<WorkItemModelWithString>();
+    private List<WorkItemModelWithString> filteredData = new List<WorkItemModelWithString>();
+    private string searchQuery = string.Empty;
+    private string Key = "Key";
+    private string Type = "Type";
+    private string Name = "Name";
+    private bool isLoading = true;
+    Alert myAlert;
+    Alert myAlertFailed;
+    private string currentSortColumn = "Name";
+    private bool isSortAscending = true;
+    private string selectedAssignee;
+    private string selectedReporter;
+    private string selectedType;
+    private string selectedStatus;
+    private List<string> assignees = new List<string>();
+    private List<string> reporters = new List<string>();
+    private List<string> types = new List<string>();
+    private List<string> statuses = new List<string>();
+
+    LoadingIndicator loadingIndicator = new LoadingIndicator();
+
+    private Modal modalRef;
+    private string selectedItem;
+
+    private async Task ShowDeleteConfirmation(string item)
+    {
+        selectedItem = item;
+        await modalRef.Show();
+    }
+
+    private async Task ConfirmDelete()
+    {
+        await DeleteWorkItem(selectedItem);
+        await modalRef.Hide();
+    }
+
+    private async Task CloseDeleteModal()
+    {
+        await modalRef.Hide();
+    }
+    private void SortData(string columnName)
+    {
+        if (currentSortColumn == columnName)
+        {
+            isSortAscending = !isSortAscending;
+        }
+        else
+        {
+            currentSortColumn = columnName;
+            isSortAscending = true;
+        }
+
+        ApplySorting();
+        StateHasChanged();
+    }
+
+    private void ApplySorting()
+    {
+        Func<WorkItemModelWithString, object> keySelector = currentSortColumn switch
+        {
+            "Name" => item => item.Name,
+            "Key" => item => item.WorkItemId,
+            "Type" => item => item.TypeId,
+            _ => item => item.Name,
+        };
+
+        filteredData = isSortAscending
+            ? filteredData.OrderBy(keySelector).ToList()
+            : filteredData.OrderByDescending(keySelector).ToList();
+    }
+
+    private async Task DeleteWorkItem(string id)
+    {
+        isLoading = true;
+        var LinkId = await linkCall.DeleteLinks(id);
+        var result = await workitemcall.deleteWorkItem(id);
+        if (result)
+        {
+            myAlert.Show();
+            await LoadData();
+        }
+        else
+        {
+            myAlertFailed.Show();
+            await LoadData();
+        }
+        isLoading = false;
+    }
+
+    private async Task LoadData()
+    {
+        isLoading = true;
+        data = await workitemcall.GetWorkItems();
+        displayData.Clear();
+        foreach (var item in data)
+        {
+            var element = new WorkItemModelWithString
+                {
+                    TypeId = await workitemcall.GetTypeName(item.TypeId),
+                    IterationId = await workitemcall.GetIterationName(item.IterationId),
+                    StatusId = await workitemcall.GetStatusName(item.StatusId),
+                    AreaId = await workitemcall.GetAreaName(item.AreaId),
+                    AssigneeName = await workitemcall.GetUserName(item.AssigneeId),
+                    ReporterName = await workitemcall.GetUserName(item.ReporterId),
+                    StoryPoints = item.StoryPoints,
+                    WorkItemId = item.WorkItemId,
+                    Description = item.Description,
+                    ActualEndDate = item.ActualEndDate,
+                    ActualStartDate = item.ActualStartDate,
+                    ExpectedStartDate = item.ExpectedStartDate,
+                    ExpectedEndDate = item.ExpectedEndDate,
+                    Name = item.Name
+                };
+            displayData.Add(element);
+        }
+        assignees = displayData.Select(item => item.AssigneeName).Distinct().ToList();
+        reporters = displayData.Select(item => item.ReporterName).Distinct().ToList();
+        types = displayData.Select(item => item.TypeId).Distinct().ToList();
+        statuses = displayData.Select(item => item.StatusId).Distinct().ToList();
+        FilterData();
+        ApplySorting();
+        isLoading = false;
+
+    }
+
+    private async Task OnSearchQueryChanged(ChangeEventArgs args)
+    {
+        searchQuery = args.Value?.ToString() ?? string.Empty;
+        await FilterData();
+        ApplySorting();
+        StateHasChanged();
+    }
+    private async Task OnFilterChangedAssignee(string value)
+    {
+        selectedAssignee = value;
+        await FilterData();
+        ApplySorting();
+        StateHasChanged();
+    }
+    private async Task OnFilterChangedReporter(string value)
+    {
+        selectedReporter = value;
+        await FilterData();
+        ApplySorting();
+        StateHasChanged();
+    }
+    private async Task OnFilterChangedType(string value)
+    {
+        selectedType = value;
+        await FilterData();
+        ApplySorting();
+        StateHasChanged();
+    }
+    private async Task OnFilterChangedStatus(string value)
+    {
+        selectedStatus = value;
+        await FilterData();
+        ApplySorting();
+        StateHasChanged();
+    }
+    private async Task FilterData()
+{
+    // Apply filters first
+        Console.WriteLine($"Filter - Assignee: {selectedAssignee}, Reporter: {selectedReporter}, Type: {selectedType}, Status: {selectedStatus}, SearchQuery: {searchQuery}");
+    var filteredByFilters =  displayData.Where(item =>
+        (string.IsNullOrWhiteSpace(selectedAssignee) || item.AssigneeName == selectedAssignee) &&
+        (string.IsNullOrWhiteSpace(selectedReporter) || item.ReporterName == selectedReporter) &&
+        (string.IsNullOrWhiteSpace(selectedType) || item.TypeId == selectedType) &&
+        (string.IsNullOrWhiteSpace(selectedStatus) || item.StatusId == selectedStatus)
+    ).ToList();
+
+    // Then apply search query to the already filtered data
+    filteredData = filteredByFilters.Where(item =>
+        string.IsNullOrWhiteSpace(searchQuery) ||
+        item.TypeId?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) == true ||
+        item.WorkItemId?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) == true ||
+        item.Name?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) == true ||
+        item.Description?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) == true ||
+        item.StatusId?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) == true ||
+        item.AssigneeName?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) == true ||
+        item.ReporterName?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) == true ||
+        item.AreaId?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) == true ||
+        item.IterationId?.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) == true ||
+        item.StoryPoints.ToString().Contains(searchQuery, StringComparison.OrdinalIgnoreCase) == true ||
+        (item.ExpectedStartDate != DateTime.MinValue && item.ExpectedStartDate.ToShortDateString().Contains(searchQuery, StringComparison.OrdinalIgnoreCase)) ||
+        (item.ExpectedEndDate != DateTime.MinValue && item.ExpectedEndDate.ToShortDateString().Contains(searchQuery, StringComparison.OrdinalIgnoreCase)) ||
+        (item.ActualStartDate != DateTime.MinValue && item.ActualStartDate.ToShortDateString().Contains(searchQuery, StringComparison.OrdinalIgnoreCase)) ||
+        (item.ActualEndDate != DateTime.MinValue && item.ActualEndDate.ToShortDateString().Contains(searchQuery, StringComparison.OrdinalIgnoreCase))
+    ).ToList();
+
+    
+}
+    
+
+
+    private void UpdateItem(WorkItemModel item)
+    {
+        NavManager.NavigateTo($"/UpdateWorkItem/{item.WorkItemId}");
+    }
+
+    private void LinkItems(WorkItemModelWithString item)
+    {
+        NavManager.NavigateTo($"/linkworkitems/{item.WorkItemId}");
+    }
+
+    private void UploadFiles(WorkItemModel item)
+    {
+        NavManager.NavigateTo($"/upload/{item.WorkItemId}");
+    }
+    private void CreateNewWorkItem()
+    {
+        NavManager.NavigateTo($"/workitem");
+    }
+
+    protected override async Task OnInitializedAsync()
+    { 
+         
+        await LoadData();
+         
+    }
+}
+
+<style>
+    .loading-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+ 
+
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1050; /* Make sure it’s above other content */
+    }
+
+    .d-none {
+        display: none !important;
+    }
+
+
+     
+
+
+    .search-filter-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+
+    .search-box-container {
+        position: relative; /* Ensures that the search icon is positioned relative to this container */
+        margin-right: 15px; /* Space between the search box and filters */
+    }
+
+    .search-input-wrapper {
+        position: relative; /* Position the icon relative to this wrapper */
+        width: 300px; /* Match the width to the search box */
+    }
+
+    .search-box {
+        width: 100%; /* Use 100% so it fills the wrapper */
+        padding: 10px 15px;
+        padding-right: 40px; /* Add some padding on the right to make space for the icon */
+        border-radius: 20px;
+        border: 1px solid #ced4da;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+    }
+
+    .search-icon {
+        position: absolute;
+        top: 50%;
+        right: 15px; /* Adjust this value to control how far the icon is from the right edge */
+        transform: translateY(-50%);
+        color: #ced4da;
+        font-size: 18px;
+        pointer-events: none; /* Make sure the icon doesn’t interfere with the input */
+    }
+
+     
+
+    .filter-container {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between filter elements */
+    }
+
+        .filter-container select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            font-size: 16px;
+            width: 150px; /* Set width or adjust as needed */
+            box-sizing: border-box; /* Include padding and border in the width */
+        }
+
+            .filter-container select:focus {
+                border-color: #007bff;
+            }
+    .list-container {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .table-header {
+        background-color: #f8f9fa;
+    }
+
+    .table-body {
+        background-color: #ffffff;
+    }
+
+    .sortable {
+        cursor: pointer;
+    }
+
+        .sortable:hover {
+            background-color: #f1f1f1;
+        }
+
+    .key-column {
+        color: cornflowerblue; /* Ensure the color is applied correctly */
+        text-decoration: underline;
+    }
+
+        .key-column a {
+            color: inherit; /* Ensure the link color is blue */
+            text-decoration: inherit; /* Remove underline for the link */
+        }
+
+            .key-column a:hover {
+                color: #0056b3; /* Slightly darker blue for hover effect */
+            }
+
+    .icon-action {
+        cursor: pointer;
+    }
+
+        .icon-action:hover {
+            color: #007bff;
+        }
+
+    .table th,
+    .table td {
+        white-space: nowrap;
+    }
+
+    .custom-attachment-button {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 0.5rem;
+        background: none;
+        border: none;
+        color: black;
+        font-size: 1rem;
+        text-decoration: none;
+        margin-bottom: 10px; /* Add spacing below the button */
+    }
+
+        .custom-attachment-button i {
+            margin-right: 0.5rem;
+            color: green;
+        }
+
+        .custom-attachment-button:hover {
+            background-color: lightgrey;
+        }
+ 
+ 
+</style>

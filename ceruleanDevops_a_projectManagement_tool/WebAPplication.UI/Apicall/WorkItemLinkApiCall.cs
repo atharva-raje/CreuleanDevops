@@ -25,9 +25,15 @@ namespace WebAPplication.UI.Apicall
             return dlink;
         }
 
-        public async Task<bool> LinkWorkItems(string sourceWorkItemId, string targetWorkItemId, string linkType)
+        public async Task<List<WorkItemLinkModel>> GetLinksForWorkItem(string sourceId)
         {
-            var response = await _httpClient.PostAsJsonAsync("api/link", new { SourceWorkItemId = sourceWorkItemId, TargetWorkItemId = targetWorkItemId, LinkType = linkType });
+            var result = await _httpClient.GetFromJsonAsync<WorkItemLinkModel[]>($"api/GetLinksForWorkItem/{sourceId}");
+            return result.ToList();
+        }
+
+        public async Task<bool> LinkWorkItems(string sourceWorkItemId, string targetWorkItemId, int linkType)
+        {
+            var response = await _httpClient.PostAsJsonAsync("api/LinkWorkItems", new { SourceWorkItemId = sourceWorkItemId, TargetWorkItemId = targetWorkItemId, LinkType = linkType });
             return response.IsSuccessStatusCode;
         }
     }

@@ -16,8 +16,7 @@ namespace BusinessLOgic.Models
         public byte[] FileData { get; set; }
         public string ContentType { get; set; }
         public DateTime UploadDate { get; set; }
-
-         public long Size {  get; set; }
+        public long Size {  get; set; }
         public string WorkItemId { get; set; }
         public string SizeFormatted
         {

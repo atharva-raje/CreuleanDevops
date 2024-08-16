@@ -1,0 +1,412 @@
+﻿@page "/dashboard"
+@using BusinessLOgic.Models
+@using Microsoft.AspNetCore.Components.Forms
+@using Apicall
+@using WebAPplication.UI.UiModels
+@using Microsoft.JSInterop
+@inject WorkItemCall workitemcall
+@inject NavigationManager NavManager
+@inject UserAPiCall usercall
+@inject IJSRuntime JSRuntime
+<div class="kanban-container">
+    <div class="header">
+        <div class="search-bar-container d-flex align-items-center">
+            <input type="text" class="form-control search-bar me-3" placeholder="Search" @bind="searchText" @oninput="OnSearchInput" />
+            <div class="filters d-flex align-items-center ms-3">
+                <div class="dropdown me-2 filter-dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="typeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Type (@selectedTypeIds.Count)
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="typeDropdown">
+                        @foreach (var type in uniqueTypeIds)
+                        {
+                            <li>
+                                <a class="dropdown-item @GetDropdownItemClass(type, selectedTypeIds)" href="javascript:void(0);" @onclick="() => OnTypeFilterChanged(type)">
+                                    <input type="checkbox" @bind="typeCheckboxStates[type]" class="me-2" /> <!-- Checkbox with binding -->
+                                    <i class="fa @GetIconClassForType(type) me-2"></i> @type <!-- Icon and text -->
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                
+                 <div class="dropdown me-2 filter-dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="assigneeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Assignee (@selectedAssigneeIds.Count)
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="assigneeDropdown">
+                        @foreach (var assignee in uniqueAssignees)
+                        {
+                            <li>
+                                <a class="dropdown-item @GetDropdownItemClass(assignee, selectedAssigneeIds)" href="javascript:void(0);" @onclick="() => OnAssigneeFilterChanged(assignee)">
+                                    <input type="checkbox" @bind="assigneeCheckboxStates[assignee]" class="me-2" /> <!-- Checkbox with binding -->
+                                    <i class="fa fa-user me-2"></i> @assignee <!-- Icon and text -->
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                
+                <button class="btn btn-secondary clear-filters" @onclick="ClearFilters">
+                    Clear filters
+                </button>
+            </div>
+        </div>
+    </div>
+    <DropContainer @ref="dropContainer" TItem="WorkItemModelWithString" Items="@filteredData" ItemsFilter="@((item, dropZone) => item.StatusId == dropZone)" ItemDropped="@OnDrop" Flex="Flex.Wrap.Grow.Is1">
+        <ChildContent>
+            <div class="dropzone-row d-flex">
+                @foreach (var status in new[] { "ToDo", "InProgress", "Done" })
+                {
+                    <div class="dropzone-container">
+                        <DropZone TItem="WorkItemModelWithString" Name="@status" AllowReorder="true" Border="Border.Rounded" Background="Background.Light" Padding="Padding.Is3" Margin="Margin.Is3" Flex="Flex.Grow.Is1">
+                            <Heading Size="HeadingSize.Is4" Margin="Margin.Is3.FromBottom">@status (@filteredData.Count(w => w.StatusId == status))</Heading>
+                            <div class="card-container">
+                                @foreach (var item in filteredData.Where(i => i.StatusId == status))
+                                {
+                                    <_Draggable TItem="WorkItemModelWithString" Item="@item">
+                                        <Card Shadow="Shadow.Default" Margin="Margin.Is3.OnY" Background="Background.White" Border="Border.Primary" Class="kanban-card">
+                                            <CardBody>
+                                                <div class="card-header">
+                                                    <div class="card-title">
+                                                        <h5 title="@item.Name">@item.Name</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="card-details">
+                                                    <div class="card-type">
+                                                        <i class="fa @GetIconClassForType(item.TypeId)" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div>
+                                                        <a href="@($"/UpdateWorkItem/{item.WorkItemId}")" class="card-workitem-id">@item.WorkItemId</a>
+                                                    </div>
+                                                    <div class="card-assignee">
+                                                        <i class="fa fa-user" aria-hidden="true"></i> @item.AssigneeName
+                                                    </div>
+                                                </div>
+                                            </CardBody>
+                                        </Card>
+                                    </_Draggable>
+                                }
+                            </div>
+                        </DropZone>
+                    </div>
+                }
+            </div>
+        </ChildContent>
+    </DropContainer>
+</div>
+
+@code {
+    private UIWorkItem workItem = new UIWorkItem();
+    private IEnumerable<WorkItemModel> workItems = new List<WorkItemModel>();
+    private List<WorkItemModelWithString> displayData = new List<WorkItemModelWithString>();
+    private string searchText = string.Empty;
+    private List<string> selectedTypeIds = new List<string>();
+    private List<string> selectedAssigneeIds = new List<string>();
+    private List<WorkItemModelWithString> filteredData = new List<WorkItemModelWithString>();
+    private List<string> uniqueTypeIds = new List<string>();
+    private List<string> uniqueAssignees = new List<string>();
+    private DropContainer<WorkItemModelWithString> dropContainer;
+    private Dictionary<string, bool> typeCheckboxStates = new Dictionary<string, bool>();
+    private Dictionary<string, bool> assigneeCheckboxStates = new Dictionary<string, bool>();
+
+    private async Task OnDrop(DraggableDroppedEventArgs<WorkItemModelWithString> dropItem)
+    {
+        var item = dropItem.Item;
+        if (item != null && item.StatusId != dropItem.DropZoneName)
+        {
+            var updateItem = await workitemcall.GetWorkItemById(item.WorkItemId);
+            item.StatusId = dropItem.DropZoneName;
+            updateItem.StatusId = await workitemcall.GetStatusId(dropItem.DropZoneName);
+            await workitemcall.UpdateWorkItem(updateItem);
+            await loadData();
+        }
+    }
+
+    private string GetIconClassForType(string type)
+    {
+        return type switch
+        {
+            "Task" => "fa-check-circle text-primary",  // Blue checkmark icon
+            "Bug" => "fa-bug text-danger",             // Red bug icon
+            _ => "fa-question"                         // Fallback icon
+        };
+    }
+
+    private string GetIconClassForPriority(string priority)
+    {
+        return priority switch
+        {
+            "Low" => "fa-arrow-down text-success",    // Green down arrow for low priority
+            "Medium" => "fa-arrow-right text-warning", // Yellow right arrow for medium priority
+            "High" => "fa-arrow-up text-danger",       // Red up arrow for high priority
+            _ => "fa-question"                         // Fallback icon
+        };
+    }
+
+    private async Task loadData()
+    {
+        displayData.Clear();
+        workItems = await workitemcall.GetWorkItems();
+
+        var DisplayData1 = await workitemcall.GetWorkItemsWithName();
+        displayData = DisplayData1.ToList();
+        filteredData = displayData;
+        uniqueTypeIds = displayData.Select(w => w.TypeId).Distinct().ToList();
+        uniqueAssignees = displayData.Select(w => w.AssigneeName).Distinct().ToList();
+        typeCheckboxStates = uniqueTypeIds.ToDictionary(t => t, t => selectedTypeIds.Contains(t));
+        assigneeCheckboxStates = uniqueAssignees.ToDictionary(a => a, a => selectedAssigneeIds.Contains(a));
+        ApplyFilters();
+    }
+
+    private void OnSearchInput(ChangeEventArgs e)
+    {
+        searchText = e.Value.ToString();
+        ApplyFilters();
+    }
+
+    /*private void OnTypeFilterChanged(string type)
+    {
+        if (selectedTypeIds.Contains(type))
+        {
+            selectedTypeIds.Remove(type);
+        }
+        else
+        {
+            selectedTypeIds.Add(type);
+        }
+        typeCheckboxStates[type] = selectedTypeIds.Contains(type); // Update checkbox state
+        ApplyFilters();
+    }*/
+    private void OnTypeFilterChanged(List<string> updatedSelectedTypeIds)
+    {
+        selectedTypeIds = updatedSelectedTypeIds;
+        ApplyFilters();
+    }
+
+    /*private void OnAssigneeFilterChanged(string assignee)
+    {
+        if (selectedAssigneeIds.Contains(assignee))
+        {
+            selectedAssigneeIds.Remove(assignee);
+        }
+        else
+        {
+            selectedAssigneeIds.Add(assignee);
+        }
+        assigneeCheckboxStates[assignee] = selectedAssigneeIds.Contains(assignee); // Update checkbox state
+ 
+         
+        ApplyFilters();
+    }*/
+    private void OnAssigneeFilterChanged(List<string> updatedSelectedAssigneeIds)
+    {
+        selectedAssigneeIds = updatedSelectedAssigneeIds;
+        ApplyFilters();
+    }
+
+    private void ApplyFilters()
+    {
+        filteredData = displayData
+            .Where(w => (string.IsNullOrEmpty(searchText) || w.Name.Contains(searchText, StringComparison.OrdinalIgnoreCase)))
+            .Where(w => selectedTypeIds.Count == 0 || selectedTypeIds.Contains(w.TypeId))
+            .Where(w => selectedAssigneeIds.Count == 0 || selectedAssigneeIds.Contains(w.AssigneeName))
+            .ToList();
+
+        dropContainer.Refresh();
+        StateHasChanged();
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        await workitemcall.AddWorkItem(workItem);
+        workItem = new UIWorkItem();
+        await loadData();
+    }
+
+    private void ClearFilters()
+    {
+        selectedTypeIds.Clear();
+        selectedAssigneeIds.Clear();
+        searchText = string.Empty;
+        typeCheckboxStates = uniqueTypeIds.ToDictionary(t => t, t => false); // Clear checkbox states
+        assigneeCheckboxStates = uniqueAssignees.ToDictionary(a => a, a => false); // Clear checkbox states
+        ApplyFilters();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await loadData();
+    }
+
+    private string GetDropdownItemClass(string item, List<string> selectedItems)
+    {
+        return selectedItems.Contains(item) ? "checked" : string.Empty;
+    }
+}
+
+<style>
+    .kanban-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        width: 250px;
+        box-sizing: border-box;
+        height: 150px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s;
+    }
+
+        .kanban-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: none;
+        padding-bottom: 5px;
+    }
+
+    .card-title {
+        flex: 1;
+        font-size: 16px;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .card-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .card-type i {
+        font-size: 1.5em;
+    }
+
+    .card-assignee {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+    }
+
+        .card-assignee i {
+            font-size: 1em;
+            margin-right: 5px;
+        }
+
+    .filter-dropdown .dropdown-item i {
+        margin-right: 5px;
+    }
+
+    .search-bar-container {
+        width: auto;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 200px; /* Adjust the width of the search bar */
+        flex-grow: 0;
+    }
+
+    .filters {
+        display: flex;
+        align-items: center;
+    }
+
+    .filter-dropdown {
+        position: relative;
+    }
+
+        .filter-dropdown .dropdown-toggle {
+            background-color: #d3d3d3;
+            color: #000;
+            border: 1px solid #d3d3d3;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: none;
+        }
+
+            .filter-dropdown .dropdown-toggle:focus {
+                outline: none;
+                box-shadow: none; /* Remove blue highlight */
+            }
+
+            .filter-dropdown .dropdown-toggle:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        .filter-dropdown .dropdown-menu {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            background-color: #fff;
+            margin-top: 0.5rem;
+        }
+
+        .filter-dropdown .dropdown-item {
+            padding: 8px 12px;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+            .filter-dropdown .dropdown-item:hover {
+                background-color: #f1f1f1;
+            }
+
+            .filter-dropdown .dropdown-item.checked {
+                background-color: #e0e0e0; /* Custom background color for checked items */
+                color: #000; /* Custom text color for checked items */
+            }
+
+                .filter-dropdown .dropdown-item.checked i {
+                    color: #000; /* Custom icon color for checked items */
+                }
+
+            .filter-dropdown .dropdown-item input[type="checkbox"] {
+                margin-right: 8px;
+            }
+
+    .filters .btn-secondary {
+        background-color: transparent;
+        border: none;
+        color: #000;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+        .filters .btn-secondary:hover {
+            background-color: #d3d3d3;
+            color: #000;
+        }
+
+    .card-workitem-id {
+        color: black; /* Default color */
+        text-decoration: none; /* Remove underline */
+        font-weight: bold;
+    }
+
+        .card-workitem-id:hover {
+            color: #0056b3; /* Color on hover */
+            text-decoration: underline; /* Underline on hover for better visibility */
+        }
+</style>
+ 

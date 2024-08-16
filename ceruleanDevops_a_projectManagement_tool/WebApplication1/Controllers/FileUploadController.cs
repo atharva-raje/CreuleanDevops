@@ -24,11 +24,18 @@ namespace WebApplication1.Controllers
         public async Task<IActionResult> GetFilesByWorkItemId(string id)
         {
             var result = await _fileUploadService.GetFilesWithId(id);
-            var model = _mapper.Map<IEnumerable<FileModel>>(result);
+            var model = _mapper.Map<IEnumerable<FileModelWithoutData>>(result);
 
             return Ok(result);
         }
+        [HttpGet("getallByFileId/{fid}")]
+        public async Task<IActionResult> GetFilesByFileId(int fid)
+        {
+            var result = await _fileUploadService.GetFileByFileId(fid);
+            var model = _mapper.Map<FileModel>(result);
 
+            return Ok(result);
+        }
         [HttpPost("upload")]
         public async Task<IActionResult> PostFiles([FromForm] List<IFormFile> files, [FromForm] string workItemId)
         {
@@ -45,6 +52,19 @@ namespace WebApplication1.Controllers
             else
             {
                 return NotFound("WorkItem not found.");
+            }
+        }
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteFile(int id)
+        {
+            var result = await _fileUploadService.Deletefile(id);
+            if(result)
+            {
+                return Ok("File deleted sucessfully");
+            }
+            else
+            {
+                return NotFound();
             }
         }
     }

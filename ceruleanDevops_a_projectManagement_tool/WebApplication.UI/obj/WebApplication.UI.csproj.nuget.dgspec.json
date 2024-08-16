@@ -32,7 +32,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\SharedEnums\\SharedEnums.csproj": {
+                "projectPath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\SharedEnums\\SharedEnums.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -75,6 +79,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.JSInterop": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             }
           },
           "imports": [
@@ -128,6 +136,9 @@
             "projectReferences": {
               "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\DAL.csproj": {
                 "projectPath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DAL\\DAL.csproj"
+              },
+              "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\SharedEnums\\SharedEnums.csproj": {
+                "projectPath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\SharedEnums\\SharedEnums.csproj"
               }
             }
           }
@@ -176,6 +187,81 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.JSInterop": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\SharedEnums\\SharedEnums.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\SharedEnums\\SharedEnums.csproj",
+        "projectName": "SharedEnums",
+        "projectPath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\SharedEnums\\SharedEnums.csproj",
+        "packagesPath": "C:\\Users\\athar\\.nuget\\packages\\",
+        "outputPath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\SharedEnums\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\athar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.JSInterop": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             }
           },
           "imports": [
@@ -229,6 +315,9 @@
             "projectReferences": {
               "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\BusinessLOgic.csproj": {
                 "projectPath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\DomainLayer\\BusinessLOgic.csproj"
+              },
+              "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\SharedEnums\\SharedEnums.csproj": {
+                "projectPath": "D:\\adtechsource\\repos\\New_repository\\ceruleanDevops_a_projectManagement_tool\\SharedEnums\\SharedEnums.csproj"
               }
             }
           }
@@ -252,38 +341,70 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Blazored.Typeahead": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "Blazorise": {
               "target": "Package",
-              "version": "[1.5.3, )"
+              "version": "[1.6.0, )"
+            },
+            "Blazorise.Animate": {
+              "target": "Package",
+              "version": "[1.6.0, )"
             },
             "Blazorise.Bootstrap": {
               "target": "Package",
-              "version": "[1.5.3, )"
+              "version": "[1.6.0, )"
+            },
+            "Blazorise.Bootstrap5": {
+              "target": "Package",
+              "version": "[1.6.0, )"
             },
             "Blazorise.Components": {
               "target": "Package",
-              "version": "[1.5.3, )"
+              "version": "[1.6.0, )"
+            },
+            "Blazorise.DataGrid": {
+              "target": "Package",
+              "version": "[1.6.0, )"
             },
             "Blazorise.Icons.FontAwesome": {
               "target": "Package",
-              "version": "[1.5.3, )"
+              "version": "[1.6.0, )"
+            },
+            "Blazorise.LoadingIndicator": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "Blazorise.SpinKit": {
+              "target": "Package",
+              "version": "[1.6.0, )"
             },
             "Microsoft.AspNet.Cors": {
               "target": "Package",
               "version": "[5.3.0, )"
             },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.JSInterop": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -296,6 +417,22 @@
               "target": "Package",
               "version": "[8.0.5, )",
               "autoReferenced": true
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "blazor-dragdrop": {
+              "target": "Package",
+              "version": "[2.6.1, )"
             },
             "bootstrap": {
               "target": "Package",
